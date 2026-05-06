@@ -4,84 +4,58 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Akamai Technologies
 providerId: akamai-technologies
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: true
 tags:
   - CDN
-  - Security
+  - Edge
   - Cloud
+  - Security
   - Rate Limiting
-  - Quotas
-  - Throttling
-description: Machine-readable rate limit definitions for the Akamai Technologies API surface. Captures
-  per-tier quotas, burst behavior, response signaling, and recovery semantics. Defaults are scaffold values
-  to be replaced with published provider limits.
-headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
+description: Akamai is a multi-service platform; API rate limits vary by product surface. Control-plane
+  APIs (Akamai EdgeGrid OPEN APIs covering CDN configuration, Property Manager, Cloud Computing,
+  EdgeWorkers, Security configuration, Reporting, Identity, etc.) each have service-specific
+  throttles. Akamai Cloud Computing inherits the published Linode API rate limits. Throttling
+  responses follow standard 429 / Retry-After conventions; specific numeric limits are documented in
+  per-service Akamai TechDocs / API reference pages.
+notes: Per-service limits are documented in TechDocs rather than a single rate-limit page. Consumers
+  should check the relevant API reference for canonical limits.
+sources:
+  - https://techdocs.akamai.com/
+  - https://www.linode.com/docs/api/
 responseCodes:
   throttled: 429
-  quotaExceeded: 429
   serviceUnavailable: 503
 limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 10
-    burst: 20
-    timeFrame: minute
-    applies:
-      - Akamai Technologies API
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - Akamai Technologies API
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
-    metric: requests_per_minute
-    limit: 100
-    burst: 200
-    timeFrame: minute
-    applies:
-      - Akamai Technologies API
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - Akamai Technologies API
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
-    applies:
-      - Akamai Technologies API
+  - name: EdgeGrid Control-Plane APIs
+    scope: api_client
+    metric: varies
+    limit: service-specific TPS / RPM, see per-API TechDocs
+    notes: Property Manager, Cloud Computing, Security Configuration, Reporting, etc. each publish
+      their own rate-limit ceilings; EdgeGrid signing is required.
+  - name: Cloud Computing (Linode) API
+    scope: account
+    metric: varies
+    limit: see Linode API rate-limit documentation
+    notes: Linode API publishes documented per-endpoint limits and uses the X-RateLimit-* family of
+      headers.
+  - name: CDN edge request volume
+    scope: account
+    metric: varies
+    limit: governed by contract (committed traffic / requests / RPS), not a public number
 policies:
   - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+    description: Clients should implement exponential backoff with jitter on 429 / 503 responses,
+      honoring Retry-After when present.
+  - name: EdgeGrid Authentication
+    description: Akamai control-plane APIs require EdgeGrid request signing; misconfigured clients
+      can be blocked before reaching rate limits.
+  - name: Per-Service Limits
+    description: Numeric limits are published per API in TechDocs. Treat them as authoritative — do
+      not infer one product's limits from another.
+  - name: Contract-Governed CDN Capacity
+    description: CDN traffic capacity is contractual, not an API rate limit. Coordinate with the
+      Akamai account team before unusual traffic events.
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
