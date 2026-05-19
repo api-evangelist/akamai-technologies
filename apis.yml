@@ -28,6 +28,10 @@ apis:
     description: >-
       The Akamai Technologies API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: GitHubOrganization
+    url: https://github.com/akamai
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/akamai-technologies
   - type: Website
     url: https://www.akamai.com
 maintainers:
