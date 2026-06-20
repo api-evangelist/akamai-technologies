@@ -2,7 +2,7 @@ aid: akamai-technologies
 url: https://raw.githubusercontent.com/api-evangelist/akamai-technologies/refs/heads/main/apis.yml
 name: Akamai Technologies
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - CDN
   - Security
@@ -19,7 +19,7 @@ apis:
       - CDN
       - Security
       - Cloud
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     baseURL: https://api.akamai.com
     humanURL: https://developer.akamai.com
     properties:
