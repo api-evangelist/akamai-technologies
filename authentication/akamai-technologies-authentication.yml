@@ -1,0 +1,18 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/akamai-technologies-openapi.yml
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: EdgeGrid
+  type: apiKey
+  in: header
+  parameter: Authorization
+  description: |-
+    Akamai EdgeGrid HMAC-SHA256 signed Authorization header
+    (`EG1-HMAC-SHA256 client_token=...;access_token=...;timestamp=...;nonce=...;signature=...`).
+  sources:
+  - openapi/akamai-technologies-openapi.yml
