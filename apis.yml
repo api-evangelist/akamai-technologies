@@ -28,6 +28,8 @@ apis:
     description: >-
       The Akamai Technologies API provides access to platform services and data for enterprise integration and automation.
 common:
+  - type: AgenticAccess
+    url: agentic-access/akamai-technologies-agentic-access.yml
   - type: DomainSecurity
     url: security/akamai-technologies-domain-security.yml
   - type: Authentication
