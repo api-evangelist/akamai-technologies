@@ -2,7 +2,20 @@ aid: akamai-technologies
 url: https://raw.githubusercontent.com/api-evangelist/akamai-technologies/refs/heads/main/apis.yml
 name: Akamai Technologies
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: true
+  try_now: true
+  public: false
+  label: Free · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/akamai-technologies.png
 tags:
   - CDN
   - Security
@@ -13,20 +26,51 @@ created: '2026-04-19'
 modified: '2026-04-19'
 specificationVersion: '0.19'
 apis:
-  - aid: akamai-technologies:akamai-technologies-api
-    name: Akamai Technologies API
-    tags:
-      - CDN
-      - Security
-      - Cloud
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.akamai.com
-    humanURL: https://developer.akamai.com
-    properties:
-      - url: https://developer.akamai.com/docs
-        type: Documentation
-    description: >-
-      The Akamai Technologies API provides access to platform services and data for enterprise integration and automation.
+- aid: akamai-technologies:akamai-technologies-api
+  name: Akamai Technologies API
+  tags:
+  - CDN
+  - Security
+  - Cloud
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  baseURL: https://api.akamai.com
+  humanURL: https://developer.akamai.com
+  properties:
+  - url: https://developer.akamai.com/docs
+    type: Documentation
+  description: >-
+    The Akamai Technologies API provides access to platform services and data for enterprise integration
+    and automation.
+- aid: akamai-technologies:akamai-technologies-deletions-api
+  name: Akamai Technologies Deletions API
+  description: Remove cached objects from the edge.
+  humanURL: https://developer.akamai.com
+  baseURL: https://api.akamai.com
+  tags:
+  - Deletions
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-deletions-api-openapi.yml
+- aid: akamai-technologies:akamai-technologies-invalidations-api
+  name: Akamai Technologies Invalidations API
+  description: Mark cached objects as stale, forcing revalidation on next request.
+  humanURL: https://developer.akamai.com
+  baseURL: https://api.akamai.com
+  tags:
+  - Invalidations
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-invalidations-api-openapi.yml
+- aid: akamai-technologies:akamai-technologies-status-api
+  name: Akamai Technologies Status API
+  description: Inspect rate-limit and object-limit status.
+  humanURL: https://developer.akamai.com
+  baseURL: https://api.akamai.com
+  tags:
+  - Status
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-status-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/akamai-technologies-agentic-access.yml
