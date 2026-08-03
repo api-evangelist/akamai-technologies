@@ -1,0 +1,18 @@
+{
+  "provider": "akamai-technologies",
+  "sources": [
+    "akamai-technologies-deletions-api-openapi.yml",
+    "akamai-technologies-invalidations-api-openapi.yml",
+    "akamai-technologies-status-api-openapi.yml"
+  ],
+  "outputs": [
+    "akamai-technologies-deletions-api-openapi.yml",
+    "akamai-technologies-invalidations-api-openapi.yml",
+    "akamai-technologies-status-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
