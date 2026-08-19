@@ -1,0 +1,92 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Akamai Fast Purge (CCU v3) Deletions Invalidations API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Invalidations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Invalidate by URL or ARL",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}.luna.akamaiapis.net/ccu/v3/invalidate/url/:network",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Invalidate by URL or ARL"
+        },
+        {
+          "info": {
+            "name": "Invalidate by CP code",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}.luna.akamaiapis.net/ccu/v3/invalidate/cpcode/:network",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Invalidate by CP code"
+        },
+        {
+          "info": {
+            "name": "Invalidate by cache tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}.luna.akamaiapis.net/ccu/v3/invalidate/tag/:network",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Invalidate by cache tag"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

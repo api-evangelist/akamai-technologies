@@ -1,0 +1,418 @@
+{
+  "item": [
+    {
+      "id": "cf7ed4e7-4149-49ab-97c8-32549c4438b8",
+      "name": "Invalidations",
+      "description": {
+        "content": "Mark cached objects as stale, forcing revalidation on next request.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "477e72cf-25d0-4f57-9542-d0ce43a625cb",
+          "name": "Invalidate by URL or ARL",
+          "request": {
+            "name": "Invalidate by URL or ARL",
+            "description": {},
+            "url": {
+              "path": [
+                "invalidate",
+                "url",
+                ":network"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "network",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Per-account API hostname prefix from your EdgeGrid credentials.",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"objects\": [\n    \"<uri>\",\n    \"<uri>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b83555be-a1e7-4762-bfac-98790040bcfb",
+              "name": "Purge request accepted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "invalidate",
+                    "url",
+                    ":network"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "network",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Per-account API hostname prefix from your EdgeGrid credentials.",
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"objects\": [\n    \"<uri>\",\n    \"<uri>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "08f46f2a-be71-4f47-9ab2-fdcfe9dd93e1",
+          "name": "Invalidate by CP code",
+          "request": {
+            "name": "Invalidate by CP code",
+            "description": {},
+            "url": {
+              "path": [
+                "invalidate",
+                "cpcode",
+                ":network"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "network",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Per-account API hostname prefix from your EdgeGrid credentials.",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"objects\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b8359777-020a-48eb-9384-5c8d69cd16bb",
+              "name": "Purge request accepted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "invalidate",
+                    "cpcode",
+                    ":network"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "network",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Per-account API hostname prefix from your EdgeGrid credentials.",
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"objects\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7015be62-d8f2-4ea8-9063-b8ad97f72ab2",
+          "name": "Invalidate by cache tag",
+          "request": {
+            "name": "Invalidate by cache tag",
+            "description": {},
+            "url": {
+              "path": [
+                "invalidate",
+                "tag",
+                ":network"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "network",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Per-account API hostname prefix from your EdgeGrid credentials.",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"objects\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1749ecba-07d3-4b2e-b541-8faec457e0ee",
+              "name": "Purge request accepted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "invalidate",
+                    "tag",
+                    ":network"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "network",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Per-account API hostname prefix from your EdgeGrid credentials.",
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"objects\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Per-account API hostname prefix from your EdgeGrid credentials.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "akab-xxxxxxxxxx",
+      "key": "host"
+    },
+    {
+      "type": "string",
+      "value": "https://{{host}}.luna.akamaiapis.net/ccu/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0aa27d48-22b6-4da7-97ba-875fca6c91a0",
+    "name": "Akamai Fast Purge (CCU v3) Deletions Invalidations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Akamai Fast Purge (Content Control Utility v3) API for invalidating\nor deleting cached content at the Akamai edge by URL, CP code, or\ncache tag, on either the production or staging network.\nAuthentication uses the Akamai EdgeGrid HMAC-SHA256 scheme. All\nrequests target a per-account hostname under akamaiapis.net.\n\n\nContact Support:\n Name: Akamai Technologies",
+      "type": "text/plain"
+    }
+  }
+}

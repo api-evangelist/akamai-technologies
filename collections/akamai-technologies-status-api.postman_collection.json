@@ -1,0 +1,153 @@
+{
+  "item": [
+    {
+      "id": "0498bdba-a77d-4bdc-b9a7-82723150cb40",
+      "name": "Status",
+      "description": {
+        "content": "Inspect rate-limit and object-limit status.",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1f676dad-e3bf-449b-861a-1cdab7c27d8c",
+          "name": "Check rate and object limit status",
+          "request": {
+            "name": "Check rate and object limit status",
+            "description": {},
+            "url": {
+              "path": [
+                "rate-limit-status",
+                ":purge-type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "purge-type",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Per-account API hostname prefix from your EdgeGrid credentials.",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "be4918af-2291-4e17-a2b9-1a5e568be1f5",
+              "name": "Limit status.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rate-limit-status",
+                    ":purge-type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "purge-type",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Per-account API hostname prefix from your EdgeGrid credentials.",
+                      "type": "any",
+                      "value": "{{host}}",
+                      "key": "host"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Per-account API hostname prefix from your EdgeGrid credentials.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "akab-xxxxxxxxxx",
+      "key": "host"
+    },
+    {
+      "type": "string",
+      "value": "https://{{host}}.luna.akamaiapis.net/ccu/v3",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "af3aeb0d-a2f7-4b05-9f3e-09cc93a9cabe",
+    "name": "Akamai Fast Purge (CCU v3) Deletions Status API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Akamai Fast Purge (Content Control Utility v3) API for invalidating\nor deleting cached content at the Akamai edge by URL, CP code, or\ncache tag, on either the production or staging network.\nAuthentication uses the Akamai EdgeGrid HMAC-SHA256 scheme. All\nrequests target a per-account hostname under akamaiapis.net.\n\n\nContact Support:\n Name: Akamai Technologies",
+      "type": "text/plain"
+    }
+  }
+}

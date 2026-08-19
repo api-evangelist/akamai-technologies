@@ -1,0 +1,44 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Akamai Fast Purge (CCU v3) Deletions Status API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Status",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Check rate and object limit status",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}.luna.akamaiapis.net/ccu/v3/rate-limit-status/:purge-type",
+            "params": [
+              {
+                "name": "purge-type",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Check rate and object limit status"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

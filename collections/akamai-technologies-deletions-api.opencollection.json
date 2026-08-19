@@ -1,0 +1,92 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Akamai Fast Purge (CCU v3) Deletions API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Deletions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Delete by URL or ARL",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}.luna.akamaiapis.net/ccu/v3/delete/url/:network",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete by URL or ARL"
+        },
+        {
+          "info": {
+            "name": "Delete by CP code",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}.luna.akamaiapis.net/ccu/v3/delete/cpcode/:network",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete by CP code"
+        },
+        {
+          "info": {
+            "name": "Delete by cache tag",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{host}.luna.akamaiapis.net/ccu/v3/delete/tag/:network",
+            "params": [
+              {
+                "name": "network",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Delete by cache tag"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
