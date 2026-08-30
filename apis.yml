@@ -60,6 +60,8 @@ apis:
   humanURL: https://techdocs.akamai.com/adaptive-acceleration/reference
   baseURL: https://{hostname}/adaptive-acceleration/v1
   tags:
+  - Property Report
+  tags_raw:
   - Property report
   properties:
   - type: OpenAPI
@@ -70,6 +72,13 @@ apis:
   humanURL: https://techdocs.akamai.com/alerts-app/reference
   baseURL: https://{hostname}/alerts/v2
   tags:
+  - Access control data
+  - Alert definition
+  - Alert Definitions
+  - Alert details
+  - Alert firings
+  - Alert summaries
+  tags_raw:
   - Access control data
   - Alert definition
   - Alert definitions
@@ -85,6 +94,13 @@ apis:
   humanURL: https://techdocs.akamai.com/mfa/reference
   baseURL: https://{hostname}/amfa/v1
   tags:
+  - Bypass Codes
+  - Devices
+  - Email enrollments
+  - Group
+  - Policies
+  - User aliases
+  tags_raw:
   - Bypass codes
   - Devices
   - Email enrollments
@@ -105,6 +121,12 @@ apis:
   - Cache
   - Categories
   - Contracts and groups
+  tags_raw:
+  - API privacy
+  - CORS
+  - Cache
+  - Categories
+  - Contracts and groups
   - Endpoints
   properties:
   - type: OpenAPI
@@ -115,6 +137,13 @@ apis:
   humanURL: https://techdocs.akamai.com/key-traffic-mgmt/reference
   baseURL: https://{hostname}/apikey-manager-api/v1
   tags:
+  - ACL
+  - Collection Endpoints
+  - Counter endpoints
+  - Counter keys
+  - Key collections
+  - Keys
+  tags_raw:
   - ACLs
   - Collection endpoints
   - Counter endpoints
@@ -130,6 +159,13 @@ apis:
   humanURL: https://techdocs.akamai.com/application-security/reference
   baseURL: https://{hostname}/appsec/v1
   tags:
+  - API Endpoints
+  - API request constraints
+  - Activation history
+  - Activation status
+  - Activations
+  - Attack payload logs
+  tags_raw:
   - API endpoints
   - API request constraints
   - Activation history
@@ -149,6 +185,13 @@ apis:
   - Access key version properties
   - Access key version status requests
   - Access key versions
+  - Access Keys
+  - Property lookups
+  tags_raw:
+  - Access key creation status
+  - Access key version properties
+  - Access key version status requests
+  - Access key versions
   - Access keys
   - Property lookups
   properties:
@@ -160,6 +203,12 @@ apis:
   humanURL: https://techdocs.akamai.com/case-mgmt/reference
   baseURL: https://{hostname}/case-management/v3
   tags:
+  - Account
+  - Case Attachments
+  - Case categories
+  - Case comments
+  - Cases
+  tags_raw:
   - Accounts
   - Case attachments
   - Case categories
@@ -176,6 +225,11 @@ apis:
   tags:
   - CP code
   - Cache tag
+  - Rate Limits
+  - URL/ARL
+  tags_raw:
+  - CP code
+  - Cache tag
   - Rate limits
   - URL/ARL
   properties:
@@ -187,6 +241,13 @@ apis:
   humanURL: https://techdocs.akamai.com/chinacdn/reference
   baseURL: https://{hostname}/chinacdn/v1
   tags:
+  - Edge hostnames
+  - Group
+  - ICP holding entities
+  - ICP numbers
+  - Property hostnames
+  - Provision state changes
+  tags_raw:
   - Edge hostnames
   - Groups
   - ICP holding entities
@@ -226,7 +287,8 @@ apis:
   description: Solve specific business challenges using value-added apps that complement Akamai's core solutions.
   humanURL: https://techdocs.akamai.com/cloudlets/reference
   baseURL: https://{hostname}/cloudlets/api/v2
-  tags:
+  tags: []
+  tags_raw:
   - API
   properties:
   - type: OpenAPI
@@ -268,6 +330,13 @@ apis:
   tags:
   - AS maps
   - CIDR maps
+  - Collection
+  - Contracts
+  - Data Centers
+  - Domains
+  tags_raw:
+  - AS maps
+  - CIDR maps
   - Collections
   - Contracts
   - Data centers
@@ -297,6 +366,11 @@ apis:
   baseURL: https://{hostname}/cprg/v1
   tags:
   - CP codes
+  - Product
+  - Reporting Groups
+  - Watermark limits
+  tags_raw:
+  - CP codes
   - Products
   - Reporting groups
   - Watermark limits
@@ -309,6 +383,10 @@ apis:
   humanURL: https://techdocs.akamai.com/cps/reference
   baseURL: https://{hostname}/cps/v2
   tags:
+  - Changes
+  - Deployment
+  - Enrollments
+  tags_raw:
   - Changes
   - Deployments
   - Enrollments
@@ -325,6 +403,13 @@ apis:
   - Application IDPs
   - Application audit logs
   - Application bundles
+  - Application Categories
+  - Application directories
+  tags_raw:
+  - Admin events reports
+  - Application IDPs
+  - Application audit logs
+  - Application bundles
   - Application categories
   - Application directories
   properties:
@@ -336,6 +421,13 @@ apis:
   humanURL: https://techdocs.akamai.com/datastream2/reference
   baseURL: https://{hostname}/datastream-config-api/v2
   tags:
+  - Activations
+  - Datasets
+  - Group
+  - History
+  - Properties
+  - Streams
+  tags_raw:
   - Activations
   - Data sets
   - Groups
@@ -378,6 +470,12 @@ apis:
   humanURL: https://techdocs.akamai.com/edgekv/reference
   baseURL: https://{hostname}/edgekv/v1
   tags:
+  - Access Tokens
+  - EdgeKV status
+  - Item
+  - Namespaces
+  - Permission Groups
+  tags_raw:
   - Access tokens
   - EdgeKV status
   - Items
@@ -397,6 +495,13 @@ apis:
   - Deactivations
   - EdgeWorker IDs
   - Limits
+  - Permission Groups
+  tags_raw:
+  - Activations
+  - Contracts
+  - Deactivations
+  - EdgeWorker IDs
+  - Limits
   - Permission groups
   properties:
   - type: OpenAPI
@@ -408,6 +513,13 @@ apis:
   humanURL: https://techdocs.akamai.com/etp-config/reference
   baseURL: https://{hostname}/etp-config/v3
   tags:
+  - Acknowledgments
+  - Akamai built-in security lists
+  - Bulk log export
+  - Client Configuration
+  - Client devices
+  - Client network configurations
+  tags_raw:
   - Acknowledgments
   - Akamai built-in security lists
   - Bulk log export
@@ -439,6 +551,9 @@ apis:
   humanURL: https://techdocs.akamai.com/event-viewer/reference
   baseURL: https://{hostname}/event-viewer-api/v1
   tags:
+  - Event Types
+  - Event
+  tags_raw:
   - Event types
   - Events
   properties:
@@ -450,6 +565,9 @@ apis:
   humanURL: https://techdocs.akamai.com/event-ctr/reference
   baseURL: https://{hostname}/events/v3
   tags:
+  - Event
+  - Tags
+  tags_raw:
   - Events
   - Tags
   properties:
@@ -461,6 +579,10 @@ apis:
   humanURL: https://techdocs.akamai.com/firewall-rules/reference
   baseURL: https://{hostname}/firewall-rules-manager/v1
   tags:
+  - CIDR blocks
+  - Services
+  - Subscription
+  tags_raw:
   - CIDR blocks
   - Services
   - Subscriptions
@@ -497,7 +619,8 @@ apis:
   description: Create users and groups, and define policies that manage access to Control Center applications.
   humanURL: https://techdocs.akamai.com/iam-api/reference
   baseURL: https://{hostname}/identity-management/v1
-  tags:
+  tags: []
+  tags_raw:
   - API
   properties:
   - type: OpenAPI
@@ -524,6 +647,13 @@ apis:
   baseURL: https://{hostname}/identity-management/v3
   tags:
   - 'API client: self'
+  - API Clients
+  - Assets
+  - Blocked assets
+  - CIDR blocks
+  - Contact Types
+  tags_raw:
+  - 'API client: self'
   - API clients
   - Assets
   - Blocked assets
@@ -538,6 +668,13 @@ apis:
   humanURL: https://techdocs.akamai.com/ivm/reference
   baseURL: https://{hostname}/imaging/v2
   tags:
+  - Errors
+  - Image collection hitory
+  - Image collections
+  - Image
+  - Logs
+  - Policies
+  tags_raw:
   - Errors
   - Image collection hitory
   - Image collections
@@ -581,6 +718,9 @@ apis:
   baseURL: https://{hostname}/live-archive/v1
   tags:
   - Archives
+  - VOD assets
+  tags_raw:
+  - Archives
   - Endpoints
   - VOD assets
   properties:
@@ -605,6 +745,9 @@ apis:
   baseURL: http://{apiKey}-nsu.akamaihd.net
   tags:
   - API actions
+  - Manage Subscriptions
+  tags_raw:
+  - API actions
   - Manage subscriptions
   properties:
   - type: OpenAPI
@@ -616,6 +759,13 @@ apis:
   humanURL: https://techdocs.akamai.com/network-cloud-firewall/reference
   baseURL: https://{hostname}/network-cloud-firewall/v1
   tags:
+  - ACL aliases
+  - ACL rule hits
+  - ACL Rules
+  - ACL versions
+  - Account limits
+  - Big aliases
+  tags_raw:
   - ACL aliases
   - ACL rule hits
   - ACL rules
@@ -631,6 +781,11 @@ apis:
   humanURL: https://techdocs.akamai.com/network-lists/reference
   baseURL: https://{hostname}/network-list/v2
   tags:
+  - Activations
+  - Elements
+  - Network Lists
+  - Subscription
+  tags_raw:
   - Activations
   - Elements
   - Network lists
@@ -656,6 +811,13 @@ apis:
   baseURL: https://{hostname}/papi/v1
   tags:
   - Active property hostnames
+  - Builds
+  - Bulk activations
+  - Bulk patch
+  - Bulk search
+  - Bulk versioning
+  tags_raw:
+  - Active property hostnames
   - Build
   - Bulk activations
   - Bulk patch
@@ -670,6 +832,13 @@ apis:
   humanURL: https://techdocs.akamai.com/prolexic/reference
   baseURL: https://{hostname}/prolexic-analytics/v2
   tags:
+  - Attack reports
+  - Critical Events
+  - Customer names
+  - Event
+  - Metric types
+  - Metrics
+  tags_raw:
   - Attack reports
   - Critical events
   - Customer names
@@ -696,6 +865,9 @@ apis:
   humanURL: https://techdocs.akamai.com/reporting/reference
   baseURL: https://{hostname}/reporting-api/v1
   tags:
+  - Report Types
+  - Reports
+  tags_raw:
   - Report types
   - Reports
   properties:
@@ -707,6 +879,10 @@ apis:
   humanURL: https://techdocs.akamai.com/reporting/reference
   baseURL: https://{hostname}/reporting-api/v2
   tags:
+  - Report data
+  - Report list
+  - Report Metadata
+  tags_raw:
   - Report data
   - Report list
   - Report metadata
@@ -743,6 +919,8 @@ apis:
   humanURL: https://techdocs.akamai.com/siem-integration/reference
   baseURL: https://{hostname}/siem/v1
   tags:
+  - Event
+  tags_raw:
   - Events
   properties:
   - type: OpenAPI
@@ -777,6 +955,13 @@ apis:
   humanURL: https://techdocs.akamai.com/netstorage/reference
   baseURL: https://{hostname}/storage/v1
   tags:
+  - Account
+  - CP codes
+  - Group
+  - Rulesets
+  - Snapshots
+  - Zones
+  tags_raw:
   - Accounts
   - CP codes
   - Groups
@@ -806,6 +991,13 @@ apis:
   baseURL: https://{hostname}/test-management/v3
   tags:
   - Functions
+  - Test Cases
+  - Test catalog template
+  - Test conditions
+  - Test Requests
+  - Test Runs
+  tags_raw:
+  - Functions
   - Test cases
   - Test catalog template
   - Test conditions
@@ -821,6 +1013,13 @@ apis:
   humanURL: https://techdocs.akamai.com/linode-api/reference/api
   baseURL: https://api.linode.com
   tags:
+  - Access Keys
+  - Account
+  - Account agreements
+  - Account availability
+  - Account logins
+  - Account Settings
+  tags_raw:
   - Access keys
   - Account
   - Account agreements
