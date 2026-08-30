@@ -1,0 +1,81 @@
+generated: '2026-08-30'
+method: generated
+source: openapi/ (58 first-party Akamai OpenAPI descriptions) + conventions/akamai-technologies-conventions.yml
+description: Packaged Agent Skills for the five Akamai flows an agent is most likely to be asked to run. Every operationId
+  referenced was grepped out of the harvested specs; none is invented. Each skill names the reversal path for its
+  writes, because Akamai is an activate/deactivate platform and the undo is the part an agent needs before it acts.
+skill_count: 5
+skills:
+- name: purge-cached-content
+  title: Purge cached content at the Akamai edge
+  file: skills/akamai-technologies-purge-cached-content.md
+  api: akamai-technologies:ccu-v3
+  operations:
+  - post-invalidate-url
+  - post-delete-url
+  - post-invalidate-cpcode
+  - post-delete-cpcode
+  - post-invalidate-tag
+  - post-delete-tag
+  - post-rate-limit-status
+- name: activate-property-version
+  title: Change and activate an Akamai property configuration
+  file: skills/akamai-technologies-activate-property-version.md
+  api: akamai-technologies:papi-v1
+  operations:
+  - get-contracts
+  - get-groups
+  - get-properties
+  - get-property
+  - get-latest-property-version
+  - post-property-versions
+  - get-property-version-rules
+  - put-property-version-rules
+  - post-property-activations
+  - get-property-activation
+  - delete-property-activation
+- name: deploy-edgeworker
+  title: Deploy and roll back an Akamai EdgeWorker
+  file: skills/akamai-technologies-deploy-edgeworker.md
+  api: akamai-technologies:edgeworkers-v1
+  operations:
+  - get-ids
+  - post-ids
+  - get-id
+  - post-activations
+  - get-activations
+  - get-activation
+  - delete-activation
+  - post-rollback-to-previous-active-version
+  - post-deactivations
+- name: provision-cloud-instance
+  title: Provision and manage an Akamai Cloud (Linode) instance
+  file: skills/akamai-technologies-provision-cloud-instance.md
+  api: akamai-technologies:linode-api
+  operations:
+  - get-regions
+  - get-linode-types
+  - get-images
+  - post-linode-instance
+  - get-linode-instance
+  - get-linode-instances
+  - post-boot-linode-instance
+  - post-shutdown-linode-instance
+  - post-reboot-linode-instance
+  - delete-linode-instance
+- name: manage-edge-dns-zone
+  title: Change Akamai Edge DNS records safely
+  file: skills/akamai-technologies-manage-edge-dns-zone.md
+  api: akamai-technologies:config-dns-v2
+  operations:
+  - get-zones
+  - get-zone
+  - post-zone
+  - post-changelists
+  - get-changelists-zone-diff
+  - post-changelists-zone-recordsets
+  - post-changelists-zone-submit
+  - delete-changelists-zone
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

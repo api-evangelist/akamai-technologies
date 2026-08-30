@@ -1,0 +1,46 @@
+generated: '2026-08-30'
+method: searched
+source: https://techdocs.akamai.com/sandbox/docs + openapi/akamai-technologies-sandbox-api-v1-openapi.json
+description: 'Akamai Sandbox is a real local test environment, not a mock: it runs an Akamai edge instance on the
+  developer''s machine, loaded with a copy of a real property configuration, so property-rule and EdgeWorker changes
+  can be exercised against production origins before activation. It is exposed as a first-class API (sandbox-api/v1,
+  17 operations) and as `akamai sandbox` CLI plugin commands. Separately, every activation-bearing Akamai API has
+  a STAGING network alongside PRODUCTION - the `network` path parameter on Fast Purge and the `network` field on
+  property, EdgeWorker and imaging activations - which is the platform-level equivalent of a test mode.'
+modes:
+- name: staging network
+  how: network path parameter or activation field set to `staging` (vs `production`)
+  applies_to:
+  - ccu-v3 (Fast Purge)
+  - papi-v1 (property activations)
+  - edgeworkers-v1
+  - imaging-v2
+  - api-definitions-v2
+  note: Staging resolves through Akamai staging edge servers; it is a real network, not a simulator.
+- name: Akamai Sandbox
+  how: '`akamai sandbox create --property <name>:<version>` then `akamai sandbox start`'
+  applies_to:
+  - papi-v1
+  - edgeworkers-v1
+  api: openapi/akamai-technologies-sandbox-api-v1-openapi.json
+  note: Sandbox instance seeded from a real property version; client requests are routed to it through the sandbox
+    client connection.
+- name: Test Center
+  how: test-management/v3 API and Control Center Test Center app
+  applies_to:
+  - papi-v1
+  api: openapi/akamai-technologies-test-management-v3-openapi.json
+  note: Functional test suites and test cases run against a property version before activation; supports restore
+    of deleted suites and cases.
+- name: Akamai Cloud free credit
+  how: new Akamai Cloud accounts receive promotional credit
+  applies_to:
+  - linode-api
+  note: A credited real account, not a sandbox - resources created are billable once the credit is spent.
+test_credentials: null
+test_values: null
+note: 'No published test card numbers, magic identifiers or hosted test tokens: Akamai has no card-acquiring surface,
+  and every sandbox path above runs against real credentials.'
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

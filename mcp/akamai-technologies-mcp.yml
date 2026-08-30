@@ -1,0 +1,203 @@
+generated: '2026-08-30'
+method: searched
+source: https://github.com/akamai-developers/akamai-cloud-mcp
+name: Akamai Cloud MCP Server
+status: published
+description: 'Akamai publishes one official Model Context Protocol server, akamai-cloud-mcp, covering Akamai Cloud
+  (Linode). It is read-only by construction - a GET-only HTTP client, an allowlist serializer and a recursive secret
+  scrub, enforced by a static scan and a runtime verb guard - and exposes 37 curated tools across ten loadable domains
+  plus one read-only escape hatch. There is no vendor-hosted endpoint: the server is distributed on PyPI and run
+  by the consumer over stdio, or self-hosted behind the auth-gated streamable-http transport. No MCP server is published
+  for the EdgeGrid control-plane APIs (Property Manager, purge, security, identity); those remain REST only.'
+deployment:
+  mode: local-stdio
+  install: uvx akamai-cloud-mcp
+  package: https://pypi.org/project/akamai-cloud-mcp/
+  auth: api-key
+  verified: searched
+  note: The server also ships a streamable-http transport (--transport streamable-http, default bind 127.0.0.1:8080,
+    path /mcp, bearer token required via AKAMAI_MCP_HTTP_AUTH_TOKEN) but Akamai publishes no hosted endpoint URL
+    for it, so an agent cannot reach an Akamai-operated MCP server today - the consumer must run or host it.
+repository: https://github.com/akamai-developers/akamai-cloud-mcp
+license: Apache-2.0
+runtime: Python 3.11+
+transports:
+- stdio
+- streamable-http (self-hosted, bearer-gated)
+domains:
+- regions
+- pricing
+- compute
+- lke
+- object_storage
+- networking
+- account
+- dns
+- databases
+- escape
+authentication:
+  credential: Linode personal access token (LINODE_TOKEN, alias LINODE_API_TOKEN)
+  scopes_recommended:
+  - linodes:read_only
+  - lke:read_only
+  - object_storage:read_only
+  - nodebalancers:read_only
+  - firewall:read_only
+  - vpc:read_only
+  - ips:read_only
+  - account:read_only
+  - events:read_only
+  note: Pricing and catalog tools work with no token; account-scoped tools require one.
+tool_count: 37
+tools:
+- name: linode_list_regions
+  domain: regions
+  description: Regions with capabilities, country, site type, and status.
+  read_only: true
+- name: linode_get_region_availability
+  domain: regions
+  description: Which plans are in stock, account-wide or scoped to one region.
+  read_only: true
+- name: linode_list_instance_types
+  domain: regions
+  description: Plan types with vcpus, memory, disk, transfer, GPUs, class, and prices.
+  read_only: true
+- name: linode_get_pricing
+  domain: pricing
+  description: Per-type pricing for a family with the correct region override applied.
+  read_only: true
+- name: linode_find_gpu_availability
+  domain: pricing
+  description: GPU and accelerated plans with price and the regions where each is in stock.
+  read_only: true
+- name: linode_estimate_cost
+  domain: pricing
+  description: Itemized hourly and monthly cost of a described stack, each line labeled by source.
+  read_only: true
+- name: linode_list_instances
+  domain: compute
+  description: Compute instances with region, type, status, IPs, image, and specs.
+  read_only: true
+- name: linode_get_instance
+  domain: compute
+  description: One instance by id.
+  read_only: true
+- name: linode_list_volumes
+  domain: compute
+  description: Block-storage volumes with size, region, status, and attachment.
+  read_only: true
+- name: linode_list_lke_clusters
+  domain: lke
+  description: LKE clusters with region, Kubernetes version, tier, and control-plane settings.
+  read_only: true
+- name: linode_get_lke_cluster
+  domain: lke
+  description: One cluster with node pools, API endpoints, and control-plane ACL.
+  read_only: true
+- name: linode_list_kubernetes_versions
+  domain: lke
+  description: Kubernetes versions available for new and upgraded clusters.
+  read_only: true
+- name: linode_list_object_storage_buckets
+  domain: object_storage
+  description: Buckets with hostname, endpoint type, size, and object count.
+  read_only: true
+- name: linode_get_object_storage_bucket
+  domain: object_storage
+  description: One bucket's detail (hostname, S3 endpoint, size, object count).
+  read_only: true
+- name: linode_list_object_storage_endpoints
+  domain: object_storage
+  description: Endpoints (region, type, S3 hostname) available to the account.
+  read_only: true
+- name: linode_get_object_storage_transfer
+  domain: object_storage
+  description: Object Storage network transfer for the current billing period.
+  read_only: true
+- name: linode_list_object_storage_quotas
+  domain: object_storage
+  description: Object Storage quotas.
+  read_only: true
+- name: linode_list_firewalls
+  domain: networking
+  description: Cloud Firewalls with status and tags.
+  read_only: true
+- name: linode_get_firewall
+  domain: networking
+  description: One firewall with its inbound/outbound rules and attached resources.
+  read_only: true
+- name: linode_list_ips
+  domain: networking
+  description: IP addresses with type, region, reverse DNS, and assignment.
+  read_only: true
+- name: linode_list_vlans
+  domain: networking
+  description: VLANs with region, CIDR, and attached instances.
+  read_only: true
+- name: linode_list_vpcs
+  domain: networking
+  description: VPCs with region and description.
+  read_only: true
+- name: linode_get_vpc
+  domain: networking
+  description: One VPC with its subnets and the instances in each.
+  read_only: true
+- name: linode_list_nodebalancers
+  domain: networking
+  description: NodeBalancers with region, hostname, IPs, and transfer usage.
+  read_only: true
+- name: linode_get_account
+  domain: account
+  description: Company, country, balance, capabilities. Payment and personal fields redacted.
+  read_only: true
+- name: linode_get_account_transfer
+  domain: account
+  description: Network transfer for the current billing period, including per-region.
+  read_only: true
+- name: linode_list_invoices
+  domain: account
+  description: Invoices with date, subtotal, tax, and total. Payment detail redacted.
+  read_only: true
+- name: linode_list_events
+  domain: account
+  description: Recent account events (the audit log).
+  read_only: true
+- name: linode_get_account_limits
+  domain: account
+  description: Composed account-limits summary (rate limits, Object Storage quotas, transfer pool).
+  read_only: true
+- name: linode_list_domains
+  domain: dns
+  description: DNS domains (zones) with type, status, and SOA email.
+  read_only: true
+- name: linode_get_domain
+  domain: dns
+  description: One zone with SOA timers, master/AXFR IPs, and tags.
+  read_only: true
+- name: linode_list_domain_records
+  domain: dns
+  description: A/AAAA/NS/MX/CNAME/TXT/SRV/PTR/CAA records with name, target, and TTL.
+  read_only: true
+- name: linode_list_databases
+  domain: databases
+  description: Managed Database clusters (all engines) with engine, version, region, status, plan, and host.
+  read_only: true
+- name: linode_get_database
+  domain: databases
+  description: One database by engine and id, with host, port, and maintenance window.
+  read_only: true
+- name: linode_list_database_engines
+  domain: databases
+  description: Available database engines and versions.
+  read_only: true
+- name: linode_list_database_types
+  domain: databases
+  description: Managed Database plan types with vcpus, memory, disk, engines, and price.
+  read_only: true
+- name: linode_api_get
+  domain: escape
+  description: Read-only GET against any Linode API v4 path a curated tool does not cover.
+  read_only: true
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

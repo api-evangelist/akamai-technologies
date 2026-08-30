@@ -1,0 +1,79 @@
+generated: '2026-08-30'
+method: probed
+source: https://techdocs.akamai.com/.well-known/api-catalog
+description: Probe of the RFC 8615 /.well-known/ namespace on every Akamai host named in apis.yml. techdocs.akamai.com
+  serves a real RFC 9727 API catalog (application/linkset+json) listing 116 Akamai API products, each with its own
+  per-product api-catalog and reference documentation link. www.akamai.com answers 403 to non-browser clients on
+  every path (Akamai Bot Manager on their own edge), so no document could be read there; that is a crawler outcome,
+  not a statement that the documents are absent.
+hosts:
+- host: techdocs.akamai.com
+  documents:
+  - path: /.well-known/api-catalog
+    status: 200
+    file: well-known/akamai-technologies-api-catalog.json
+    content_type: application/linkset+json
+    note: RFC 9727 linkset, 116 service anchors.
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: 200 but the body is the 3.7MB documentation SPA shell (text/html), not an RFC 9116 document - treated
+      as a miss.
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: 200 with the same HTML SPA shell - not an A2A agent card. Rejected.
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: 200 with the same HTML SPA shell - not an A2A agent card. Rejected.
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+- host: developers.akamai.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+- host: www.akamai.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    file: null
+    note: Bot challenge - Akamai edge refused the crawler.
+  - path: /.well-known/api-catalog
+    status: 403
+    file: null
+    note: Bot challenge.
+  - path: /.well-known/openid-configuration
+    status: 403
+    file: null
+    note: Bot challenge.
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    file: null
+    note: Bot challenge.
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    file: null
+    note: Bot challenge.
+  - path: /.well-known/agent-card.json
+    status: 403
+    file: null
+    note: Bot challenge.
+  - path: /.well-known/agent.json
+    status: 403
+    file: null
+    note: Bot challenge.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

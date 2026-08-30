@@ -1,0 +1,279 @@
+generated: '2026-08-30'
+method: derived
+source: openapi/akamai-technologies-papi-v1-openapi.json + openapi/akamai-technologies-linode-api-openapi.json +
+  openapi/akamai-technologies-config-dns-v2-openapi.json
+description: 'Two distinct entity graphs sit under the Akamai name. The EdgeGrid control plane hangs everything
+  off the commercial hierarchy - account > contract > group - and every configuration object (property, include,
+  security config, CP code, certificate enrollment) is created inside a contract and group, which is why contractId
+  and groupId are query parameters on nearly every collection. Below that, the platform is version-and-activation
+  shaped: you never edit a live object, you create a new version, edit that, and activate it to staging or production.
+  Akamai Cloud (Linode) is a flat resource graph keyed on numeric ids with region as the placement axis.'
+id_conventions:
+- surface: edgegrid
+  pattern: prefixed opaque ids
+  examples:
+  - prp_123456 (property)
+  - ctr_C-1234 (contract)
+  - grp_12345 (group)
+  - cpc_12345 (CP code)
+  - ehn_12345 (edge hostname)
+  - atv_1234567 (activation)
+  - inc_12345 (include)
+  note: The PAPI-Use-Prefixes request header (70 operations) toggles whether ids come back prefixed or bare - a
+    genuine trap for a client that assumes one form.
+- surface: linode
+  pattern: bare integers plus string slugs
+  examples:
+  - linodeId 12345
+  - region us-east
+  - type g6-standard-2
+  - image linode/ubuntu24.04
+entities:
+- name: Account
+  surface: edgegrid
+  note: The billing and identity root. accountSwitchKey selects a managed account.
+- name: Contract
+  surface: edgegrid
+  operations:
+  - get-contracts
+  belongs_to: Account
+- name: Group
+  surface: edgegrid
+  operations:
+  - get-groups
+  belongs_to: Account
+  note: Groups form a tree and carry access control; a group may span contracts.
+- name: Product
+  surface: edgegrid
+  operations:
+  - get-products
+  belongs_to: Contract
+- name: Property
+  surface: edgegrid
+  operations:
+  - post-properties
+  - get-properties
+  - get-property
+  - delete-property
+  belongs_to:
+  - Contract
+  - Group
+- name: PropertyVersion
+  surface: edgegrid
+  operations:
+  - post-property-versions
+  - get-property-versions
+  - get-property-version
+  - get-latest-property-version
+  belongs_to: Property
+  note: The unit of edit. Rules, hostnames and includes all hang off a version.
+- name: RuleTree
+  surface: edgegrid
+  operations:
+  - get-property-version-rules
+  - put-property-version-rules
+  - patch-property-version-rules
+  belongs_to: PropertyVersion
+  note: The behaviour/criteria document that actually configures the edge.
+- name: PropertyHostname
+  surface: edgegrid
+  operations:
+  - get-property-version-hostnames
+  - put-property-version-hostnames
+  - patch-property-hostnames
+  belongs_to: PropertyVersion
+  references: EdgeHostname
+- name: EdgeHostname
+  surface: edgegrid
+  operations:
+  - post-edgehostnames
+  - get-edgehostnames
+  - get-edgehostname
+  belongs_to: Contract
+- name: Activation
+  surface: edgegrid
+  operations:
+  - post-property-activations
+  - get-property-activations
+  - delete-property-activation
+  belongs_to: PropertyVersion
+  note: Carries network=STAGING|PRODUCTION. Cancellable while pending.
+- name: Include
+  surface: edgegrid
+  operations:
+  - post-include-activation
+  - delete-include-activation
+  belongs_to:
+  - Contract
+  - Group
+  note: Reusable rule fragment referenced by property versions.
+- name: CPCode
+  surface: edgegrid
+  spec: openapi/akamai-technologies-cprg-v1-openapi.json
+  belongs_to: Contract
+  note: The reporting and billing key; also a Fast Purge target.
+- name: EdgeWorker
+  surface: edgegrid
+  spec: openapi/akamai-technologies-edgeworkers-v1-openapi.json
+  operations:
+  - post-ids
+  - get-ids
+  - post-activations
+  - post-rollback-to-previous-active-version
+  belongs_to:
+  - Contract
+  - Group
+  note: Versioned bundle with its own activation lifecycle; bound to a property by rule behaviour.
+- name: CertificateEnrollment
+  surface: edgegrid
+  spec: openapi/akamai-technologies-cps-v2-openapi.json
+  operations:
+  - post-enrollment
+  - put-enrollment
+  - delete-enrollment-change
+  belongs_to: Contract
+- name: Zone
+  surface: edgegrid
+  spec: openapi/akamai-technologies-config-dns-v2-openapi.json
+  operations:
+  - post-zone
+  - get-zones
+  - get-zone
+  belongs_to:
+  - Contract
+  - Group
+- name: ChangeList
+  surface: edgegrid
+  spec: openapi/akamai-technologies-config-dns-v2-openapi.json
+  operations:
+  - post-changelists
+  - post-changelists-zone-recordsets
+  - post-changelists-zone-submit
+  belongs_to: Zone
+  note: Edge DNS uses the same stage-then-submit shape as property activation.
+- name: Linode
+  surface: linode
+  operations:
+  - post-linode-instance
+  - get-linode-instances
+  - get-linode-instance
+  - delete-linode-instance
+  references:
+  - Region
+  - LinodeType
+  - Image
+- name: Volume
+  surface: linode
+  operations:
+  - get-volumes
+  references:
+  - Region
+  - Linode
+- name: LKECluster
+  surface: linode
+  operations:
+  - get-lke-clusters
+  - get-lke-cluster
+  references: Region
+- name: ObjectStorageBucket
+  surface: linode
+  operations:
+  - get-object-storage-buckets
+  references: Region
+- name: Firewall
+  surface: linode
+  operations:
+  - get-firewalls
+  - get-firewall
+  references: Linode
+- name: VPC
+  surface: linode
+  operations:
+  - get-vpcs
+  - get-vpc
+  references: Region
+- name: Domain
+  surface: linode
+  operations:
+  - get-domains
+  - get-domain
+  - get-domain-records
+relationships:
+- from: Contract
+  to: Account
+  type: belongs_to
+  via: accountId
+- from: Group
+  to: Account
+  type: belongs_to
+  via: accountId
+- from: Property
+  to: Contract
+  type: belongs_to
+  via: contractId
+- from: Property
+  to: Group
+  type: belongs_to
+  via: groupId
+- from: Property
+  to: PropertyVersion
+  type: has_many
+  via: propertyId
+- from: PropertyVersion
+  to: RuleTree
+  type: has_one
+  via: propertyVersion
+- from: PropertyVersion
+  to: PropertyHostname
+  type: has_many
+  via: propertyVersion
+- from: PropertyHostname
+  to: EdgeHostname
+  type: belongs_to
+  via: cnameTo / edgeHostnameId
+- from: PropertyVersion
+  to: Activation
+  type: has_many
+  via: propertyVersion
+- from: PropertyVersion
+  to: Include
+  type: has_many
+  via: includeId
+- from: EdgeWorker
+  to: Property
+  type: has_many
+  via: get-properties on the EdgeWorker id
+- from: Zone
+  to: ChangeList
+  type: has_one
+  via: zone
+- from: Linode
+  to: Region
+  type: belongs_to
+  via: region
+- from: Linode
+  to: LinodeType
+  type: belongs_to
+  via: type
+- from: Linode
+  to: Image
+  type: belongs_to
+  via: image
+- from: Volume
+  to: Linode
+  type: belongs_to
+  via: linode_id
+- from: Firewall
+  to: Linode
+  type: has_many
+  via: entities
+- from: Domain
+  to: DomainRecord
+  type: has_many
+  via: domain_id
+schema_counts:
+  papi-v1: 0
+  linode-api: 77
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

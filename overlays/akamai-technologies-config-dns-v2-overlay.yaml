@@ -1,0 +1,31 @@
+overlay: 1.0.0
+info:
+  title: Akamai Edge DNS - API Evangelist enhancements
+  version: 1.0.0
+extends: openapi/akamai-technologies-config-dns-v2-openapi.json
+actions:
+- target: $
+  description: Declare the EdgeGrid security scheme the upstream Akamai spec omits.
+  update:
+    components:
+      securitySchemes:
+        EdgeGrid:
+          type: apiKey
+          in: header
+          name: Authorization
+          description: 'Akamai EdgeGrid request signing. Send Authorization: EG1-HMAC-SHA256 client_token=...;access_token=...;timestamp=...;nonce=...;signature=
+            computed over the method, path, host, selected headers and a hash of the request body, using the credentials
+            from your ~/.edgerc section. Documented at https://techdocs.akamai.com/developer/docs/authenticate-with-edgegrid
+            - NOT declared in the upstream spec.'
+    security:
+    - EdgeGrid: []
+- target: $.info
+  description: Record where this contract came from and how it is authenticated.
+  update:
+    x-akamai-source: https://github.com/akamai/akamai-apis
+    x-akamai-auth: EdgeGrid EG1-HMAC-SHA256
+    x-akamai-host-variable: '{hostname} is your per-account API hostname, e.g. akab-xxxxxxxx.luna.akamaiapis.net,
+      from ~/.edgerc'
+x-generated: '2026-08-30'
+x-method: generated
+x-note: Captures enhancements only; the upstream openapi/ file is never mutated.

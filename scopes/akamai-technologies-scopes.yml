@@ -1,0 +1,210 @@
+generated: '2026-08-30'
+method: derived
+source: openapi/akamai-technologies-linode-api-openapi.json
+schemes:
+- name: oauth
+  source: openapi/akamai-technologies-linode-api-openapi.json
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://login.linode.com/oauth/authorize
+    tokenUrl: https://login.linode.com/oauth/token
+scopes:
+- scope: account:read_only
+  description: Allows access to GET information about your account.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: account:read_write
+  description: Allows access to all endpoints related to your account.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: child_account:read_only
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: child_account:read_write
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: databases:read_only
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: databases:read_write
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: domains:read_only
+  description: Allows access to GET Domains on your account.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: domains:read_write
+  description: Allows access to all Domain endpoints.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: events:read_only
+  description: Allows access to GET your Events.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: events:read_write
+  description: Allows access to all endpoints related to your Events.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: firewall:read_only
+  description: Allows access to GET information about your Firewalls.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: firewall:read_write
+  description: Allows access to all Firewall endpoints.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: images:read_only
+  description: Allows access to GET your Images.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: images:read_write
+  description: Allows access to all endpoints related to your Images.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: ips:read
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: ips:read_only
+  description: Allows access to GET your ips.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: ips:read_write
+  description: Allows access to all endpoints related to your ips.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: linode:read_only
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: linodes:read_only
+  description: Allows access to GET Linodes on your account.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: linodes:read_write
+  description: Allow access to all endpoints related to your Linodes.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: lke:read_only
+  description: Allows access to GET LKE Clusters on your account.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: lke:read_write
+  description: Allows access to all endpoints related to LKE Clusters on your account.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: longview:read_only
+  description: Allows access to GET your Longview Clients.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: longview:read_write
+  description: Allows access to all endpoints related to your Longview Clients.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: monitor:read-write
+  description: Allows access to all Monitor (Akamai Cloud Pulse) endpoints.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: monitor:read_only
+  description: Allows access to Monitor (Akamai Cloud Pulse) data.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: monitor:read_write
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: nodebalancers:read_only
+  description: Allows access to GET NodeBalancers on your account.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: nodebalancers:read_write
+  description: Allows access to all NodeBalancer endpoints.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: object_storage:read_only
+  description: Allows access to GET information related to your Object Storage.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: object_storage:read_write
+  description: Allows access to all Object Storage endpoints.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: placement:read_only
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: stackscripts:read_only
+  description: Allows access to GET your StackScripts.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: stackscripts:read_write
+  description: Allows access to all endpoints related to your StackScripts.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: volumes:read_only
+  description: Allows access to GET your Volumes.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: volumes:read_write
+  description: Allows access to all endpoints related to your Volumes.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+- scope: vpc:read_write
+  description: Allows access to all endpoints related to VPC and Subnet creation, updating,
+    and deletion.
+  flows:
+  - authorizationCode
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json

@@ -1,0 +1,65 @@
+generated: '2026-08-30'
+method: searched
+source: https://github.com/akamai/cli + https://github.com/linode/linode-cli + https://techdocs.akamai.com/developer/docs/cli
+description: 'Akamai ships three first-party command lines. `akamai` is a Go host binary with a plugin package manager:
+  the core binary installs and updates per-product plugins, each of which wraps one EdgeGrid API. `linode-cli` is
+  a separate Python CLI for Akamai Cloud, generated from the Linode OpenAPI description, so its command surface
+  tracks the spec automatically.'
+clis:
+- name: akamai
+  repository: https://github.com/akamai/cli
+  language: Go
+  official: true
+  install:
+  - brew install akamai
+  - docker run -it -v $HOME/.edgerc:/root/.edgerc:ro akamai/shell
+  - download a release binary from https://github.com/akamai/cli/releases
+  auth: ~/.edgerc credentials file (EdgeGrid client_token / client_secret / access_token / host), section selected
+    with --section
+  model: host binary + installable plugins (`akamai install <plugin>`)
+  plugins:
+  - name: property-manager
+    repository: https://github.com/akamai/cli-property-manager
+    api: papi-v1
+  - name: purge
+    repository: https://github.com/akamai/cli-purge
+    api: ccu-v3
+  - name: edgeworkers
+    repository: https://github.com/akamai/cli-edgeworkers
+    api: edgeworkers-v1
+  - name: dns
+    repository: https://github.com/akamai/cli-dns
+    api: config-dns-v2
+  - name: gtm
+    repository: https://github.com/akamai/cli-gtm
+    api: config-gtm-v1
+  - name: cps
+    repository: https://github.com/akamai/cli-cps
+    api: cps-v2
+  - name: eaa
+    repository: https://github.com/akamai/cli-eaa
+    api: crux-v1
+  - name: terraform
+    repository: https://github.com/akamai/cli-terraform
+    api: multiple (exports existing config as Terraform)
+- name: linode-cli
+  repository: https://github.com/linode/linode-cli
+  language: Python
+  official: true
+  install:
+  - pip install linode-cli
+  - brew install linode-cli
+  auth: '`linode-cli configure` (OAuth browser flow) or LINODE_CLI_TOKEN personal access token'
+  model: generated from the Linode OpenAPI description - every API resource becomes a command group
+  note: Also ships `linode-cli obj`, an s3cmd-style client for Object Storage.
+- name: akr
+  repository: https://github.com/akamai/akr
+  language: Rust
+  official: true
+  install:
+  - brew install akamai/mfa/akr
+  auth: Akamai MFA enrollment
+  model: Akamai MFA CLI and SSH agent
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

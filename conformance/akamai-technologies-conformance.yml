@@ -1,0 +1,74 @@
+generated: '2026-08-30'
+method: derived
+source: openapi/ (58 first-party Akamai OpenAPI descriptions) + https://techdocs.akamai.com/linode-api/reference/rate-limits
+description: 'Standards the Akamai contracts assert about themselves, read from the specs rather than from marketing
+  copy. The strongest signal is RFC 7807: 3,227 of the 3,381 error-response media types across the harvested specs
+  are a problem+json flavour. OAuth 2.0 and OIDC are present only on the Akamai Cloud / MFA side; the EdgeGrid control
+  plane uses its own HMAC signature scheme and declares no securitySchemes at all.'
+entries:
+- id: openapi-3
+  conforms: true
+  evidence: 58 published OpenAPI descriptions (3.0.x and 3.1.x) in github.com/akamai/akamai-apis and github.com/linode/linode-api-openapi,
+    Apache-2.0 licensed.
+- id: rfc7807
+  conforms: true
+  evidence: 3,199 application/problem+json plus 28 application/api-problem+json error responses across the harvested
+    specs.
+- id: rfc9457
+  conforms: partial
+  evidence: The envelope matches RFC 9457 (type/title/detail/instance/status) but the declared media type is the
+    RFC 7807 spelling; no spec declares the 9457 extension members.
+- id: rfc9727
+  conforms: true
+  evidence: https://techdocs.akamai.com/.well-known/api-catalog returns application/linkset+json with 116 service
+    anchors, each carrying service-desc and service-doc links. Saved verbatim to well-known/akamai-technologies-api-catalog.json.
+- id: oauth2
+  conforms: true
+  evidence: openapi/akamai-technologies-linode-api-openapi.json declares an authorizationCode flow at login.linode.com/oauth/authorize
+    with 37 read_only/read_write scopes.
+- id: oidc
+  conforms: partial
+  evidence: Akamai MFA publishes an OIDC API (techdocs.akamai.com, "Akamai MFA OIDC API"), but no /.well-known/openid-configuration
+    was served on any Akamai host probed (404 on techdocs, 403 on www).
+- id: rfc9116
+  conforms: false
+  evidence: /.well-known/security.txt returned 404 on developers.akamai.com, an HTML SPA shell on techdocs.akamai.com,
+    and 403 on www.akamai.com.
+- id: rfc8594
+  conforms: false
+  evidence: No Sunset or Deprecation response headers in any of the 58 specs; deprecation is announced in per-product
+    changelogs only.
+- id: idempotency
+  conforms: false
+  evidence: No Idempotency-Key parameter in any spec; If-Match/ETag preconditions on 38 operations serve the safe-retry
+    role instead.
+- id: pagination
+  conforms: partial
+  evidence: Linode uses page/page_size with data/page/pages/results; the EdgeGrid APIs have no common pagination
+    contract.
+- id: http-conditional-requests
+  conforms: true
+  evidence: If-Match on 38 operations with 412 responses - optimistic concurrency on property, include and configuration
+    versions.
+domain_standards:
+- id: rfc9727-api-catalog
+  present: true
+  where: https://techdocs.akamai.com/.well-known/api-catalog
+  note: The API-catalog standard is itself the domain standard for a platform of this size; Akamai is one of the
+    very few providers in the catalog actually serving one.
+compliance_claims:
+  read: false
+  note: Akamai publishes its certification and compliance program at www.akamai.com/legal/compliance, but every
+    request to www.akamai.com from this pipeline returned 403 - Akamai Bot Manager on their own edge refuses non-browser
+    clients. No certification is asserted here because none could be read. No Compliance or TrustCenter pointer
+    is emitted on the strength of an unread page.
+  evidence:
+  - url: https://www.akamai.com/legal/compliance
+    status: 403
+  - url: https://akamai.com/legal/compliance
+    status: 403
+  - url: https://www.linode.com/legal-compliance/
+    status: 403
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

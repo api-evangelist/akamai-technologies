@@ -1,0 +1,200 @@
+generated: '2026-08-30'
+method: derived
+source: openapi/ (58 first-party Akamai OpenAPI descriptions) + https://techdocs.akamai.com/developer/docs/make-your-first-api-call
+description: Cross-cutting runtime semantics shared by the Akamai EdgeGrid control plane and the Linode (Akamai
+  Cloud) API. The two halves differ in almost every convention - auth scheme, pagination, versioning, rate-limit
+  headers - so each is recorded separately rather than averaged into one house style.
+authentication:
+  edgegrid: EG1-HMAC-SHA256 request signing in the Authorization header, against a per-account hostname; credentials
+    come from a ~/.edgerc section.
+  linode: OAuth 2.0 authorization code flow (login.linode.com) or a personal access token as a Bearer token.
+  see: authentication/akamai-technologies-authentication.yml
+idempotency:
+  supported: false
+  header: null
+  evidence: 'No Idempotency-Key (or equivalent) parameter appears in any of the 58 harvested specs, and the Akamai
+    TechDocs llms.txt index contains no occurrence of "idempoten". Safe retry is achieved instead by optimistic
+    concurrency: If-Match / ETag on 38 operations, returning 412 when the version has moved.'
+  substitute:
+    mechanism: If-Match ETag preconditions
+    operations: 38
+    failure_status: 412
+pagination:
+- surface: linode-api
+  style: page-number
+  params:
+  - page
+  - page_size
+  response_fields:
+  - data
+  - page
+  - pages
+  - results
+  default_page_size: 100
+  note: GET collections are rate limited to 200 requests/minute, lower than the 1600/minute default.
+- surface: edgegrid control plane
+  style: mixed / per-API
+  params:
+  - offset
+  - limit
+  - page
+  - pageSize
+  - from
+  - to
+  note: There is no platform-wide pagination contract; most configuration APIs return the full collection and the
+    reporting/diagnostic APIs use offset+limit or a time window.
+filtering:
+  linode: X-Filter request header carrying a JSON filter document.
+  edgegrid: Per-API query parameters; contractId + groupId scope nearly every Property Manager collection.
+versioning:
+  style: URI path
+  examples:
+  - /papi/v1
+  - /ccu/v3
+  - /identity-management/v3
+  - /v4 (Linode, via the {apiVersion} path variable)
+  note: Major versions run in parallel - identity-management ships v1, v2 and v3 concurrently, cloudlets v2 and
+    v3, reporting-api v1 and v2 - so a version is retired by product decision, not by URL rewrite.
+account_switching:
+  parameter: accountSwitchKey
+  occurrences: 1609
+  note: A query parameter on essentially every EdgeGrid operation, letting a partner or reseller act against a managed
+    account. It is the single most common parameter in the whole Akamai surface.
+error_envelope:
+  format: rfc7807
+  see: errors/akamai-technologies-problem-types.yml
+rate_limit_signaling:
+  headers:
+  - X-Ratelimit-Limit
+  - X-Ratelimit-Remaining
+  - X-Ratelimit-Limit-Per-Second
+  - X-Ratelimit-Limit-Objects
+  - X-Ratelimit-Remaining-Objects
+  - X-Ratelimit-Limit-Per-Second-Objects
+  - X-Ratelimit-Seconds-To-Refresh-Limit
+  - X-Ratelimit-Seconds-To-Refresh-Limit-Objects
+  - X-RateLimit-Next
+  - X-Rate-Limit-Retry-After-Seconds
+  status: 429
+  see: rate-limits/akamai-technologies-rate-limits.yml
+request_tracing:
+  field: supportId (Fast Purge) / instance (RFC 7807)
+  header: null
+  note: Akamai does not return a platform-wide request-id header in the harvested specs; the correlation value is
+    carried in the error body.
+staging_vs_production:
+  mechanism: '`network` path parameter or activation field, values production | staging'
+  note: Every activation-bearing API can be exercised on the staging network first. See sandbox/akamai-technologies-sandbox.yml.
+reversibility:
+  grade: verified
+  summary: 'Akamai is unusually strong here: the platform is built on an activate/deactivate model, so most consequential
+    writes are a staged activation that can be cancelled while pending and rolled back or deactivated once live.
+    39 reversal operations were found across the harvested specs. The one genuinely irreversible action is a cache
+    purge - Fast Purge cannot be un-purged; the reversal is a re-fetch from origin.'
+  surfaces:
+  - write: Activate a property version
+    operation: post-property-activations
+    spec: openapi/akamai-technologies-papi-v1-openapi.json
+    reversal: delete-property-activation
+    reversal_kind: cancel
+    window: While the activation is PENDING. Once the activation completes it can no longer be cancelled; the reversal
+      is then to activate the previous version.
+    docs: https://techdocs.akamai.com/property-mgr/reference/delete-property-activation
+    verified: true
+  - write: Activate an include version
+    operation: post-include-activation
+    spec: openapi/akamai-technologies-papi-v1-openapi.json
+    reversal: delete-include-activation
+    reversal_kind: cancel
+    window: While the activation is pending.
+    docs: https://techdocs.akamai.com/property-mgr/reference/delete-include-activation
+    verified: true
+  - write: Change property hostnames (creates a hostname activation)
+    operation: patch-property-hostnames
+    spec: openapi/akamai-technologies-papi-v1-openapi.json
+    reversal: delete-property-hostname-activations
+    reversal_kind: cancel
+    window: While the hostname activation is pending.
+    docs: https://techdocs.akamai.com/property-mgr/reference
+    verified: true
+  - write: Activate an EdgeWorker version
+    operation: post-activations
+    spec: openapi/akamai-technologies-edgeworkers-v1-openapi.json
+    reversal: post-rollback-to-previous-active-version
+    reversal_kind: rollback
+    window: Any time while a previous version exists; a separate delete-activation cancels an activation that is
+      still in progress.
+    docs: https://techdocs.akamai.com/edgeworkers/reference
+    verified: true
+  - write: Deploy an Image & Video Manager policy
+    operation: put-policy
+    spec: openapi/akamai-technologies-imaging-v2-openapi.json
+    reversal: put-rollback-policy
+    reversal_kind: rollback
+    window: To the previous policy version.
+    docs: https://techdocs.akamai.com/ivm/reference
+    verified: true
+  - write: Update a certificate enrollment (creates a change)
+    operation: put-enrollment
+    spec: openapi/akamai-technologies-cps-v2-openapi.json
+    reversal: delete-enrollment-change
+    reversal_kind: cancel
+    window: While the change is still in the workflow.
+    docs: https://techdocs.akamai.com/cps/reference
+    verified: true
+  - write: Revoke API keys
+    operation: post-keys-revoke
+    spec: openapi/akamai-technologies-apikey-manager-api-v1-openapi.json
+    reversal: post-keys-restore
+    reversal_kind: restore
+    window: null
+    docs: https://techdocs.akamai.com/key-traffic-mgmt/reference
+    verified: false
+    note: A restore operation exists; the docs consulted here do not state a time window, so this row is documented
+      rather than verified.
+  - write: Delete a test suite / test cases
+    operation: delete-test-suite
+    spec: openapi/akamai-technologies-test-management-v3-openapi.json
+    reversal: post-test-suite-restore
+    reversal_kind: restore
+    window: null
+    docs: https://techdocs.akamai.com/test-ctr/reference
+    verified: false
+  - write: Restore a Linode from backup
+    operation: post-restore-backup
+    spec: openapi/akamai-technologies-linode-api-openapi.json
+    reversal: post-restore-backup
+    reversal_kind: restore
+    window: Automatic backups retain daily, weekly and biweekly snapshots per the backup service retention; a manual
+      snapshot is retained until replaced.
+    docs: https://techdocs.akamai.com/linode-api/reference/post-restore-backup
+    verified: false
+    note: Retention is stated in the Backups product docs rather than the API reference, so recorded as documented.
+  - write: Purge cached objects
+    operation: post-delete-url
+    spec: openapi/akamai-technologies-ccu-v3-openapi.json
+    reversal: null
+    reversal_kind: none
+    window: null
+    docs: https://techdocs.akamai.com/purge-cache/reference
+    note: IRREVERSIBLE. A delete purge removes the object from edge cache; the only recovery is a re-fetch from
+      origin, which costs origin load. `invalidate` is the safer sibling - it marks the object stale and revalidates
+      on next request rather than evicting it.
+  - write: Cancel your Akamai Cloud account
+    operation: post-cancel-account
+    spec: openapi/akamai-technologies-linode-api-openapi.json
+    reversal: null
+    reversal_kind: none
+    window: null
+    docs: https://techdocs.akamai.com/linode-api/reference/post-cancel-account
+    note: IRREVERSIBLE and destructive. Summary in the spec reads "Delete your account".
+  reversal_operation_count: 39
+dry_run_mode:
+  supported: true
+  mechanism: Activate to the `staging` network first, and/or run a Test Center functional test suite against the
+    property version before activating to production.
+  note: This is a real rehearsal against Akamai edge servers rather than a request-level dry-run flag; no operation
+    in the harvested specs takes a dryRun parameter.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,306 @@
+generated: '2026-08-30'
+method: derived
+source: mcp/akamai-technologies-mcp.yml + openapi/akamai-technologies-linode-api-openapi.json
+description: 'Binds each tool of the official akamai-cloud-mcp server to the Linode (Akamai Cloud) API operation
+  it calls. The MCP server covers only Akamai Cloud; the other 57 harvested OpenAPI descriptions - Property Manager,
+  Fast Purge, Application Security, Edge DNS, EdgeWorkers, CPS, Identity and Access Management and the rest of the
+  EdgeGrid control plane - have no MCP tool at all, which is the single largest agent-surface gap in this provider.
+  The live tool schemas were not introspected: the server is stdio-only and requires a Linode token, so tools are
+  mapped by published name and description.'
+surfaces:
+  openapi: openapi/akamai-technologies-linode-api-openapi.json
+  graphql: null
+  mcp: stdio only (uvx akamai-cloud-mcp) - no hosted endpoint published
+  gated:
+  - MCP tools/list requires a local process and a Linode personal access token
+coverage:
+  mcp_tools: 37
+  mapped: 34
+  mcp_only: 3
+  rest_operations_linode: 505
+  rest_only: 469
+  rest_operations_without_any_mcp_tool_all_specs: 2127
+crosswalk:
+- tool: linode_list_regions
+  category: regions
+  rest:
+  - get-regions
+  binding: operationId
+  confidence: high
+- tool: linode_get_region_availability
+  category: regions
+  rest:
+  - get-account-availability
+  - get-regions-availability
+  binding: operationId
+  confidence: high
+- tool: linode_list_instance_types
+  category: regions
+  rest:
+  - get-linode-types
+  binding: operationId
+  confidence: high
+- tool: linode_get_pricing
+  category: pricing
+  rest:
+  - get-linode-types
+  - get-network-transfer-prices
+  - get-lke-types
+  - get-object-storage-types
+  binding: operationId
+  confidence: medium
+  note: 'Partial match: get-volumes-types, get-nodebalancer-types not found under that exact operationId.'
+- tool: linode_find_gpu_availability
+  category: pricing
+  rest:
+  - get-linode-types
+  - get-regions-availability
+  binding: operationId
+  confidence: high
+- tool: linode_list_instances
+  category: compute
+  rest:
+  - get-linode-instances
+  binding: operationId
+  confidence: high
+- tool: linode_get_instance
+  category: compute
+  rest:
+  - get-linode-instance
+  binding: operationId
+  confidence: high
+- tool: linode_list_volumes
+  category: compute
+  rest:
+  - get-volumes
+  binding: operationId
+  confidence: high
+- tool: linode_list_lke_clusters
+  category: lke
+  rest:
+  - get-lke-clusters
+  binding: operationId
+  confidence: high
+- tool: linode_get_lke_cluster
+  category: lke
+  rest:
+  - get-lke-cluster
+  binding: operationId
+  confidence: high
+- tool: linode_list_kubernetes_versions
+  category: lke
+  rest:
+  - get-lke-versions
+  binding: operationId
+  confidence: high
+- tool: linode_list_object_storage_buckets
+  category: object_storage
+  rest:
+  - get-object-storage-buckets
+  binding: operationId
+  confidence: high
+- tool: linode_get_object_storage_bucket
+  category: object_storage
+  rest:
+  - get-object-storage-bucketin-cluster
+  binding: operationId
+  confidence: high
+- tool: linode_list_object_storage_endpoints
+  category: object_storage
+  rest:
+  - get-object-storage-endpoints
+  binding: operationId
+  confidence: high
+- tool: linode_get_object_storage_transfer
+  category: object_storage
+  rest:
+  - get-object-storage-transfer
+  binding: operationId
+  confidence: high
+- tool: linode_list_object_storage_quotas
+  category: object_storage
+  rest:
+  - get-object-storage-quotas
+  binding: operationId
+  confidence: high
+- tool: linode_list_firewalls
+  category: networking
+  rest:
+  - get-firewalls
+  binding: operationId
+  confidence: high
+- tool: linode_get_firewall
+  category: networking
+  rest:
+  - get-firewall
+  binding: operationId
+  confidence: high
+- tool: linode_list_ips
+  category: networking
+  rest:
+  - get-ips
+  binding: operationId
+  confidence: high
+- tool: linode_list_vlans
+  category: networking
+  rest:
+  - get-vlans
+  binding: operationId
+  confidence: high
+- tool: linode_list_vpcs
+  category: networking
+  rest:
+  - get-vpcs
+  binding: operationId
+  confidence: high
+- tool: linode_get_vpc
+  category: networking
+  rest:
+  - get-vpc
+  binding: operationId
+  confidence: high
+- tool: linode_list_nodebalancers
+  category: networking
+  rest:
+  - get-node-balancers
+  binding: operationId
+  confidence: high
+- tool: linode_get_account
+  category: account
+  rest:
+  - get-account
+  binding: operationId
+  confidence: high
+- tool: linode_get_account_transfer
+  category: account
+  rest:
+  - get-account-transfer
+  binding: operationId
+  confidence: low
+  note: Named operationId(s) not present in the harvested spec under that exact id; mapped by name and semantics.
+- tool: linode_list_invoices
+  category: account
+  rest:
+  - get-invoices
+  binding: operationId
+  confidence: high
+- tool: linode_list_events
+  category: account
+  rest:
+  - get-events
+  binding: operationId
+  confidence: high
+- tool: linode_list_domains
+  category: dns
+  rest:
+  - get-domains
+  binding: operationId
+  confidence: high
+- tool: linode_get_domain
+  category: dns
+  rest:
+  - get-domain
+  binding: operationId
+  confidence: high
+- tool: linode_list_domain_records
+  category: dns
+  rest:
+  - get-domain-records
+  binding: operationId
+  confidence: high
+- tool: linode_list_databases
+  category: databases
+  rest:
+  - get-databases-instances
+  binding: operationId
+  confidence: high
+- tool: linode_get_database
+  category: databases
+  rest:
+  - get-databases-mysql-instance
+  - get-databases-postgre-sql-instance
+  binding: operationId
+  confidence: high
+- tool: linode_list_database_engines
+  category: databases
+  rest:
+  - get-databases-engines
+  binding: operationId
+  confidence: high
+- tool: linode_list_database_types
+  category: databases
+  rest:
+  - get-databases-types
+  binding: operationId
+  confidence: high
+mcp_only:
+- tool: linode_estimate_cost
+  reason: Composite or open-ended tool with no single backing REST operation.
+- tool: linode_get_account_limits
+  reason: Composite or open-ended tool with no single backing REST operation.
+- tool: linode_api_get
+  reason: Composite or open-ended tool with no single backing REST operation.
+rest_only_sample:
+- delete-alert-definition
+- delete-client
+- delete-databases-mysql-instance
+- delete-databases-postgre-sql-conn-pool
+- delete-databases-postgre-sql-instance
+- delete-destination
+- delete-disk
+- delete-domain
+- delete-domain-record
+- delete-entity-transfer
+- delete-firewall
+- delete-firewall-device
+- delete-idp-config
+- delete-idp-config-certificate
+- delete-image
+- delete-ipv6-range
+- delete-linode-config
+- delete-linode-config-interface
+- delete-linode-instance
+- delete-linode-interface
+- delete-linode-ip
+- delete-lke-cluster
+- delete-lke-cluster-acl
+- delete-lke-cluster-kubeconfig
+- delete-lke-cluster-node
+- delete-lke-node-pool
+- delete-lke-service-token
+- delete-longview-client
+- delete-managed-contact
+- delete-managed-service
+- delete-node-balancer
+- delete-node-balancer-config
+- delete-node-balancer-config-node
+- delete-notification-channel
+- delete-object-storage-bucket
+- delete-object-storage-key
+- delete-object-storage-ssl
+- delete-payment-method
+- delete-personal-access-token
+- delete-placement-group
+- delete-profile-app
+- delete-profile-phone-number
+- delete-resource-lock
+- delete-service-transfer
+- delete-sharegroup
+- delete-sharegroup-imageshare
+- delete-sharegroup-member-token
+- delete-sharegroup-token
+- delete-ssh-key
+- delete-stack-script
+- delete-stream
+- delete-tag
+- delete-trusted-device
+- delete-user
+- delete-vlan
+- delete-volume
+- delete-vpc
+- delete-vpc-subnet
+- get-account-agreements
+- get-account-login
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

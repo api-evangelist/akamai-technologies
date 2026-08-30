@@ -1,0 +1,61 @@
+generated: '2026-08-30'
+method: derived
+source: openapi/akamai-technologies-datastream-config-api-v2-openapi.json + openapi/akamai-technologies-siem-v1-openapi.json
+  + openapi/akamai-technologies-alerts-v2-openapi.json + llms/akamai-technologies-llms.txt
+description: 'Akamai publishes no AsyncAPI description. It does run a real event surface, and it is push-based:
+  DataStream 2 delivers live log events from the edge to a destination the customer configures, and one of the twelve
+  destination types is a plain customer-owned HTTPS endpoint - a webhook in everything but name. SIEM Integration
+  is the pull-side sibling (poll for security events), Alerts fires notifications on origin and delivery conditions,
+  and Security Notification Settings routes security alerts to Slack, Microsoft Teams, PagerDuty and custom webhooks.
+  None of these carry a machine-readable event schema catalog, which is the real gap: an agent can subscribe but
+  cannot discover the payload shape from a contract.'
+asyncapi_published: false
+surfaces:
+- name: DataStream 2
+  kind: push
+  spec: openapi/akamai-technologies-datastream-config-api-v2-openapi.json
+  docs: https://techdocs.akamai.com/datastream2/reference
+  destination_types:
+  - HTTPS
+  - S3
+  - S3_COMPATIBLE
+  - AZURE
+  - GCS
+  - ORACLE_CLOUD_STORAGE
+  - SPLUNK
+  - DATADOG
+  - SUMO_LOGIC
+  - LOGGLY
+  - ELASTICSEARCH
+  - NEWRELIC
+  webhook:
+    destination_type: HTTPS
+    note: Akamai POSTs batched log events to a customer URL with configurable auth headers.
+  note: Configure with post-stream / put-stream; deactivate with post-stream-deactivate.
+- name: SIEM Integration
+  kind: pull
+  spec: openapi/akamai-technologies-siem-v1-openapi.json
+  docs: https://techdocs.akamai.com/siem-integration/reference
+  note: One operation - poll security events for a security configuration, with an offset cursor for replay.
+- name: Alerts
+  kind: notification
+  spec: openapi/akamai-technologies-alerts-v2-openapi.json
+  docs: https://techdocs.akamai.com/alerts-app/reference
+  note: 25 operations covering alert definitions, firings and summaries for origin and delivery conditions.
+- name: Event Center
+  kind: configuration
+  spec: openapi/akamai-technologies-events-v3-openapi.json
+  docs: https://techdocs.akamai.com/event-ctr/reference
+- name: Firewall Rules Notification
+  kind: notification
+  spec: openapi/akamai-technologies-firewall-rules-manager-v1-openapi.json
+  docs: https://techdocs.akamai.com/firewall-rules/reference
+- name: Security Notification Settings
+  kind: push
+  spec: null
+  docs: https://techdocs.akamai.com/security-notification-settings
+  note: Routes application-security alerts to Slack, Microsoft Teams, PagerDuty and custom webhooks. No public API
+    description in akamai/akamai-apis; documented product only.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,0 +1,150 @@
+generated: '2026-08-30'
+method: derived
+source: openapi/ (58 first-party Akamai OpenAPI descriptions) + https://techdocs.akamai.com/purge-cache/reference/api-errors
+format: rfc7807
+description: 'Akamai answers errors as RFC 7807 problem documents across essentially the whole control plane: of
+  the 3381 error-response media types declared in the harvested specs, 3199 are application/problem+json and 28
+  are the older application/api-problem+json (Fast Purge). Only a small remainder fall back to plain application/json.
+  The envelope carries `type` (a URI that resolves to the per-product error reference), `title`, `detail`, `instance`
+  and `status`; Fast Purge additionally returns `supportId`, `describedBy`, and, on 429, the live `rateLimit` /
+  `rateLimitRemaining` / `rateLimitCurrentRequestSize` counters. There is no single cross-product error-code registry
+  - each API publishes its own error reference under techdocs.akamai.com/<product>/reference/api-errors.'
+envelope:
+  media_types:
+  - application/problem+json
+  - application/json
+  - '*/*'
+  - application/api-problem+json
+  fields:
+  - type
+  - title
+  - detail
+  - instance
+  - status
+  fast_purge_fields:
+  - httpStatus
+  - title
+  - detail
+  - describedBy
+  - supportId
+  - purgeId
+  - estimatedSeconds
+  - rateLimit
+  - rateLimitRemaining
+  - rateLimitCurrentRequestSize
+  correlation: supportId (Fast Purge) / instance URI (most other APIs) is the value Akamai support asks for.
+status_count: 17
+problem_types:
+- status: 400
+  occurrences: 699
+  meaning: 'Malformed request: bad syntax, an invalid field value, or a body that fails schema validation.'
+  example_type_uris:
+  - https://problems.luna.akamaiapis.net/-/pep-authn/request-error
+  - /alerts-api/error-types/ILLEGAL_ARGUMENT
+  - https://problems.luna.akamaiapis.net/zt-mfa/bad-request
+- status: 401
+  occurrences: 363
+  meaning: EdgeGrid signature missing, malformed, or expired; or a Linode token that is absent or invalid.
+  example_type_uris:
+  - https://problems.luna.akamaiapis.net/-/pep-authn/deny
+  - https://problems.luna.akamaiapis.net/zt-mfa/unauthorized
+  - https://problems.luna-dev.akamaiapis.net/-/pep-authn/deny
+- status: 403
+  occurrences: 716
+  meaning: Authenticated but not authorized - the API client lacks the grant, role or contract/group access for
+    this resource.
+  example_type_uris:
+  - https://problems.luna.akamaiapis.net/adaptive-acceleration/v1/forbidden
+  - /alerts-api/error-types/AUTHZ_PROBLEM
+  - https://problems.luna.akamaiapis.net/zt-mfa/forbidden
+- status: 404
+  occurrences: 691
+  meaning: The addressed resource does not exist, or the API client cannot see it under its account.
+  example_type_uris:
+  - https://developer.akamai.com/luna/adaptive-acceleration/overview.html#notFound
+  - /alerts-api/error-types/ALERT_NOT_FOUND
+  - https://problems.luna.akamaiapis.net/zt-mfa/resource.not.found
+- status: 405
+  occurrences: 203
+  meaning: Method not allowed on this path.
+  example_type_uris:
+  - https://problems.luna.akamaiapis.net/-/resource-impl/forward-origin-error
+  - /alerts-api/error-types/METHOD_NOT_ALLOWED
+  - https://problems.luna-dev.akamaiapis.net/-/pep-authn/policy-error
+- status: 406
+  occurrences: 98
+  meaning: Accept header asks for a representation the operation cannot produce.
+  example_type_uris:
+  - https://problems.luna.akamaiapis.net/-/resource-impl/forward-origin-error
+  - https://problems.luna.akamaiapis.net/appsec/error-types/INVALID-INPUT-ERROR
+  - about:blank
+- status: 409
+  occurrences: 37
+  meaning: State conflict - typically a pending activation or a concurrent modification of the same version.
+  example_type_uris:
+  - https://problems.luna.akamaiapis.net/appsec/error-types/INVALID-INPUT-ERROR
+  - /cam/error-types/access-key-already-exists
+  - /cloudlets/v3/error-types/data-update-conflict
+- status: 410
+  occurrences: 1
+  meaning: The resource has been permanently removed.
+  example_type_uris:
+  - /edgekv/error-types/edgekv-not-found
+- status: 412
+  occurrences: 42
+  meaning: Precondition failed - an If-Match ETag no longer matches the current version.
+  example_type_uris:
+  - https://problems.luna.akamaiapis.net/appsec-resource/error-types/PRECONDITION-FAILED
+  - https://problems.omni.akamaiapis.net/unknown
+  - https://problems.luna.akamaiapis.net/papi/v0/toolkit/validation_failed.error.activation.to
+- status: 413
+  occurrences: 3
+  meaning: Request body exceeds the operation limit (notably purge object lists and EdgeWorker bundles).
+  example_type_uris:
+  - /edgekv/error-types/edgekv-payload-too-large
+  - https://problems.luna.akamaiapis.net/papi/v1/http/
+- status: 415
+  occurrences: 49
+  meaning: Unsupported media type on the request body.
+  example_type_uris:
+  - /alerts-api/error-types/UNSUPPORTED_MEDIA_TYPE
+  - unsupported_media_type
+  - https://problems.luna.akamaiapis.net/papi/v1/http/unsupported-media-type
+- status: 416
+  occurrences: 1
+  meaning: Requested range not satisfiable.
+  example_type_uris:
+  - https://problems.cloudsecurity.akamaiapis.net/siem/v1/offset-too-old
+- status: 422
+  occurrences: 13
+  meaning: Semantically invalid request - well-formed, but the values cannot be applied.
+  example_type_uris:
+  - https://problems.luna.akamaiapis.net/appsec/error-types/UNPROCESSABLE-REQUEST
+  - /edgekv/error-types/edgekv-unprocessable-entity
+  - https://problems.luna.akamaiapis.net/papi/v1/property_activation_still_pending
+- status: 429
+  occurrences: 156
+  meaning: Rate or object limit exceeded. See rate-limits/akamai-technologies-rate-limits.yml for the headers returned.
+  example_type_uris:
+  - https://problems.luna.akamaiapis.net/appsec/error-types/RATE-LIMITED
+  - requests.exceeded.error
+  - /edgekv/error-types/edgekv-too-many-requests
+- status: 500
+  occurrences: 326
+  meaning: Unhandled server error; retry with backoff and quote the supportId when opening a case.
+  example_type_uris:
+  - /alerts-api/error-types/INTERNAL_SERVER_ERROR
+  - https://problems.luna.akamaiapis.net/zt-mfa/internal-server-error
+  - internal_server_error
+- status: 503
+  occurrences: 3
+  meaning: Service temporarily unavailable; retry with backoff.
+  example_type_uris:
+  - https://problems.luna.akamaiapis.net/-/resource-impl/forward-origin-error
+  - https://problems.cloudsecurity.akamaiapis.net/siem/v1/service-unavailable
+- status: 504
+  occurrences: 1
+  meaning: Upstream timeout.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

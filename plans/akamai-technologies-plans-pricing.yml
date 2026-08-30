@@ -1,118 +1,323 @@
+generated: '2026-08-30'
+method: probed
+source: https://api.linode.com/v4/linode/types and the sibling keyless price endpoints
 specification: API Commons Plans
 specificationVersion: '0.1'
-schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
 provider: Akamai Technologies
 providerId: akamai-technologies
-created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: true
-tags:
-  - CDN
-  - Edge
-  - Cloud
-  - Security
-  - Multi-Service
-description: Akamai Technologies is a multi-product platform spanning CDN, edge compute (EdgeWorkers),
-  application/API security (App & API Protector, Bot Manager, Account Protector), Akamai Cloud
-  Computing (formerly Linode — public per-instance, per-GB rates), DNS, NetStorage, and observability
-  (mPulse). CDN, Security, and Edge products are typically priced via custom quote against expected
-  traffic / requests / GB egress with reserved-commitment discounts; Akamai Cloud Computing is the one
-  major surface with a published per-plan price list. New customers can take advantage of trial /
-  starter credits on Cloud Computing.
-sources:
-  - https://www.akamai.com/products/pricing
-  - https://www.akamai.com/cloud/pricing
+description: Akamai is two pricing companies. Akamai Cloud (Linode) publishes a complete, keyless, MACHINE-READABLE
+  price catalog - six unauthenticated endpoints on api.linode.com return every compute plan, volume, NodeBalancer,
+  LKE control-plane tier, Object Storage class and network-transfer overage rate with hourly and monthly prices.
+  That is rare and it is the strongest thing in this artifact. The rest of Akamai - CDN, security, edge compute,
+  DNS, NetStorage - publishes no price at all and is sold on a negotiated enterprise contract. This file records
+  both facts rather than averaging them.
+machine_readable_pricing:
+  available: true
+  auth_required: false
+  endpoints:
+  - https://api.linode.com/v4/linode/types
+  - https://api.linode.com/v4/volumes/types
+  - https://api.linode.com/v4/nodebalancers/types
+  - https://api.linode.com/v4/lke/types
+  - https://api.linode.com/v4/object-storage/types
+  - https://api.linode.com/v4/network-transfer/prices
+  note: An agent can price an Akamai Cloud stack with no credentials at all. There is no equivalent for the edge
+    portfolio.
+evidence:
+- url: https://api.linode.com/v4/linode/types
+  status: 200
+- url: https://api.linode.com/v4/volumes/types
+  status: 200
+- url: https://api.linode.com/v4/nodebalancers/types
+  status: 200
+- url: https://api.linode.com/v4/lke/types
+  status: 200
+- url: https://api.linode.com/v4/object-storage/types
+  status: 200
+- url: https://api.linode.com/v4/network-transfer/prices
+  status: 200
+plan_count: 13
 plans:
-  - id: akamai-technologies-platform-overview
-    name: Platform Pricing Overview
-    type: enterprise
-    description: Per-service pricing across the Akamai portfolio. CDN / Security / Edge surfaces are
-      quoted; Akamai Cloud Computing has a public price list.
-    entries:
-      - label: Per-service rates
-        name: varies
-        type: metered
-        metric: varies
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: see vendor pricing pages
-        userMultiplied: false
-    elements:
-      - name: Akamai CDN (Ion, DSA)
-      - name: Akamai Image & Video Manager
-      - name: Akamai EdgeWorkers (serverless)
-      - name: Akamai App & API Protector (WAF / DDoS / Bot)
-      - name: Akamai Account Protector
-      - name: Akamai Cloud Computing (Linode-based)
-      - name: Akamai NetStorage
-      - name: Akamai Edge DNS
-      - name: Akamai mPulse (Real User Monitoring)
-  - id: akamai-technologies-cloud-computing
-    name: Akamai Cloud Computing (Linode)
-    type: pay-as-you-go
-    description: Akamai Cloud Computing publishes a per-instance / per-GB price list (Shared CPU,
-      Dedicated CPU, High Memory, Premium, GPU; Block and Object Storage; Network Transfer). Detailed
-      rates are listed on the vendor pricing page.
-    entries:
-      - label: Compute, storage, and network rates
-        name: cloud_computing_rates
-        type: metered
-        metric: varies
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: see https://www.akamai.com/cloud/pricing
-        userMultiplied: false
-    elements:
-      - name: Shared / Dedicated / High Memory / Premium / GPU compute plans
-      - name: Block Storage and Object Storage
-      - name: Bundled network transfer with overage
-      - name: Linode-compatible APIs and CLI
-  - id: akamai-technologies-committed-use
-    name: Committed Use / Reserved
-    type: enterprise
-    description: 1-year and multi-year commitments deliver substantial discounts vs on-demand for
-      high-volume CDN, Security, and Cloud customers.
-    entries:
-      - label: Multi-year commitment
-        name: committed
-        type: subscription
-        metric: year
-        limit: -1
-        timeFrame: year
-        geo: global
-        unit: 1
-        price: custom
-        userMultiplied: false
-    elements:
-      - name: Reserved Instances / Committed Use Discounts
-      - name: Volume traffic / request / GB tiers
-      - name: Negotiated enterprise agreements
-  - id: akamai-technologies-free-trial
-    name: Free Trial / Starter Credits
-    type: freemium
-    description: Akamai offers trial credits for Cloud Computing and limited evaluation access for
-      other services.
-    entries:
-      - label: Trial credits
-        name: trial_credits
-        type: quota
-        metric: credit
-        limit: -1
-        timeFrame: month
-        geo: global
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Cloud Computing trial credits
-      - name: Sandbox / evaluation access on enterprise products
+- id: akamai-cloud-compute-accelerated
+  name: Akamai Cloud compute - accelerated
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  plan_count_in_class: 6
+  price_low:
+    type: g1-accelerated-netint-vpu-t1u1-s
+    label: NETINT Quadra T1U x1 Small
+    monthly: 280.0
+    hourly: 0.42
+    vcpus: 8
+    memory_mb: 16384
+    disk_mb: 204800
+    transfer_gb: 0
+  price_high:
+    type: g1-accelerated-netint-vpu-t1u8-l
+    label: NETINT Quadra T1U x8 Large
+    monthly: 2816.0
+    hourly: 4.224
+    vcpus: 96
+    memory_mb: 196608
+    disk_mb: 307200
+    transfer_gb: 0
+  included_quota: Each plan bundles outbound network transfer (transfer_gb); overage is billed from the network-transfer
+    price list.
+  source: https://api.linode.com/v4/linode/types
+- id: akamai-cloud-compute-dedicated
+  name: Akamai Cloud compute - dedicated
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  plan_count_in_class: 33
+  price_low:
+    type: g8-dedicated-4-2
+    label: G8 Dedicated 4x2
+    monthly: null
+    hourly: 0.07
+    vcpus: 2
+    memory_mb: 4096
+    disk_mb: 41984
+    transfer_gb: 0
+  price_high:
+    type: g7-dedicated-256-56
+    label: G7 Dedicated 256x56
+    monthly: 2765.0
+    hourly: 4.1475
+    vcpus: 56
+    memory_mb: 262144
+    disk_mb: 5120000
+    transfer_gb: 11000
+  included_quota: Each plan bundles outbound network transfer (transfer_gb); overage is billed from the network-transfer
+    price list.
+  source: https://api.linode.com/v4/linode/types
+- id: akamai-cloud-compute-gpu
+  name: Akamai Cloud compute - gpu
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  plan_count_in_class: 13
+  price_low:
+    type: g1-gpu-rtx6000-1
+    label: Dedicated 32GB + RTX6000 GPU x1
+    monthly: null
+    hourly: 1.5
+    vcpus: 8
+    memory_mb: 32768
+    disk_mb: 655360
+    transfer_gb: 16000
+  price_high:
+    type: g2-gpu-rtx4000a4-m
+    label: RTX4000 Ada x4 Medium
+    monthly: null
+    hourly: 3.57
+    vcpus: 48
+    memory_mb: 200704
+    disk_mb: 2097152
+    transfer_gb: 0
+  included_quota: Each plan bundles outbound network transfer (transfer_gb); overage is billed from the network-transfer
+    price list.
+  source: https://api.linode.com/v4/linode/types
+- id: akamai-cloud-compute-highmem
+  name: Akamai Cloud compute - highmem
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  plan_count_in_class: 5
+  price_low:
+    type: g7-highmem-1
+    label: Linode 24GB
+    monthly: 60.0
+    hourly: 0.09
+    vcpus: 2
+    memory_mb: 24576
+    disk_mb: 20480
+    transfer_gb: 5000
+  price_high:
+    type: g7-highmem-16
+    label: Linode 300GB
+    monthly: 960.0
+    hourly: 1.44
+    vcpus: 16
+    memory_mb: 307200
+    disk_mb: 348160
+    transfer_gb: 9000
+  included_quota: Each plan bundles outbound network transfer (transfer_gb); overage is billed from the network-transfer
+    price list.
+  source: https://api.linode.com/v4/linode/types
+- id: akamai-cloud-compute-nanode
+  name: Akamai Cloud compute - nanode
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  plan_count_in_class: 1
+  price_low:
+    type: g6-nanode-1
+    label: Nanode 1GB
+    monthly: 5.0
+    hourly: 0.0075
+    vcpus: 1
+    memory_mb: 1024
+    disk_mb: 25600
+    transfer_gb: 1000
+  price_high:
+    type: g6-nanode-1
+    label: Nanode 1GB
+    monthly: 5.0
+    hourly: 0.0075
+    vcpus: 1
+    memory_mb: 1024
+    disk_mb: 25600
+    transfer_gb: 1000
+  included_quota: Each plan bundles outbound network transfer (transfer_gb); overage is billed from the network-transfer
+    price list.
+  source: https://api.linode.com/v4/linode/types
+- id: akamai-cloud-compute-premium
+  name: Akamai Cloud compute - premium
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  plan_count_in_class: 8
+  price_low:
+    type: g7-premium-2
+    label: Premium 4GB
+    monthly: 43.0
+    hourly: 0.0645
+    vcpus: 2
+    memory_mb: 4096
+    disk_mb: 81920
+    transfer_gb: 4000
+  price_high:
+    type: g7-premium-56
+    label: Premium 256GB
+    monthly: 2765.0
+    hourly: 4.1475
+    vcpus: 56
+    memory_mb: 262144
+    disk_mb: 5120000
+    transfer_gb: 11000
+  included_quota: Each plan bundles outbound network transfer (transfer_gb); overage is billed from the network-transfer
+    price list.
+  source: https://api.linode.com/v4/linode/types
+- id: akamai-cloud-compute-standard
+  name: Akamai Cloud compute - standard
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  plan_count_in_class: 9
+  price_low:
+    type: g6-standard-1
+    label: Linode 2GB
+    monthly: 12.0
+    hourly: 0.018
+    vcpus: 1
+    memory_mb: 2048
+    disk_mb: 51200
+    transfer_gb: 2000
+  price_high:
+    type: g6-standard-32
+    label: Linode 192GB
+    monthly: 1152.0
+    hourly: 1.728
+    vcpus: 32
+    memory_mb: 196608
+    disk_mb: 3932160
+    transfer_gb: 20000
+  included_quota: Each plan bundles outbound network transfer (transfer_gb); overage is billed from the network-transfer
+    price list.
+  source: https://api.linode.com/v4/linode/types
+- id: akamai-cloud-block_storage
+  name: Akamai Cloud Block Storage
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  entries:
+  - type: volume
+    label: Storage Volume
+    monthly: 0.1
+    hourly: 0.00015
+  source: https://api.linode.com/v4/volumes/types
+- id: akamai-cloud-nodebalancers
+  name: Akamai Cloud NodeBalancers
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  entries:
+  - type: nodebalancer
+    label: NodeBalancer
+    monthly: 10.0
+    hourly: 0.015
+  - type: nodebalancer-40GB-pr100
+    label: Nodebalancer Enterprise
+    monthly: 300.0
+    hourly: 0.45
+  - type: nodebalancer-pr100
+    label: Nodebalancer Premium
+    monthly: 150.0
+    hourly: 0.225
+  source: https://api.linode.com/v4/nodebalancers/types
+- id: akamai-cloud-lke
+  name: Akamai Cloud Linode Kubernetes Engine control plane
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  entries:
+  - type: lke-sa
+    label: LKE Standard Availability
+    monthly: 0.0
+    hourly: 0.0
+  - type: lke-ha
+    label: LKE High Availability
+    monthly: 60.0
+    hourly: 0.09
+  - type: lke-e
+    label: LKE Enterprise
+    monthly: 300.0
+    hourly: 0.45
+  source: https://api.linode.com/v4/lke/types
+- id: akamai-cloud-object_storage
+  name: Akamai Cloud Object Storage
+  type: pay-as-you-go
+  currency: USD
+  billing_period: hourly, capped monthly
+  entries:
+  - type: objectstorage
+    label: Object Storage
+    monthly: 5.0
+    hourly: 0.0075
+  - type: objectstorage-overage
+    label: Object Storage Overage
+    monthly: null
+    hourly: 0.02
+  source: https://api.linode.com/v4/object-storage/types
+- id: akamai-cloud-network-transfer
+  name: Akamai Cloud network transfer overage
+  type: metered
+  currency: USD
+  billing_period: usage
+  entries:
+  - type: distributed_network_transfer
+    label: Distributed Network Transfer
+    monthly: null
+    hourly: 0.01
+  - type: network_transfer
+    label: Network Transfer
+    monthly: null
+    hourly: 0.005
+  source: https://api.linode.com/v4/network-transfer/prices
+- id: akamai-edge-platform
+  name: Akamai edge platform (CDN, security, edge compute, DNS, NetStorage)
+  type: enterprise
+  currency: USD
+  billing_period: contract
+  price: quote only
+  included_quota: null
+  note: No published price list. CDN, App & API Protector, Prolexic, EdgeWorkers, Edge DNS, NetStorage and the rest
+    of the EdgeGrid portfolio are sold on a negotiated contract against committed traffic, requests or GB. www.akamai.com/products/pricing
+    could not be read from this pipeline - Akamai returns 403 to non-browser clients on every www.akamai.com path
+    - so no tier detail is asserted here.
+  source: https://www.akamai.com/products/pricing (403 to this crawler)
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

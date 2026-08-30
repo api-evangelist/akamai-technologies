@@ -1,64 +1,123 @@
-specification: API Commons Rate Limits
-specificationVersion: '0.1'
-schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+generated: '2026-08-30'
+method: searched
+source: https://techdocs.akamai.com/linode-api/reference/rate-limits + https://techdocs.akamai.com/purge-cache/reference/rate-limiting
+  + openapi/akamai-technologies-ccu-v3-openapi.json
 provider: Akamai Technologies
 providerId: akamai-technologies
-created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
-reconciled: true
-tags:
-  - CDN
-  - Edge
-  - Cloud
-  - Security
-  - Rate Limiting
-description: Akamai is a multi-service platform; API rate limits vary by product surface. Control-plane
-  APIs (Akamai EdgeGrid OPEN APIs covering CDN configuration, Property Manager, Cloud Computing,
-  EdgeWorkers, Security configuration, Reporting, Identity, etc.) each have service-specific
-  throttles. Akamai Cloud Computing inherits the published Linode API rate limits. Throttling
-  responses follow standard 429 / Retry-After conventions; specific numeric limits are documented in
-  per-service Akamai TechDocs / API reference pages.
-notes: Per-service limits are documented in TechDocs rather than a single rate-limit page. Consumers
-  should check the relevant API reference for canonical limits.
-sources:
-  - https://techdocs.akamai.com/
-  - https://www.linode.com/docs/api/
+description: Akamai publishes real numbers on the two surfaces that need them most. Fast Purge declares per-object-type
+  burst and sustained limits and returns eight X-Ratelimit-* headers on every accepted purge, including the seconds-to-refresh
+  value an agent needs to schedule its next call. The Linode (Akamai Cloud) API publishes a documented default of
+  1600 requests/minute, 200/minute for paginated GET collections, with named exceptions per operation. The remaining
+  EdgeGrid configuration APIs do not publish a numeric ceiling - their limits are contract-governed and surfaced
+  only as a 429.
 responseCodes:
   throttled: 429
   serviceUnavailable: 503
+headers:
+- name: X-Ratelimit-Limit
+  meaning: Burst limit - requests allowed in excess of the sustained rate.
+  surface: ccu-v3
+- name: X-Ratelimit-Limit-Per-Second
+  meaning: Maximum sustainable requests per second per account.
+  surface: ccu-v3
+- name: X-Ratelimit-Remaining
+  meaning: Requests left before the next call returns 429.
+  surface: ccu-v3
+- name: X-Ratelimit-Limit-Objects
+  meaning: Burst limit on objects per request, by object type.
+  surface: ccu-v3
+- name: X-Ratelimit-Limit-Per-Second-Objects
+  meaning: Maximum sustainable objects per second per request.
+  surface: ccu-v3
+- name: X-Ratelimit-Remaining-Objects
+  meaning: Objects left before the next call returns 429.
+  surface: ccu-v3
+- name: X-Ratelimit-Seconds-To-Refresh-Limit
+  meaning: Minimum seconds to wait before another full burst.
+  surface: ccu-v3
+- name: X-Ratelimit-Seconds-To-Refresh-Limit-Objects
+  meaning: Minimum seconds to wait before another full object burst.
+  surface: ccu-v3
+- name: X-RateLimit-Next
+  meaning: When the next request may be made.
+  surface: siem-v1
+- name: X-Rate-Limit-Retry-After-Seconds
+  meaning: Seconds to wait before retrying.
+  surface: edge-diagnostics-v1
+limit_count: 8
 limits:
-  - name: EdgeGrid Control-Plane APIs
-    scope: api_client
-    metric: varies
-    limit: service-specific TPS / RPM, see per-API TechDocs
-    notes: Property Manager, Cloud Computing, Security Configuration, Reporting, etc. each publish
-      their own rate-limit ceilings; EdgeGrid signing is required.
-  - name: Cloud Computing (Linode) API
-    scope: account
-    metric: varies
-    limit: see Linode API rate-limit documentation
-    notes: Linode API publishes documented per-endpoint limits and uses the X-RateLimit-* family of
-      headers.
-  - name: CDN edge request volume
-    scope: account
-    metric: varies
-    limit: governed by contract (committed traffic / requests / RPS), not a public number
+- name: Fast Purge - by URL/ARL
+  scope: account
+  api: ccu-v3
+  metric: objects
+  limit: 10000
+  window: burst
+  evidence: '429 example in openapi/akamai-technologies-ccu-v3-openapi.json: rateLimit 10000.'
+  docs: https://techdocs.akamai.com/purge-cache/reference/rate-limiting
+- name: Fast Purge - by cache tag
+  scope: account
+  api: ccu-v3
+  metric: objects
+  limit: 5000
+  window: burst
+  evidence: '429 example in the spec: rateLimit 5000.'
+  docs: https://techdocs.akamai.com/purge-cache/reference/rate-limiting
+- name: Fast Purge - by CP code
+  scope: account
+  api: ccu-v3
+  metric: objects
+  limit: 300
+  window: burst
+  evidence: '429 example in the spec: rateLimit 300.'
+  docs: https://techdocs.akamai.com/purge-cache/reference/rate-limiting
+- name: Fast Purge - live status
+  scope: account
+  api: ccu-v3
+  metric: introspection
+  limit: read the current limits with post-rate-limit-status per purge type
+  docs: https://techdocs.akamai.com/purge-cache/reference/post-rate-limit-status
+- name: Linode API - default
+  scope: per-token (or per-IP for public operations)
+  api: linode-api
+  metric: requests
+  limit: 1600
+  window: 1 minute
+  docs: https://techdocs.akamai.com/linode-api/reference/rate-limits
+- name: Linode API - paginated GET collections
+  scope: per-token
+  api: linode-api
+  metric: requests
+  limit: 200
+  window: 1 minute
+  docs: https://techdocs.akamai.com/linode-api/reference/rate-limits
+- name: Linode API - accept a service transfer
+  scope: per-token
+  api: linode-api
+  metric: requests
+  limit: 2
+  window: 1 minute
+  docs: https://techdocs.akamai.com/linode-api/reference/rate-limits
+- name: Linode API - open a support ticket
+  scope: per-token
+  api: linode-api
+  metric: requests
+  limit: 2
+  window: 1 minute
+  docs: https://techdocs.akamai.com/linode-api/reference/rate-limits
+undocumented:
+  surfaces: The EdgeGrid configuration APIs (Property Manager, AppSec, Edge DNS, GTM, CPS, Identity and Access Management
+    and the rest) publish no numeric ceiling in either the specs or the reference pages consulted here.
+  behaviour: Exhaustion is signalled as 429 with an RFC 7807 body; clients should back off exponentially with jitter.
 policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter on 429 / 503 responses,
-      honoring Retry-After when present.
-  - name: EdgeGrid Authentication
-    description: Akamai control-plane APIs require EdgeGrid request signing; misconfigured clients
-      can be blocked before reaching rate limits.
-  - name: Per-Service Limits
-    description: Numeric limits are published per API in TechDocs. Treat them as authoritative — do
-      not infer one product's limits from another.
-  - name: Contract-Governed CDN Capacity
-    description: CDN traffic capacity is contractual, not an API rate limit. Coordinate with the
-      Akamai account team before unusual traffic events.
+- name: Backoff
+  description: Exponential backoff with jitter on 429 and 503; honour X-Ratelimit-Seconds-To-Refresh-Limit where
+    returned.
+- name: Read the limit before the burst
+  description: Fast Purge exposes post-rate-limit-status so a client can read its current headroom rather than discover
+    it with a 429.
+- name: Contract capacity is not a rate limit
+  description: CDN traffic capacity is contractual; coordinate large events with the account team rather than treating
+    it as an API throttle.
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com

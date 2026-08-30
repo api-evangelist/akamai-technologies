@@ -1,0 +1,161 @@
+generated: '2026-08-30'
+method: searched
+source: https://github.com/akamai + https://github.com/linode + registry metadata endpoints (pypi.org, registry.npmjs.org,
+  proxy.golang.org, repo1.maven.org, powershellgallery.com, registry.terraform.io)
+description: 'Akamai distributes EdgeGrid request SIGNERS rather than generated per-API clients for its control
+  plane - the signer plus any HTTP client is the supported integration path - and full typed clients only for Go
+  (AkamaiOPEN-edgegrid-golang, which backs the Terraform provider) and PowerShell. Akamai Cloud (Linode) is the
+  opposite: first-party typed clients in Python, Go and TypeScript plus a CLI. The two NetStorage kits are the clear
+  decay signal - both last published in 2018 against an API that is still in the current catalog.'
+official_count: 15
+package_count: 15
+packages:
+- name: edgegrid-python
+  registry: pypi
+  url: https://pypi.org/project/edgegrid-python/
+  repository: https://github.com/akamai/AkamaiOPEN-edgegrid-python
+  language: Python
+  official: true
+  version: 2.0.7
+  published: '2026-05-19'
+  kind: auth-signer
+  note: EdgeGrid request-signing handler for python-requests. Akamai ships signers, not per-API clients.
+- name: akamai-edgegrid
+  registry: npm
+  url: https://www.npmjs.com/package/akamai-edgegrid
+  repository: https://github.com/akamai/AkamaiOPEN-edgegrid-node
+  language: JavaScript
+  official: true
+  version: 4.0.4
+  published: '2026-07-02'
+  kind: auth-signer
+- name: github.com/akamai/AkamaiOPEN-edgegrid-golang/v12
+  registry: go
+  url: https://pkg.go.dev/github.com/akamai/AkamaiOPEN-edgegrid-golang/v12
+  repository: https://github.com/akamai/AkamaiOPEN-edgegrid-golang
+  language: Go
+  official: true
+  version: v12.3.0
+  published: '2026-01-19'
+  kind: client
+  note: 'The richest first-party client: typed service packages for PAPI, DNS, GTM, CPS, AppSec and more. Powers
+    the Akamai Terraform provider.'
+- name: com.akamai.edgegrid:edgegrid-signer-core
+  registry: maven
+  url: https://central.sonatype.com/artifact/com.akamai.edgegrid/edgegrid-signer-core
+  repository: https://github.com/akamai/AkamaiOPEN-edgegrid-java
+  language: Java
+  official: true
+  version: 6.0.5
+  published: '2026-08-05'
+  kind: auth-signer
+  note: 'Sibling artifacts in the same group: edgegrid-signer-apache-http-client, -apache-http-client5, -async-http-client,
+    -google-http-client, -rest-assured, -gatling, edgerc-reader.'
+- name: Akamai
+  registry: powershell-gallery
+  url: https://www.powershellgallery.com/packages/Akamai
+  repository: https://github.com/akamai/PowerShell
+  language: PowerShell
+  official: true
+  version: 3.0.0
+  published: '2026-05-26'
+  kind: client
+- name: akamai/akamai
+  registry: terraform
+  url: https://registry.terraform.io/providers/akamai/akamai/latest
+  repository: https://github.com/akamai/terraform-provider-akamai
+  language: HCL/Go
+  official: true
+  version: 10.4.0
+  published: '2026-07-29'
+  kind: infrastructure-as-code
+- name: linode/linode
+  registry: terraform
+  url: https://registry.terraform.io/providers/linode/linode/latest
+  repository: https://github.com/linode/terraform-provider-linode
+  language: HCL/Go
+  official: true
+  version: 4.4.0
+  published: '2026-08-25'
+  kind: infrastructure-as-code
+- name: linode-api4
+  registry: pypi
+  url: https://pypi.org/project/linode-api4/
+  repository: https://github.com/linode/linode_api4-python
+  language: Python
+  official: true
+  version: 5.46.1
+  published: '2026-08-05'
+  kind: client
+  note: Official client for the Linode (Akamai Cloud) API v4.
+- name: github.com/linode/linodego
+  registry: go
+  url: https://pkg.go.dev/github.com/linode/linodego
+  repository: https://github.com/linode/linodego
+  language: Go
+  official: true
+  version: v1.69.1
+  published: '2026-05-12'
+  kind: client
+- name: '@linode/api-v4'
+  registry: npm
+  url: https://www.npmjs.com/package/@linode/api-v4
+  repository: https://github.com/linode/manager
+  language: TypeScript
+  official: true
+  version: 0.158.0
+  published: '2026-03-13'
+  kind: client
+- name: linode-cli
+  registry: pypi
+  url: https://pypi.org/project/linode-cli/
+  repository: https://github.com/linode/linode-cli
+  language: Python
+  official: true
+  version: 5.68.0
+  published: '2026-05-28'
+  kind: cli
+- name: akamai-cloud-mcp
+  registry: pypi
+  url: https://pypi.org/project/akamai-cloud-mcp/
+  repository: https://github.com/akamai-developers/akamai-cloud-mcp
+  language: Python
+  official: true
+  version: 0.1.0
+  published: '2026-06-13'
+  kind: mcp-server
+  note: Official read-only MCP server for Akamai Cloud. Only release to date.
+- name: netstorageapi
+  registry: pypi
+  url: https://pypi.org/project/netstorageapi/
+  repository: https://github.com/akamai/NetStorageKit-Python
+  language: Python
+  official: true
+  version: 1.2.13
+  published: '2018-06-07'
+  kind: client
+  note: NetStorage HTTP API kit. Last release 2018 - abandonment signal against a NetStorage Configuration API that
+    is still current.
+- name: netstorageapi
+  registry: npm
+  url: https://www.npmjs.com/package/netstorageapi
+  repository: https://github.com/akamai/NetStorageKit-Node
+  language: JavaScript
+  official: true
+  version: 1.1.5
+  published: '2018-03-28'
+  kind: client
+  note: Last release 2018; the repository itself was last pushed 2026-07-17, so the code moved but nothing shipped.
+- name: httpie-edgegrid
+  registry: pypi
+  url: https://pypi.org/project/httpie-edgegrid/
+  repository: https://github.com/akamai/httpie-edgegrid
+  language: Python
+  official: true
+  version: null
+  published: null
+  kind: tooling
+  note: Registry metadata not queried in this pass; version deliberately null rather than guessed.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

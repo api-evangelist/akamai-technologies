@@ -28,73 +28,900 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/akamai-technologies.png
 tags:
-  - CDN
-  - Security
-  - Cloud
-description: >-
-  Akamai Technologies is a major US corporation and Fortune 1000 company. The Akamai Technologies API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+- CDN
+- Security
+- Cloud
+- Edge Computing
+- DNS
+- Content Delivery
+- Cloud Computing
+- Zero Trust
+- Media Delivery
+- Observability
+- Infrastructure
+- Kubernetes
+description: Akamai Technologies operates one of the world's largest distributed edge platforms, spanning content
+  delivery (Ion, Adaptive Media Delivery, Download Delivery), application and API security (App & API Protector,
+  Bot Manager, Prolexic DDoS, Secure Internet Access, Guardicore segmentation), edge compute (EdgeWorkers, EdgeKV,
+  Akamai Functions), DNS and traffic management (Edge DNS, Global Traffic Management), NetStorage, and Akamai Cloud
+  Computing - the Linode-based public cloud acquired in 2022. Akamai publishes first-party OpenAPI descriptions
+  for its control-plane APIs in the akamai/akamai-apis GitHub repository and for the Linode API in linode/linode-api-openapi,
+  covering property configuration, certificate provisioning, purge, identity and access management, security configuration,
+  reporting, diagnostics, test automation and cloud provisioning. All Akamai control-plane APIs authenticate with
+  the EdgeGrid HMAC-SHA256 request-signing scheme against a per-account hostname; the Linode API uses OAuth 2.0
+  and personal access tokens.
 created: '2026-04-19'
-modified: '2026-04-19'
+modified: '2026-08-30'
 specificationVersion: '0.23'
 apis:
-- aid: akamai-technologies:akamai-technologies-api
-  name: Akamai Technologies API
+- aid: akamai-technologies:adaptive-acceleration-v1
+  name: Akamai Adaptive Acceleration API
+  description: View which rules Adaptive Acceleration applies to a property, and generate new rules.
+  humanURL: https://techdocs.akamai.com/adaptive-acceleration/reference
+  baseURL: https://{hostname}/adaptive-acceleration/v1
   tags:
-  - CDN
-  - Security
-  - Cloud
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  baseURL: https://api.akamai.com
-  humanURL: https://developer.akamai.com
-  properties:
-  - url: https://developer.akamai.com/docs
-    type: Documentation
-  description: >-
-    The Akamai Technologies API provides access to platform services and data for enterprise integration
-    and automation.
-- aid: akamai-technologies:akamai-technologies-deletions-api
-  name: Akamai Technologies Deletions API
-  description: Remove cached objects from the edge.
-  humanURL: https://developer.akamai.com
-  baseURL: https://api.akamai.com
-  tags:
-  - Deletions
+  - Property report
   properties:
   - type: OpenAPI
-    url: openapi/akamai-technologies-deletions-api-openapi.yml
-- aid: akamai-technologies:akamai-technologies-invalidations-api
-  name: Akamai Technologies Invalidations API
-  description: Mark cached objects as stale, forcing revalidation on next request.
-  humanURL: https://developer.akamai.com
-  baseURL: https://api.akamai.com
+    url: openapi/akamai-technologies-adaptive-acceleration-v1-openapi.json
+- aid: akamai-technologies:alerts-v2
+  name: Akamai Alerts API
+  description: Get notified automatically of changes in your origin infrastructure and content-delivery patterns.
+  humanURL: https://techdocs.akamai.com/alerts-app/reference
+  baseURL: https://{hostname}/alerts/v2
   tags:
-  - Invalidations
+  - Access control data
+  - Alert definition
+  - Alert definitions
+  - Alert details
+  - Alert firings
+  - Alert summaries
   properties:
   - type: OpenAPI
-    url: openapi/akamai-technologies-invalidations-api-openapi.yml
-- aid: akamai-technologies:akamai-technologies-status-api
-  name: Akamai Technologies Status API
-  description: Inspect rate-limit and object-limit status.
-  humanURL: https://developer.akamai.com
-  baseURL: https://api.akamai.com
+    url: openapi/akamai-technologies-alerts-v2-openapi.json
+- aid: akamai-technologies:amfa-v1
+  name: Akamai MFA API
+  description: Provide secondary authentication to cloud, on-premises, web-based, SaaS, and IaaS applications.
+  humanURL: https://techdocs.akamai.com/mfa/reference
+  baseURL: https://{hostname}/amfa/v1
   tags:
-  - Status
+  - Bypass codes
+  - Devices
+  - Email enrollments
+  - Groups
+  - Policies
+  - User aliases
   properties:
   - type: OpenAPI
-    url: openapi/akamai-technologies-status-api-openapi.yml
+    url: openapi/akamai-technologies-amfa-v1-openapi.json
+- aid: akamai-technologies:api-definitions-v2
+  name: Akamai API Endpoint Definition API
+  description: Register and manage your APIs to enable security, delivery, and governance.
+  humanURL: https://techdocs.akamai.com/api-definitions/reference
+  baseURL: https://{hostname}/api-definitions/v2
+  tags:
+  - API privacy
+  - CORS
+  - Cache
+  - Categories
+  - Contracts and groups
+  - Endpoints
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-api-definitions-v2-openapi.json
+- aid: akamai-technologies:apikey-manager-api-v1
+  name: Akamai API Keys and Traffic Management API
+  description: Create and manage API keys. Control your API traffic with quotas and throttling.
+  humanURL: https://techdocs.akamai.com/key-traffic-mgmt/reference
+  baseURL: https://{hostname}/apikey-manager-api/v1
+  tags:
+  - ACLs
+  - Collection endpoints
+  - Counter endpoints
+  - Counter keys
+  - Key collections
+  - Keys
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-apikey-manager-api-v1-openapi.json
+- aid: akamai-technologies:appsec-v1
+  name: Akamai Application Security API
+  description: Manage your configurations for Kona Site Defender, Web Application Protector, and Client Reputation.
+  humanURL: https://techdocs.akamai.com/application-security/reference
+  baseURL: https://{hostname}/appsec/v1
+  tags:
+  - API endpoints
+  - API request constraints
+  - Activation history
+  - Activation status
+  - Activations
+  - Attack payload logs
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-appsec-v1-openapi.json
+- aid: akamai-technologies:cam-v1
+  name: Akamai Cloud Access Manager API
+  description: Securely store and manage access keys for cloud origins independent of your properties.
+  humanURL: https://techdocs.akamai.com/cloud-access-mgr/reference
+  baseURL: https://{hostname}/cam/v1
+  tags:
+  - Access key creation status
+  - Access key version properties
+  - Access key version status requests
+  - Access key versions
+  - Access keys
+  - Property lookups
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-cam-v1-openapi.json
+- aid: akamai-technologies:case-management-v3
+  name: Akamai Case Management API
+  description: Manage support requests to resolve issues with your Akamai applications and services.
+  humanURL: https://techdocs.akamai.com/case-mgmt/reference
+  baseURL: https://{hostname}/case-management/v3
+  tags:
+  - Accounts
+  - Case attachments
+  - Case categories
+  - Case comments
+  - Cases
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-case-management-v3-openapi.json
+- aid: akamai-technologies:ccu-v3
+  name: Akamai Fast Purge API
+  description: Refresh or remove specific cached objects, by URLs, content provider (CP) codes, or cache tags.
+  humanURL: https://techdocs.akamai.com/purge-cache/reference
+  baseURL: https://{hostname}/ccu/v3
+  tags:
+  - CP code
+  - Cache tag
+  - Rate limits
+  - URL/ARL
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-ccu-v3-openapi.json
+- aid: akamai-technologies:chinacdn-v1
+  name: Akamai China CDN Manager API
+  description: Manage the lifecycle and monitor the status of your property hostnames on Akamai's China CDN.
+  humanURL: https://techdocs.akamai.com/chinacdn/reference
+  baseURL: https://{hostname}/chinacdn/v1
+  tags:
+  - Edge hostnames
+  - Groups
+  - ICP holding entities
+  - ICP numbers
+  - Property hostnames
+  - Provision state changes
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-chinacdn-v1-openapi.json
+- aid: akamai-technologies:client-access-control-v1
+  name: Akamai Client Access Control API
+  description: Restrict access between your origin infrastructure and Akamai edge servers based on CIDR blocks.
+  humanURL: https://techdocs.akamai.com/client-access-control/reference
+  baseURL: https://{hostname}/client-access-control/v1
+  tags:
+  - CAC configurations
+  - CIDR blocks
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-client-access-control-v1-openapi.json
+- aid: akamai-technologies:cloud-wrapper-v1
+  name: Akamai Cloud Wrapper Configuration API
+  description: Seamlessly connect your publicly stored media delivery content to the Akamai edge.
+  humanURL: https://techdocs.akamai.com/cloud-wrapper/reference
+  baseURL: https://{hostname}/cloud-wrapper/v1
+  tags:
+  - Capacity
+  - Configurations
+  - Locations
+  - Multi-CDN
+  - Properties
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-cloud-wrapper-v1-openapi.json
+- aid: akamai-technologies:cloudlets-v2
+  name: Akamai Cloudlets API
+  description: Solve specific business challenges using value-added apps that complement Akamai's core solutions.
+  humanURL: https://techdocs.akamai.com/cloudlets/reference
+  baseURL: https://{hostname}/cloudlets/api/v2
+  tags:
+  - API
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-cloudlets-v2-openapi.json
+- aid: akamai-technologies:cloudlets-v3
+  name: Akamai Cloudlets API
+  description: Solve specific business challenges using value-added apps that complement Akamai's core solutions.
+  humanURL: https://techdocs.akamai.com/cloudlets/reference
+  baseURL: https://{hostname}/cloudlets/v3
+  tags:
+  - Activations
+  - Cloudlets
+  - Policies
+  - Properties
+  - Versions
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-cloudlets-v3-openapi.json
+- aid: akamai-technologies:config-dns-v2
+  name: Akamai Edge DNS API
+  description: Replace or augment your DNS infrastructure with a cloud-based authoritative DNS solution.
+  humanURL: https://techdocs.akamai.com/edge-dns/reference
+  baseURL: https://{hostname}/config-dns/v2
+  tags:
+  - Authorities
+  - Change list settings
+  - Change lists
+  - Contracts
+  - Convert requests
+  - Create requests
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-config-dns-v2-openapi.json
+- aid: akamai-technologies:config-gtm-v1
+  name: Akamai Global Traffic Management API
+  description: Use load balancing to manage website and mobile performance demands.
+  humanURL: https://techdocs.akamai.com/gtm/reference
+  baseURL: https://{hostname}/config-gtm/v1
+  tags:
+  - AS maps
+  - CIDR maps
+  - Collections
+  - Contracts
+  - Data centers
+  - Domains
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-config-gtm-v1-openapi.json
+- aid: akamai-technologies:config-media-live-v2
+  name: Akamai Media Services Live Stream Provisioning API
+  description: Broadcast live streaming events reliably at scale.
+  humanURL: https://techdocs.akamai.com/msl/reference
+  baseURL: https://{hostname}/config-media-live/v2
+  tags:
+  - CDNs
+  - CP codes
+  - Contracts
+  - Keys
+  - Origins
+  - Publishing locations
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-config-media-live-v2-openapi.json
+- aid: akamai-technologies:cprg-v1
+  name: Akamai CP Codes and Reporting Groups API
+  description: Access detailed information about CP codes, edit their parameters, and group them for billing.
+  humanURL: https://techdocs.akamai.com/cp-codes/reference
+  baseURL: https://{hostname}/cprg/v1
+  tags:
+  - CP codes
+  - Products
+  - Reporting groups
+  - Watermark limits
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-cprg-v1-openapi.json
+- aid: akamai-technologies:cps-v2
+  name: Akamai Certificate Provisioning System API
+  description: Get full life cycle management of SSL certificates for your Akamai CDN applications.
+  humanURL: https://techdocs.akamai.com/cps/reference
+  baseURL: https://{hostname}/cps/v2
+  tags:
+  - Changes
+  - Deployments
+  - Enrollments
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-cps-v2-openapi.json
+- aid: akamai-technologies:crux-v1
+  name: Akamai Enterprise Application Access API
+  description: Manage and control remote access to your applications.
+  humanURL: https://techdocs.akamai.com/eaa-api/reference
+  baseURL: https://{hostname}/crux/v1
+  tags:
+  - Admin events reports
+  - Application IDPs
+  - Application audit logs
+  - Application bundles
+  - Application categories
+  - Application directories
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-crux-v1-openapi.json
+- aid: akamai-technologies:datastream-config-api-v2
+  name: Akamai DataStream 2 API
+  description: Monitors activity on the Akamai platform and sends live log data to a destination of your choice.
+  humanURL: https://techdocs.akamai.com/datastream2/reference
+  baseURL: https://{hostname}/datastream-config-api/v2
+  tags:
+  - Activations
+  - Data sets
+  - Groups
+  - History
+  - Properties
+  - Streams
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-datastream-config-api-v2-openapi.json
+- aid: akamai-technologies:eccu-api-v1
+  name: Akamai Enhanced Content Control Utility API
+  description: Refresh content cached on the edge network based on directory, file extension, or other logic.
+  humanURL: https://techdocs.akamai.com/eccu/reference
+  baseURL: https://{hostname}/eccu-api/v1
+  tags:
+  - ECCU requests
+  - Permissions
+  - Properties
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-eccu-api-v1-openapi.json
+- aid: akamai-technologies:edge-diagnostics-v1
+  name: Akamai Edge Diagnostics API
+  description: Diagnose your server, DNS, and network problems from Akamai servers around the world.
+  humanURL: https://techdocs.akamai.com/edge-diagnostics/reference
+  baseURL: https://{hostname}/edge-diagnostics/v1
+  tags:
+  - ARL translator
+  - CURL
+  - Connectivity problems
+  - Content problems
+  - Dig
+  - ESI debugger
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-edge-diagnostics-v1-openapi.json
+- aid: akamai-technologies:edgekv-v1
+  name: Akamai EdgeKV API
+  description: Add a key-value store database to your serverless compute logic and build data-driven applications.
+  humanURL: https://techdocs.akamai.com/edgekv/reference
+  baseURL: https://{hostname}/edgekv/v1
+  tags:
+  - Access tokens
+  - EdgeKV status
+  - Items
+  - Namespaces
+  - Permission groups
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-edgekv-v1-openapi.json
+- aid: akamai-technologies:edgeworkers-v1
+  name: Akamai EdgeWorkers API
+  description: Execute JavaScript functions at the edge to optimize site performance and customize web experiences.
+  humanURL: https://techdocs.akamai.com/edgeworkers/reference
+  baseURL: https://{hostname}/edgeworkers/v1
+  tags:
+  - Activations
+  - Contracts
+  - Deactivations
+  - EdgeWorker IDs
+  - Limits
+  - Permission groups
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-edgeworkers-v1-openapi.json
+- aid: akamai-technologies:etp-config-v3
+  name: Akamai Secure Internet Access Enterprise Configuration API
+  description: A programmatic interface to manage policy settings to protect against enterprise security and acceptable
+    user policy related events.
+  humanURL: https://techdocs.akamai.com/etp-config/reference
+  baseURL: https://{hostname}/etp-config/v3
+  tags:
+  - Acknowledgments
+  - Akamai built-in security lists
+  - Bulk log export
+  - Client configuration
+  - Client devices
+  - Client network configurations
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-etp-config-v3-openapi.json
+- aid: akamai-technologies:etp-report-v3
+  name: Akamai Secure Internet Access Enterprise Reporting API
+  description: Access and analyze reports for acceptable user policy (AUP) events, DNS activity, network traffic
+    connections, security connector events, and threat events.
+  humanURL: https://techdocs.akamai.com/etp-reporting/reference
+  baseURL: https://{hostname}/etp-report/v3
+  tags:
+  - AUP events
+  - DNS activity reports
+  - Deepscan reports
+  - Feedback reports
+  - IDP access logs
+  - IOC detail reports
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-etp-report-v3-openapi.json
+- aid: akamai-technologies:event-viewer-v1
+  name: Akamai Event Viewer API
+  description: Monitor and analyze Control Center events.
+  humanURL: https://techdocs.akamai.com/event-viewer/reference
+  baseURL: https://{hostname}/event-viewer-api/v1
+  tags:
+  - Event types
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-event-viewer-v1-openapi.json
+- aid: akamai-technologies:events-v3
+  name: Akamai Event Center API
+  description: Configure events, reporting, and alerts in Event Center.
+  humanURL: https://techdocs.akamai.com/event-ctr/reference
+  baseURL: https://{hostname}/events/v3
+  tags:
+  - Events
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-events-v3-openapi.json
+- aid: akamai-technologies:firewall-rules-manager-v1
+  name: Akamai Firewall Rules Notification API
+  description: Get notifications of CIDR block changes on the edge network so you can update your firewall rules.
+  humanURL: https://techdocs.akamai.com/firewall-rules/reference
+  baseURL: https://{hostname}/firewall-rules-manager/v1
+  tags:
+  - CIDR blocks
+  - Services
+  - Subscriptions
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-firewall-rules-manager-v1-openapi.json
+- aid: akamai-technologies:gtm-api-v1
+  name: Akamai Global Traffic Management Reporting API
+  description: Get read-only reports on Global Traffic Management's real-time statistics.
+  humanURL: https://techdocs.akamai.com/gtm-reporting/reference
+  baseURL: https://{hostname}/gtm-api/v1/reports
+  tags:
+  - Diagnostics
+  - Directed demand
+  - Domains
+  - IP availability
+  - Latency
+  - Liveness
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-gtm-api-v1-openapi.json
+- aid: akamai-technologies:gtm-load-data-v1
+  name: Akamai Global Traffic Management Load Feedback API
+  description: Submit load data for a Global Traffic Management domain in either JSON or XML.
+  humanURL: https://techdocs.akamai.com/gtm-load-feedback/reference
+  baseURL: http://{hostname}/gtm-load-data/v1
+  tags:
+  - Load data
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-gtm-load-data-v1-openapi.json
+- aid: akamai-technologies:identity-management-v1
+  name: Akamai Identity and Access Management API
+  description: Create users and groups, and define policies that manage access to Control Center applications.
+  humanURL: https://techdocs.akamai.com/iam-api/reference
+  baseURL: https://{hostname}/identity-management/v1
+  tags:
+  - API
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-identity-management-v1-openapi.json
+- aid: akamai-technologies:identity-management-v2
+  name: Akamai Identity and Access Management API
+  description: Create users and groups, and define policies that manage access to Control Center applications.
+  humanURL: https://techdocs.akamai.com/iam-user-admin/reference
+  baseURL: https://{hostname}/identity-management/v2
+  tags:
+  - Access
+  - Allowlists
+  - Assignments
+  - Blocked properties
+  - CIDR blocks
+  - Clients
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-identity-management-v2-openapi.json
+- aid: akamai-technologies:identity-management-v3
+  name: Akamai Identity and Access Management API
+  description: Create users and groups, and define policies that manage access to Control Center applications.
+  humanURL: https://techdocs.akamai.com/iam-user-admin/reference
+  baseURL: https://{hostname}/identity-management/v3
+  tags:
+  - 'API client: self'
+  - API clients
+  - Assets
+  - Blocked assets
+  - CIDR blocks
+  - Contact types
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-identity-management-v3-openapi.json
+- aid: akamai-technologies:imaging-v2
+  name: Akamai Image & Video Manager API
+  description: Automate image and video delivery optimizations for your website visitors.
+  humanURL: https://techdocs.akamai.com/ivm/reference
+  baseURL: https://{hostname}/imaging/v2
+  tags:
+  - Errors
+  - Image collection hitory
+  - Image collections
+  - Images
+  - Logs
+  - Policies
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-imaging-v2-openapi.json
+- aid: akamai-technologies:ip-protect-v1
+  name: Akamai Prolexic IP Protect Configuration API
+  description: Shield your site from DDoS attacks by diverting traffic and scrubbing network packets.
+  humanURL: https://techdocs.akamai.com/ip-protect/reference
+  baseURL: https://{hostname}/ip-protect/v1
+  tags:
+  - Health status
+  - Mapped IP addresses
+  - Policy configurations
+  - Policy domains
+  - Subnets
+  - Virtual IP addresses
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-ip-protect-v1-openapi.json
+- aid: akamai-technologies:jwt-api-v1
+  name: Akamai IoT Token Access Control API
+  description: Manage the public keys that authenticate JSON web token requests for IoT devices.
+  humanURL: https://techdocs.akamai.com/iot-token-access-control/reference
+  baseURL: https://{hostname}/jwt-api/v1
+  tags:
+  - Activations
+  - Key collections
+  - Versions
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-jwt-api-v1-openapi.json
+- aid: akamai-technologies:live-archive-v1
+  name: Akamai Live Archive Management API
+  description: Archive live streams in HLS and DASH formats for use as video on demand (VOD) content.
+  humanURL: https://techdocs.akamai.com/live-archive-management/reference
+  baseURL: https://{hostname}/live-archive/v1
+  tags:
+  - Archives
+  - Endpoints
+  - VOD assets
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-live-archive-v1-openapi.json
+- aid: akamai-technologies:media-reports-v1
+  name: Akamai Media Services Live Reports API
+  description: Monitor traffic for Media Services Live solutions.
+  humanURL: https://techdocs.akamai.com/media-services-rpts/reference
+  baseURL: https://{hostname}/media-reports/v1
+  tags:
+  - Media Services Live 4
+  - Progressive Media Delivery
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-media-reports-v1-openapi.json
+- aid: akamai-technologies:netstorage-usage-api
+  name: Akamai NetStorage Usage API
+  description: Akamai NetStorage Usage API — 7 operations published by Akamai Technologies in the akamai/akamai-apis
+    OpenAPI repository.
+  humanURL: https://techdocs.akamai.com/home/page/apis
+  baseURL: http://{apiKey}-nsu.akamaihd.net
+  tags:
+  - API actions
+  - Manage subscriptions
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-netstorage-usage-api-openapi.json
+- aid: akamai-technologies:network-cloud-firewall-v1
+  name: Akamai Prolexic Network Cloud Firewall API
+  description: Define and manage inbound access control lists (ACLs) enforced at the edge of the Prolexic cloud-based
+    DDoS protection platform.
+  humanURL: https://techdocs.akamai.com/network-cloud-firewall/reference
+  baseURL: https://{hostname}/network-cloud-firewall/v1
+  tags:
+  - ACL aliases
+  - ACL rule hits
+  - ACL rules
+  - ACL versions
+  - Account limits
+  - Big aliases
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-network-cloud-firewall-v1-openapi.json
+- aid: akamai-technologies:network-lists-v2
+  name: Akamai Network Lists API
+  description: Automate the creation, deployment, and management of lists used in Akamai security products
+  humanURL: https://techdocs.akamai.com/network-lists/reference
+  baseURL: https://{hostname}/network-list/v2
+  tags:
+  - Activations
+  - Elements
+  - Network lists
+  - Subscriptions
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-network-lists-v2-openapi.json
+- aid: akamai-technologies:ota-v1
+  name: Akamai IoT OTA Updates API
+  description: Securely update vehicle-specific software over cellular networks.
+  humanURL: https://techdocs.akamai.com/iot-ota-updates/reference
+  baseURL: https://{hostname}/ota/v1
+  tags:
+  - CP codes
+  - Download notifications
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-ota-v1-openapi.json
+- aid: akamai-technologies:papi-v1
+  name: Akamai Property Manager API
+  description: Define rules and behaviors that govern your website delivery based on match criteria.
+  humanURL: https://techdocs.akamai.com/property-mgr/reference
+  baseURL: https://{hostname}/papi/v1
+  tags:
+  - Active property hostnames
+  - Build
+  - Bulk activations
+  - Bulk patch
+  - Bulk search
+  - Bulk versioning
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-papi-v1-openapi.json
+- aid: akamai-technologies:prolexic-analytics-v2
+  name: Akamai Prolexic Analytics API
+  description: Stop DDoS attacks in the cloud before they reach the data center.
+  humanURL: https://techdocs.akamai.com/prolexic/reference
+  baseURL: https://{hostname}/prolexic-analytics/v2
+  tags:
+  - Attack reports
+  - Critical events
+  - Customer names
+  - Events
+  - Metric types
+  - Metrics
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-prolexic-analytics-v2-openapi.json
+- aid: akamai-technologies:prolexic-network-health-v1
+  name: Akamai Prolexic Network Health API
+  description: Provides network traffic visibility through Akamai's network to diagnose network issues without relying
+    solely on third-party tools.
+  humanURL: https://techdocs.akamai.com/prolexic-network-health/reference
+  baseURL: https://{hostname}/prolexic-network-health/v1
+  tags:
+  - Targets
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-prolexic-network-health-v1-openapi.json
+- aid: akamai-technologies:reporting-api-v1
+  name: Akamai Reporting API
+  description: Generate custom reports to monitor and optimize your Akamai services.
+  humanURL: https://techdocs.akamai.com/reporting/reference
+  baseURL: https://{hostname}/reporting-api/v1
+  tags:
+  - Report types
+  - Reports
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-reporting-api-v1-openapi.json
+- aid: akamai-technologies:reporting-api-v2
+  name: Akamai Reporting API
+  description: Generate custom reports to monitor and optimize your Akamai services.
+  humanURL: https://techdocs.akamai.com/reporting/reference
+  baseURL: https://{hostname}/reporting-api/v2
+  tags:
+  - Report data
+  - Report list
+  - Report metadata
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-reporting-api-v2-openapi.json
+- aid: akamai-technologies:sandbox-api-v1
+  name: Akamai Sandbox API
+  description: Create an isolated development environment to test code changes locally before deploying to the CDN.
+  humanURL: https://techdocs.akamai.com/sandbox/reference
+  baseURL: https://{hostname}/sandbox-api/v1
+  tags:
+  - EdgeWorkers
+  - Properties
+  - Rotate JWT
+  - Sandboxes
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-sandbox-api-v1-openapi.json
+- aid: akamai-technologies:script-management
+  name: Akamai Script Management API
+  description: Minimize JavaScript performance impact by retrieving or creating Script Management policies.
+  humanURL: https://techdocs.akamai.com/script-management/reference
+  baseURL: https://{hostname}/script-management/v1
+  tags:
+  - Insights
+  - Policies
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-script-management-openapi.json
+- aid: akamai-technologies:siem-v1
+  name: Akamai SIEM Integration API
+  description: Integrate third-party SIEM applications with Akamai security solutions.
+  humanURL: https://techdocs.akamai.com/siem-integration/reference
+  baseURL: https://{hostname}/siem/v1
+  tags:
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-siem-v1-openapi.json
+- aid: akamai-technologies:siteshield-v1
+  name: Akamai Site Shield API
+  description: Hide websites and applications from the Internet and restrict clients from accessing the origin.
+  humanURL: https://techdocs.akamai.com/site-shield/reference
+  baseURL: https://{hostname}/siteshield/v1
+  tags:
+  - Maps
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-siteshield-v1-openapi.json
+- aid: akamai-technologies:sla-api-v1
+  name: Akamai Service-Level Agreement API
+  description: Access the SLA test configurations and the resulting reports.
+  humanURL: https://techdocs.akamai.com/sla/reference
+  baseURL: https://{hostname}/sla-api/v1
+  tags:
+  - Agent Groups
+  - Create Test
+  - Quotas
+  - Reports
+  - Tests
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-sla-api-v1-openapi.json
+- aid: akamai-technologies:storage-v1
+  name: Akamai NetStorage Configuration API
+  description: Store content for digital optimization and flexible data transfer.
+  humanURL: https://techdocs.akamai.com/netstorage/reference
+  baseURL: https://{hostname}/storage/v1
+  tags:
+  - Accounts
+  - CP codes
+  - Groups
+  - Rule sets
+  - Snapshots
+  - Zones
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-storage-v1-openapi.json
+- aid: akamai-technologies:taas-v2
+  name: Akamai Access Revocation API
+  description: Recognize and flag authentication tokens that have been hijacked, and block requests that include
+    them.
+  humanURL: https://techdocs.akamai.com/adaptive-media-delivery/reference
+  baseURL: https://{hostname}/taas/v2
+  tags:
+  - Identifiers
+  - Properties
+  - Revocation lists
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-taas-v2-openapi.json
+- aid: akamai-technologies:test-management-v3
+  name: Akamai Test Center API
+  description: Run functional tests to check how configuration changes affect your configuration.
+  humanURL: https://techdocs.akamai.com/test-ctr/reference
+  baseURL: https://{hostname}/test-management/v3
+  tags:
+  - Functions
+  - Test cases
+  - Test catalog template
+  - Test conditions
+  - Test requests
+  - Test runs
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-test-management-v3-openapi.json
+- aid: akamai-technologies:linode-api
+  name: Akamai Linode API
+  description: Akamai Cloud Computing (Linode) API — provision and manage compute instances, Kubernetes (LKE), block
+    and object storage, networking, databases, DNS and account resources.
+  humanURL: https://techdocs.akamai.com/linode-api/reference/api
+  baseURL: https://api.linode.com
+  tags:
+  - Access keys
+  - Account
+  - Account agreements
+  - Account availability
+  - Account logins
+  - Account settings
+  properties:
+  - type: OpenAPI
+    url: openapi/akamai-technologies-linode-api-openapi.json
 common:
-  - type: AgenticAccess
-    url: agentic-access/akamai-technologies-agentic-access.yml
-  - type: DomainSecurity
-    url: security/akamai-technologies-domain-security.yml
-  - type: Authentication
-    url: authentication/akamai-technologies-authentication.yml
-  - type: GitHubOrganization
-    url: https://github.com/akamai
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/akamai-technologies
-  - type: Website
-    url: https://www.akamai.com
+- type: AgenticAccess
+  url: agentic-access/akamai-technologies-agentic-access.yml
+- type: DomainSecurity
+  url: security/akamai-technologies-domain-security.yml
+- type: OAuthScopes
+  url: scopes/akamai-technologies-scopes.yml
+- type: Authentication
+  url: authentication/akamai-technologies-authentication.yml
+- type: Website
+  url: https://www.akamai.com
+- type: DeveloperPortal
+  url: https://techdocs.akamai.com
+- type: Documentation
+  url: https://techdocs.akamai.com/home
+- type: APIReference
+  url: https://techdocs.akamai.com/home/page/apis
+- type: GettingStarted
+  url: https://techdocs.akamai.com/developer/docs/make-your-first-api-call
+- type: GitHubOrganization
+  url: https://github.com/akamai
+- type: Blog
+  url: https://developers.akamai.com/blog
+- type: SignUp
+  url: https://login.linode.com/signup
+- type: Login
+  url: https://control.akamai.com
+- type: Postman
+  url: https://www.postman.com/akamai/akamai-apis
+- type: LinkedIn
+  url: https://www.linkedin.com/company/akamai-technologies
+- type: StatusPage
+  url: https://www.akamaistatus.com
+- type: Packages
+  url: packages/akamai-technologies-packages.yml
+- type: SDKs
+  url: packages/akamai-technologies-packages.yml
+- type: WellKnown
+  url: well-known/akamai-technologies-well-known.yml
+- type: APICatalog
+  url: well-known/akamai-technologies-api-catalog.json
+- type: MCPServer
+  url: mcp/akamai-technologies-mcp.yml
+- type: ToolCrosswalk
+  url: mcp/akamai-technologies-tool-crosswalk.yml
+- type: LLMsTxt
+  url: llms/akamai-technologies-llms.txt
+- type: Overlay
+  url: overlays/akamai-technologies-ccu-v3-overlay.yaml
+- type: Overlay
+  url: overlays/akamai-technologies-papi-v1-overlay.yaml
+- type: Overlay
+  url: overlays/akamai-technologies-edgeworkers-v1-overlay.yaml
+- type: Overlay
+  url: overlays/akamai-technologies-config-dns-v2-overlay.yaml
+- type: Conformance
+  url: conformance/akamai-technologies-conformance.yml
+- type: ErrorCatalog
+  url: errors/akamai-technologies-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/akamai-technologies-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/akamai-technologies-lifecycle.yml
+- type: VulnerabilityDisclosure
+  url: security/akamai-technologies-vulnerability-disclosure.yml
+- type: Security
+  url: security/akamai-technologies-vulnerability-disclosure.yml
+- type: Sandbox
+  url: sandbox/akamai-technologies-sandbox.yml
+- type: Conventions
+  url: conventions/akamai-technologies-conventions.yml
+- type: ChangeLog
+  url: changelog/akamai-technologies-changelog.yml
+- type: CLI
+  url: cli/akamai-technologies-cli.yml
+- type: DataModel
+  url: data-model/akamai-technologies-data-model.yml
+- type: Webhooks
+  url: asyncapi/akamai-technologies-event-surface.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Plans
+  url: plans/akamai-technologies-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/akamai-technologies-rate-limits.yml
+- type: FinOps
+  url: finops/akamai-technologies-finops.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-30'
+  status: enriched
+  artifacts_added: 85
+  pass: local-v1

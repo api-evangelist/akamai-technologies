@@ -1,0 +1,120 @@
+generated: '2026-08-30'
+method: searched
+source: https://www.akamaistatus.com + https://techdocs.akamai.com/<product>/changelog + openapi/ (deprecated flags)
+description: Akamai versions in the URI path and runs major versions side by side rather than cutting over, so the
+  lifecycle signal to watch is the per-product changelog on TechDocs, not a global API version number. Every product
+  carries its own dated changelog; there is no single platform-wide release feed. 15 operations across the harvested
+  specs are flagged deprecated in the contract itself, all of them in the Linode (Akamai Cloud) API - the EdgeGrid
+  specs retire whole versions instead of individual operations.
+versioning:
+  style: URI path
+  parallel_majors: true
+  examples:
+  - identity-management v1, v2 and v3 all current
+  - cloudlets v2 and v3
+  - reporting-api v1 and v2
+  note: A new major appears at a new path; the old one keeps serving until the product team retires it.
+status_page:
+  url: https://www.akamaistatus.com
+  status: 200
+  components: Per-product status for the Akamai platform.
+  secondary:
+    url: https://status.linode.com
+    status: 200
+    covers: Akamai Cloud (Linode) regions and services
+deprecation_policy:
+  published: true
+  mechanism: 'Per-product changelog entries on techdocs.akamai.com/<product>/changelog announce deprecations and
+    end-of-life dates; the OpenAPI descriptions carry `deprecated: true` on retired Linode operations.'
+  sunset_headers: false
+  note: No RFC 8594 Sunset or Deprecation response headers appear in any of the 58 harvested specs. The signal is
+    documentary, not runtime - an agent cannot learn from a response that an operation is going away.
+  examples:
+  - https://techdocs.akamai.com/edgeworkers/changelog/aug-12-2026-reports-diabled.md - EdgeWorkers report IDs 2
+    and 4 disabled
+  - https://techdocs.akamai.com/property-mgr/changelog
+sla:
+  published: true
+  api: openapi/akamai-technologies-sla-api-v1-openapi.json
+  note: Akamai exposes a Service-Level Agreement API (sla-api/v1, 9 operations) so customers can read their own
+    SLA measurements programmatically - unusual, and worth noting.
+deprecated_operation_count: 15
+deprecated_operations:
+- api: linode-api
+  method: GET
+  path: /{apiVersion}/account/child-accounts
+  operationId: get-child-accounts
+  summary: List child accounts (Deprecated)
+- api: linode-api
+  method: GET
+  path: /{apiVersion}/account/child-accounts/{euuId}
+  operationId: get-child-account
+  summary: Get a child account (Deprecated)
+- api: linode-api
+  method: POST
+  path: /{apiVersion}/account/child-accounts/{euuId}/token
+  operationId: post-child-account-token
+  summary: Create a proxy user token
+- api: linode-api
+  method: POST
+  path: /{apiVersion}/account/credit-card
+  operationId: post-credit-card
+  summary: Add or edit a credit card
+- api: linode-api
+  method: POST
+  path: /{apiVersion}/account/entity-transfers
+  operationId: post-entity-transfer
+  summary: Create an entity transfer
+- api: linode-api
+  method: GET
+  path: /{apiVersion}/account/entity-transfers
+  operationId: get-entity-transfers
+  summary: List entity transfers
+- api: linode-api
+  method: GET
+  path: /{apiVersion}/account/entity-transfers/{token}
+  operationId: get-entity-transfer
+  summary: Get an entity transfer
+- api: linode-api
+  method: DELETE
+  path: /{apiVersion}/account/entity-transfers/{token}
+  operationId: delete-entity-transfer
+  summary: Cancel an entity transfer
+- api: linode-api
+  method: POST
+  path: /{apiVersion}/account/entity-transfers/{token}/accept
+  operationId: post-accept-entity-transfer
+  summary: Accept an entity transfer
+- api: linode-api
+  method: POST
+  path: /{apiVersion}/account/payments/paypal
+  operationId: post-pay-pal-payment
+  summary: Stage a PayPal payment
+- api: linode-api
+  method: POST
+  path: /{apiVersion}/account/payments/paypal/execute
+  operationId: post-execute-pay-pal-payment
+  summary: Execute a PayPal payment
+- api: linode-api
+  method: GET
+  path: /{apiVersion}/account/users/{username}/grants
+  operationId: get-user-grants
+  summary: List a user's grants
+- api: linode-api
+  method: PUT
+  path: /{apiVersion}/account/users/{username}/grants
+  operationId: put-user-grants
+  summary: Update a user's grants
+- api: linode-api
+  method: GET
+  path: /{apiVersion}/object-storage/clusters
+  operationId: get-object-storage-clusters
+  summary: List clusters
+- api: linode-api
+  method: GET
+  path: /{apiVersion}/object-storage/clusters/{clusterId}
+  operationId: get-object-storage-cluster
+  summary: Get a cluster
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

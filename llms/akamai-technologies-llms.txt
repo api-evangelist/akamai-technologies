@@ -1,0 +1,1979 @@
+# akamai-docs Documentation
+
+> Find guides and developer resources—including APIs, CLIs, Terraform, and code samples—that enable you to build, protect, and deliver powerful sites and apps.
+
+Append .md to any documentation page URL to get its markdown version.
+
+Each project below either links to its own llms.txt, which contains a full index of that project's documentation, or inlines the index its authors wrote by hand. Where links are listed, the section and category ones narrow to that part of the docs.
+
+## Adaptive Acceleration
+
+- [Adaptive Acceleration](https://techdocs.akamai.com/adaptive-acceleration/llms.txt): Adaptive Acceleration syncs with ​Akamai​ real user monitoring to gather navigation and resource timing data and stores that data in a policy that's associated with your hostname. As requests for your hostname continue, policy data is gathered and reviewed to identify key resources.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/adaptive-acceleration/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/adaptive-acceleration/docs/welcome/llms.txt)
+- [Manage your reports](https://techdocs.akamai.com/adaptive-acceleration/docs/manage-your-reports/llms.txt)
+- [Reporting](https://techdocs.akamai.com/adaptive-acceleration/docs/reporting/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/adaptive-acceleration/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/adaptive-acceleration/reference/api/llms.txt)
+- [Adaptive Acceleration report](https://techdocs.akamai.com/adaptive-acceleration/reference/adaptive-acceleration-report/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/adaptive-acceleration/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/adaptive-acceleration/changelog/llms.txt): full section index
+
+
+## Adaptive Media Delivery
+
+- [Adaptive Media Delivery](https://techdocs.akamai.com/adaptive-media-delivery/llms.txt): Delivers streaming video and a quality viewing experience anywhere by adapting real-time to available bandwidth. To meet consumer expectations in a hyperconnected world, content providers need a high-performance streaming media delivery solution like Akamai’s Adaptive Media Delivery. Optimized for Adaptive Bitrate (ABR) streaming, it provides a high-quality viewing experience across the broad variety of network types, fixed or mobile, at varying connection speeds. Because it’s built on the Akamai Intelligent Platform, Adaptive Media Delivery provides superior scalability, reliability, and availability.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/adaptive-media-delivery/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/adaptive-media-delivery/docs/welcome/llms.txt)
+- [Before you begin](https://techdocs.akamai.com/adaptive-media-delivery/docs/before-you-begin/llms.txt)
+- [Configuration](https://techdocs.akamai.com/adaptive-media-delivery/docs/configuration/llms.txt)
+- [Optional features](https://techdocs.akamai.com/adaptive-media-delivery/docs/optional-features/llms.txt)
+- [Resources](https://techdocs.akamai.com/adaptive-media-delivery/docs/resources/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/adaptive-media-delivery/reference/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/adaptive-media-delivery/reference/welcome/llms.txt)
+- [AMD's Access Revocation API](https://techdocs.akamai.com/adaptive-media-delivery/reference/amds-access-revocation-api/llms.txt)
+- [Access Revocation](https://techdocs.akamai.com/adaptive-media-delivery/reference/access-revocation/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/adaptive-media-delivery/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/adaptive-media-delivery/changelog/llms.txt): full section index
+
+
+## Adaptive Media Player 2 powered by Bitmovin
+
+- [Adaptive Media Player 2 powered by Bitmovin](https://techdocs.akamai.com/amp2-bitmovin/llms.txt): Adaptive Media Player 2 (AMP2), powered by Bitmovin, delivers multiplatform video SDKs with comprehensive analytics built directly into each player, providing unified insights across your users' platforms.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/amp2-bitmovin/docs/llms.txt): full section index
+- [Overview](https://techdocs.akamai.com/amp2-bitmovin/docs/overview/llms.txt)
+- [Migration](https://techdocs.akamai.com/amp2-bitmovin/docs/migration/llms.txt)
+
+
+## Akamai Cloud
+
+- [Akamai Cloud](https://techdocs.akamai.com/cloud-computing/llms.txt): Use Akamai cloud computing (formerly Linode) to build, deploy, and scale your modern applications faster and easier on the Akamai Connected Cloud.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/cloud-computing/docs/llms.txt): full section index
+- [Platform](https://techdocs.akamai.com/cloud-computing/docs/platform/llms.txt)
+- [Identity and Access](https://techdocs.akamai.com/cloud-computing/docs/identity-and-access/llms.txt)
+- [Compute](https://techdocs.akamai.com/cloud-computing/docs/compute/llms.txt)
+- [Storage](https://techdocs.akamai.com/cloud-computing/docs/storage/llms.txt)
+- [Networking](https://techdocs.akamai.com/cloud-computing/docs/networking/llms.txt)
+- [Databases](https://techdocs.akamai.com/cloud-computing/docs/databases/llms.txt)
+- [Monitoring](https://techdocs.akamai.com/cloud-computing/docs/monitoring/llms.txt)
+- [Tools](https://techdocs.akamai.com/cloud-computing/docs/tools/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/cloud-computing/changelog/llms.txt): full section index
+
+
+## Akamai Developer Center
+
+- [Akamai Developer Center](https://techdocs.akamai.com/developer/llms.txt): Find developer tools, resources, and sample code, and connect with the Akamai community.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/developer/docs/llms.txt): full section index
+- [Get Started](https://techdocs.akamai.com/developer/docs/get-started/llms.txt)
+- [Get Credentials](https://techdocs.akamai.com/developer/docs/get-credentials/llms.txt)
+- [Multicloud tools](https://techdocs.akamai.com/developer/docs/multicloud-tools/llms.txt)
+- [Security & delivery automation](https://techdocs.akamai.com/developer/docs/security-delivery-automation/llms.txt)
+- [Workflow tools](https://techdocs.akamai.com/developer/docs/workflow-tools/llms.txt)
+- [Diagnostics & testing](https://techdocs.akamai.com/developer/docs/diagnostics-testing/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/developer/recipes/llms.txt): full section index
+
+
+## Akamai Direct Connect
+
+- [Akamai Direct Connect](https://techdocs.akamai.com/direct-connect/llms.txt): Akamai's Direct Connect is a high performance network interconnection between your origin infrastructure and the Akamai Intelligent Edge Platform. Direct Connect lets you connect to the platform without using a third-party IP transit provider. It provides private connectivity between the platform and a router in your data center or colocation environment.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/direct-connect/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/direct-connect/docs/welcome/llms.txt)
+- [Requirements](https://techdocs.akamai.com/direct-connect/docs/requirements/llms.txt)
+- [Configure](https://techdocs.akamai.com/direct-connect/docs/configure/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/direct-connect/changelog/llms.txt): full section index
+
+
+## Akamai Functions
+
+- [Akamai Functions](https://techdocs.akamai.com/akamai-functions/llms.txt): Akamai Functions uses Spin to run edge native applications on Akamai Cloud. As a globally distributed PaaS Akamai Functions offers: Fast and resilient hosting for Spin applications, no maintenance tasks for infrastructure, fast application execution and availability in multiple regions across the world, automatic distribution and availability in multiple regions, and a URL that persists across deployments.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/akamai-functions/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/akamai-functions/docs/welcome/llms.txt)
+- [Manage applications](https://techdocs.akamai.com/akamai-functions/docs/manage-applications/llms.txt)
+- [Technical resources](https://techdocs.akamai.com/akamai-functions/docs/technical-resources/llms.txt)
+- [Monitor](https://techdocs.akamai.com/akamai-functions/docs/monitor/llms.txt)
+- [Limitations](https://techdocs.akamai.com/akamai-functions/docs/limitations/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/akamai-functions/changelog/llms.txt): full section index
+
+
+## Akamai MFA
+
+- [Akamai MFA](https://techdocs.akamai.com/mfa/llms.txt): Akamai MFA is a workforce MFA service that enables enterprises to provide additional security to the existing identity validation mechanisms for users’ authentication and access to cloud, on-premise, web-based, SaaS, and IaaS applications.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/mfa/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/mfa/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/mfa/docs/get-started/llms.txt)
+- [For administrators](https://techdocs.akamai.com/mfa/docs/for-administrators/llms.txt)
+- [For users](https://techdocs.akamai.com/mfa/docs/for-users/llms.txt)
+- [Administrator Tools](https://techdocs.akamai.com/mfa/docs/administrator-tools/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/mfa/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/mfa/reference/api/llms.txt)
+- [Email enrollments](https://techdocs.akamai.com/mfa/reference/email-enrollments/llms.txt)
+- [Users](https://techdocs.akamai.com/mfa/reference/users/llms.txt)
+- [Groups](https://techdocs.akamai.com/mfa/reference/groups/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/mfa/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/mfa/changelog/llms.txt): full section index
+
+
+## Akamai MFA OIDC API
+
+- [Akamai MFA OIDC API](https://techdocs.akamai.com/mfa-oidc/llms.txt): Akamai MFA OIDC API lets you integrate multi-factor authentication (MFA) into OpenID Connect (OIDC) authentication flows using Pushed Authorization Requests (PAR).
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/mfa-oidc/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/mfa-oidc/reference/api/llms.txt)
+- [Akamai MFA OIDC](https://techdocs.akamai.com/mfa-oidc/reference/akamai-mfa-oidc/llms.txt)
+
+
+## Alerts
+
+- [Alerts](https://techdocs.akamai.com/alerts-app/llms.txt): Akamai's Alerts application is a monitoring tool that both analyzes historical audience metrics and projects the expected traffic. Using intelligent algorithms, this service compares projected traffic with actual traffic in real time, and includes static alerts based on thresholds you set. It can trigger adaptive web alerts when current audience metrics goes above or below projected traffic. It does this by taking into consideration accurate traffic patterns modeled on historical data rather than on static thresholds.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/alerts-app/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/alerts-app/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/alerts-app/docs/get-started/llms.txt)
+- [Manage alerts](https://techdocs.akamai.com/alerts-app/docs/manage-alerts/llms.txt)
+- [Troubleshoot](https://techdocs.akamai.com/alerts-app/docs/troubleshoot/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/alerts-app/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/alerts-app/reference/api/llms.txt)
+- [Access control data](https://techdocs.akamai.com/alerts-app/reference/access-control-data/llms.txt)
+- [Templates](https://techdocs.akamai.com/alerts-app/reference/templates/llms.txt)
+- [Alert summaries](https://techdocs.akamai.com/alerts-app/reference/alert-summaries/llms.txt)
+- [Alert definitions](https://techdocs.akamai.com/alerts-app/reference/alert-definitions/llms.txt)
+- [Alert firings](https://techdocs.akamai.com/alerts-app/reference/alert-firings/llms.txt)
+- [Sparklines](https://techdocs.akamai.com/alerts-app/reference/sparklines/llms.txt)
+- [Schema](https://techdocs.akamai.com/alerts-app/reference/schema/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/alerts-app/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/alerts-app/changelog/llms.txt): full section index
+
+
+## API Acceleration
+
+- [API Acceleration](https://techdocs.akamai.com/api-acceleration/llms.txt): Akamai's API Acceleration improves the performance, security, and scalability of your APIs.  API Acceleration has a specialized network of servers, metadata optimization, and mapping strategies designed to meet the unique requirements and challenges of delivering performant API and beacon traffic.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/api-acceleration/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/api-acceleration/docs/welcome/llms.txt)
+- [Plan your implementation](https://techdocs.akamai.com/api-acceleration/docs/plan-your-implementation/llms.txt)
+- [Configure](https://techdocs.akamai.com/api-acceleration/docs/configure/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/api-acceleration/changelog/llms.txt): full section index
+
+
+## API Definitions
+
+- [API Definitions](https://techdocs.akamai.com/api-definitions/llms.txt): Akamai's API Definitions lets you register, manage, and deliver your APIs via Akamai in an efficient and secure manner.  Several products and features utilize API definitions, including: API Acceleration, API Discovery, API Gateway, Bot Manager, Kona Site Defender, and API protector with ASM module.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/api-definitions/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/api-definitions/docs/welcome/llms.txt)
+- [Define and register your APIs](https://techdocs.akamai.com/api-definitions/docs/define-and-register-your-apis/llms.txt)
+- [API Discovery operation](https://techdocs.akamai.com/api-definitions/docs/api-discovery-operation/llms.txt)
+- [API Gateway setup and operation](https://techdocs.akamai.com/api-definitions/docs/api-gateway-setup-and-operation/llms.txt)
+- [API keys and traffic management](https://techdocs.akamai.com/api-definitions/docs/api-keys-and-traffic-management/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/api-definitions/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/api-definitions/reference/api/llms.txt)
+- [Contracts and groups](https://techdocs.akamai.com/api-definitions/reference/contracts-and-groups/llms.txt)
+- [Categories](https://techdocs.akamai.com/api-definitions/reference/categories/llms.txt)
+- [API endpoints](https://techdocs.akamai.com/api-definitions/reference/api-endpoints/llms.txt)
+- [API delivery settings](https://techdocs.akamai.com/api-definitions/reference/api-delivery-settings/llms.txt)
+- [Multistep groups](https://techdocs.akamai.com/api-definitions/reference/multistep-groups/llms.txt)
+- [Resources and operations](https://techdocs.akamai.com/api-definitions/reference/resources-and-operations/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/api-definitions/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/api-definitions/changelog/llms.txt): full section index
+
+
+## API Keys and Traffic Management
+
+- [API Keys and Traffic Management](https://techdocs.akamai.com/key-traffic-mgmt/llms.txt): Akamai's API Keys and Traffic Management lets you create and manage API keys that serve as unique identifiers for API consumers. API keys exist inside top-level units called key collections. At the key collection level, you can set a quota limit for the number of successful requests that individual API clients can make. You can also edit access control lists (ACLs) associated with your API endpoints and resources. Together with the API Endpoint Definition API, you can use this API to programmatically deploy your APIs on the Akamai network.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/key-traffic-mgmt/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/key-traffic-mgmt/docs/welcome/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/key-traffic-mgmt/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/key-traffic-mgmt/reference/api/llms.txt)
+- [Key collections](https://techdocs.akamai.com/key-traffic-mgmt/reference/key-collections/llms.txt)
+- [Throttling counters](https://techdocs.akamai.com/key-traffic-mgmt/reference/throttling-counters/llms.txt)
+- [Keys](https://techdocs.akamai.com/key-traffic-mgmt/reference/keys/llms.txt)
+- [Tags](https://techdocs.akamai.com/key-traffic-mgmt/reference/tags/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/key-traffic-mgmt/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/key-traffic-mgmt/changelog/llms.txt): full section index
+
+
+## App Platform for LKE
+
+- [App Platform for LKE](https://techdocs.akamai.com/app-platform/llms.txt): App Platform is a Kubernetes service that combines developer-centric and operations-centric tooling along with automation and a self-service portal. This streamlines the application life cycle when using Kubernetes, from development to delivery to the management of containerized application workloads.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/app-platform/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/app-platform/docs/welcome/llms.txt)
+- [Setup](https://techdocs.akamai.com/app-platform/docs/setup/llms.txt)
+- [Get Started](https://techdocs.akamai.com/app-platform/docs/get-started/llms.txt)
+- [Platform-level usage (for administrators)](https://techdocs.akamai.com/app-platform/docs/platform-level-usage-for-administrators/llms.txt)
+- [Team-level usage (for devs)](https://techdocs.akamai.com/app-platform/docs/team-level-usage-for-devs/llms.txt)
+- [Labs](https://techdocs.akamai.com/app-platform/docs/labs/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/app-platform/changelog/llms.txt): full section index
+
+
+## Application Security API
+
+- [Application Security API](https://techdocs.akamai.com/application-security/llms.txt): Akamai's Application Security API allows you to access and modify your Security Configurations for Kona Site Defender, Web Application Protector, App & API Protector, Advanced Security Module, and Client Reputation. You can create, update, activate, and export versions of a security configuration. You can get selectable hostnames and add them to the selected list to protect your website or API content. You also can add, modify, or delete custom rules and assign policy actions.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/application-security/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/application-security/reference/api/llms.txt)
+- [Configuration settings](https://techdocs.akamai.com/application-security/reference/configuration-settings/llms.txt)
+- [Security policies](https://techdocs.akamai.com/application-security/reference/security-policies/llms.txt)
+- [Evaluation mode](https://techdocs.akamai.com/application-security/reference/evaluation-mode/llms.txt)
+- [Utilities and account data](https://techdocs.akamai.com/application-security/reference/utilities-and-account-data/llms.txt)
+- [Activation and export](https://techdocs.akamai.com/application-security/reference/activation-and-export/llms.txt)
+- [Self-service onboardings](https://techdocs.akamai.com/application-security/reference/self-service-onboardings/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/application-security/changelog/llms.txt): full section index
+
+
+## Aura
+
+- [Aura](https://techdocs.akamai.com/aura/llms.txt): Aura Licensed CDN (LCDN) is a highly-scalable, multi-purpose CDN for network operators. With Aura LCDN you can deliver high-quality, low-latency viewing experiences for both live and on-demand video content. The Aura Licensed Multicast Solution (LMS) is an extension of the Aura LCDN that uses IP Multicast technology to deliver the same Adaptive Bitrate (ABR) video content to multiple viewers simultaneously, similar to traditional broadcast methodology.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/aura/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/aura/docs/welcome/llms.txt)
+
+
+## Build on the cloud
+
+- [Build on the cloud](https://techdocs.akamai.com/get-started-cloud-computing/llms.txt): Follow this tutorial to set up highly available compute instances to deliver a basic site.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/get-started-cloud-computing/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/get-started-cloud-computing/docs/welcome/llms.txt)
+- [User Interface tutorial](https://techdocs.akamai.com/get-started-cloud-computing/docs/user-interface-tutorial/llms.txt)
+- [API tutorial](https://techdocs.akamai.com/get-started-cloud-computing/docs/api-tutorial/llms.txt)
+- [Next steps](https://techdocs.akamai.com/get-started-cloud-computing/docs/next-steps/llms.txt)
+
+
+## Certificate Provisioning System
+
+- [Certificate Provisioning System](https://techdocs.akamai.com/cps/llms.txt): Akamai’s Certificate Provisioning System (CPS) allows you to self-provision and manage your Secure Sockets Layer (SSL) and Transport Layer Security (TLS) certificates. It supports all certificate options, including third party.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/cps/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/cps/docs/welcome/llms.txt)
+- [Create Certificates](https://techdocs.akamai.com/cps/docs/create-certificates/llms.txt)
+- [View and search](https://techdocs.akamai.com/cps/docs/view-and-search/llms.txt)
+- [Certificate management](https://techdocs.akamai.com/cps/docs/certificate-management/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/cps/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/cps/reference/api/llms.txt)
+- [Enrollments](https://techdocs.akamai.com/cps/reference/enrollments/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/cps/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/cps/changelog/llms.txt): full section index
+
+
+## Client Access Control
+
+- [Client Access Control](https://techdocs.akamai.com/client-access-control/llms.txt): Manage access between your web assets and the edge servers on the Akamai network. With Client Access Control you can retrieve information about the CIDR blocks that currently connect your content to the Akamai network. When Akamai updates the CIDR blocks used for access, use Client Access Control to review the changes and send an acknowledgement to Akamai once you update your Access Control List.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/client-access-control/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/client-access-control/docs/welcome/llms.txt)
+- [Update the CIDR block list](https://techdocs.akamai.com/client-access-control/docs/update-the-cidr-block-list/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/client-access-control/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/client-access-control/reference/api/llms.txt)
+- [Configurations](https://techdocs.akamai.com/client-access-control/reference/configurations/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/client-access-control/changelog/llms.txt): full section index
+
+
+## Cloud Access Manager
+
+- [Cloud Access Manager](https://techdocs.akamai.com/cloud-access-mgr/llms.txt): Akamai's Cloud Access Manager enables cloud origin authentication and allows you to securely store and manage your cloud origin credentials in the form of access keys.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/cloud-access-mgr/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/cloud-access-mgr/docs/welcome/llms.txt)
+- [Configuration](https://techdocs.akamai.com/cloud-access-mgr/docs/configuration/llms.txt)
+- [Management](https://techdocs.akamai.com/cloud-access-mgr/docs/management/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/cloud-access-mgr/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/cloud-access-mgr/reference/api/llms.txt)
+- [Access keys](https://techdocs.akamai.com/cloud-access-mgr/reference/access-keys/llms.txt)
+- [Property lookups](https://techdocs.akamai.com/cloud-access-mgr/reference/property-lookups/llms.txt)
+- [Access key version status requests](https://techdocs.akamai.com/cloud-access-mgr/reference/access-key-version-status-requests/llms.txt)
+- [Access key creation status requests](https://techdocs.akamai.com/cloud-access-mgr/reference/access-key-creation-status-requests/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/cloud-access-mgr/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/cloud-access-mgr/changelog/llms.txt): full section index
+
+
+## Cloud Wrapper
+
+- [Cloud Wrapper](https://techdocs.akamai.com/cloud-wrapper/llms.txt): Akamai's Cloud Wrapper optimizes connectivity between cloud infrastructures and the Akamai Intelligent Edge. It uses custom caching to reduce origin requests and the cost to distribute content from the cloud. If you have a high volume of end-user requests, Cloud Wrapper can help provide consistent, high-quality experiences.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/cloud-wrapper/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/cloud-wrapper/docs/welcome/llms.txt)
+- [Configuration](https://techdocs.akamai.com/cloud-wrapper/docs/configuration/llms.txt)
+- [Administration](https://techdocs.akamai.com/cloud-wrapper/docs/administration/llms.txt)
+- [Best practices](https://techdocs.akamai.com/cloud-wrapper/docs/best-practices/llms.txt)
+- [Reports](https://techdocs.akamai.com/cloud-wrapper/docs/reports/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/cloud-wrapper/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/cloud-wrapper/reference/api/llms.txt)
+- [Capacity](https://techdocs.akamai.com/cloud-wrapper/reference/capacity/llms.txt)
+- [Properties](https://techdocs.akamai.com/cloud-wrapper/reference/properties/llms.txt)
+- [Locations](https://techdocs.akamai.com/cloud-wrapper/reference/locations/llms.txt)
+- [Configurations](https://techdocs.akamai.com/cloud-wrapper/reference/configurations/llms.txt)
+- [Multi-CDN](https://techdocs.akamai.com/cloud-wrapper/reference/multi-cdn/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/cloud-wrapper/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/cloud-wrapper/changelog/llms.txt): full section index
+
+
+## Cloudlets
+
+- [Cloudlets](https://techdocs.akamai.com/cloudlets/llms.txt): Akamai's Cloudlets are value-added applications that complement Akamai’s core delivery solutions to solve specific business challenges. Cloudlets bring a site’s business logic closer to the end user by placing it on the edge of the content delivery platform.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/cloudlets/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/cloudlets/docs/welcome/llms.txt)
+- [Manage Cloudlets](https://techdocs.akamai.com/cloudlets/docs/manage-cloudlets/llms.txt)
+- [Configuration and tools](https://techdocs.akamai.com/cloudlets/docs/configuration-and-tools/llms.txt)
+- [Application Load Balancer](https://techdocs.akamai.com/cloudlets/docs/application-load-balancer/llms.txt)
+- [API Prioritization](https://techdocs.akamai.com/cloudlets/docs/api-prioritization/llms.txt)
+- [Audience Segmentation](https://techdocs.akamai.com/cloudlets/docs/audience-segmentation/llms.txt)
+- [Edge Redirector](https://techdocs.akamai.com/cloudlets/docs/edge-redirector/llms.txt)
+- [Forward Rewrite](https://techdocs.akamai.com/cloudlets/docs/forward-rewrite/llms.txt)
+- [Phased Release](https://techdocs.akamai.com/cloudlets/docs/phased-release/llms.txt)
+- [Request Control](https://techdocs.akamai.com/cloudlets/docs/request-control/llms.txt)
+- [Visitor Prioritization](https://techdocs.akamai.com/cloudlets/docs/visitor-prioritization/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/cloudlets/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/cloudlets/reference/api/llms.txt)
+- [Cloudlets](https://techdocs.akamai.com/cloudlets/reference/cloudlets/llms.txt)
+- [Activations](https://techdocs.akamai.com/cloudlets/reference/activations/llms.txt)
+- [Policies](https://techdocs.akamai.com/cloudlets/reference/policies/llms.txt)
+- [Active properties](https://techdocs.akamai.com/cloudlets/reference/active-properties/llms.txt)
+- [Policy versions](https://techdocs.akamai.com/cloudlets/reference/policy-versions/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/cloudlets/changelog/llms.txt): full section index
+
+
+## CloudTest
+
+- [CloudTest](https://techdocs.akamai.com/cloudtest/llms.txt): Using Akamai's CloudTest to optimize your approach to load testing with a scalable, global platform. CloudTest provides testing capabilities for web and mobile apps, APIs, databases, and web services. Realtime analytics and customizable dashboards provide actionable intelligence, allowing for root-cause analysis while tests run.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/cloudtest/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/cloudtest/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/cloudtest/docs/get-started/llms.txt)
+- [Manage CloudTest](https://techdocs.akamai.com/cloudtest/docs/manage-cloudtest/llms.txt)
+- [Reference topics](https://techdocs.akamai.com/cloudtest/docs/reference-topics/llms.txt)
+- [CloudTest components](https://techdocs.akamai.com/cloudtest/docs/cloudtest-components/llms.txt)
+- [Developer tools](https://techdocs.akamai.com/cloudtest/docs/developer-tools/llms.txt)
+- [Best practices](https://techdocs.akamai.com/cloudtest/docs/best-practices/llms.txt)
+- [Tutorials](https://techdocs.akamai.com/cloudtest/docs/tutorials/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/cloudtest/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/cloudtest/reference/api/llms.txt)
+- [Cloud servers](https://techdocs.akamai.com/cloudtest/reference/cloud-servers/llms.txt)
+- [Test environments](https://techdocs.akamai.com/cloudtest/reference/test-environments/llms.txt)
+- [Grid provisioning](https://techdocs.akamai.com/cloudtest/reference/grid-provisioning/llms.txt)
+- [Compositions](https://techdocs.akamai.com/cloudtest/reference/compositions/llms.txt)
+- [Objects](https://techdocs.akamai.com/cloudtest/reference/objects/llms.txt)
+- [Results management](https://techdocs.akamai.com/cloudtest/reference/results-management/llms.txt)
+- [Query results](https://techdocs.akamai.com/cloudtest/reference/query-results/llms.txt)
+- [Results database](https://techdocs.akamai.com/cloudtest/reference/results-database/llms.txt)
+- [Seed data](https://techdocs.akamai.com/cloudtest/reference/seed-data/llms.txt)
+- [Server management](https://techdocs.akamai.com/cloudtest/reference/server-management/llms.txt)
+- [Tenant management](https://techdocs.akamai.com/cloudtest/reference/tenant-management/llms.txt)
+- [Tokens](https://techdocs.akamai.com/cloudtest/reference/tokens/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/cloudtest/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/cloudtest/changelog/llms.txt): full section index
+
+
+## Contract API
+
+- [Contract API](https://techdocs.akamai.com/contract-api/llms.txt): The Contract API provides information about Akamai contracts as well as the products included in those contracts. With this API, you have the option of retrieving product information for a specified time frame by either contract ID or reporting group.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/contract-api/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/contract-api/reference/api/llms.txt)
+- [Contracts](https://techdocs.akamai.com/contract-api/reference/contracts/llms.txt)
+- [Reporting groups](https://techdocs.akamai.com/contract-api/reference/reporting-groups/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/contract-api/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/contract-api/changelog/llms.txt): full section index
+
+
+## Control Center
+
+- [Control Center](https://techdocs.akamai.com/control-ctr/llms.txt): Akamai Control Center is the integrated interface for Akamai’s products, services, and platform. Control Center gives businesses the access, insight, and control they need to deliver the best possible online experiences. Control Center delivers intelligent tools for site and stream management, diagnostics, and collaboration to help businesses thrive in the hyperconnected world. Accessible via web, mobile, and API, Control Center makes it easy for businesses to configure their Akamai services, monitor performance, analyze traffic, and resolve end-user issues in real time, from any device, anywhere.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/control-ctr/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/control-ctr/docs/welcome/llms.txt)
+- [Global menu](https://techdocs.akamai.com/control-ctr/docs/global-menu/llms.txt)
+- [Homepage](https://techdocs.akamai.com/control-ctr/docs/homepage/llms.txt)
+- [Page header](https://techdocs.akamai.com/control-ctr/docs/page-header/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/control-ctr/changelog/llms.txt): full section index
+
+
+## CP Codes and Reporting Groups Tool
+
+- [CP Codes and Reporting Groups Tool](https://techdocs.akamai.com/cp-codes/llms.txt): Akamai's CP Codes and Reporting Groups tool lets you create, edit, view, and delete reporting groups. You can get access to detailed information about CP codes, edit their parameters, and group them for billing purposes.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/cp-codes/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/cp-codes/docs/welcome/llms.txt)
+- [Manage CP codes](https://techdocs.akamai.com/cp-codes/docs/manage-cp-codes/llms.txt)
+- [Manage reporting groups](https://techdocs.akamai.com/cp-codes/docs/manage-reporting-groups/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/cp-codes/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/cp-codes/reference/api/llms.txt)
+- [CP Codes](https://techdocs.akamai.com/cp-codes/reference/cp-codes/llms.txt)
+- [Reporting Groups](https://techdocs.akamai.com/cp-codes/reference/reporting-groups/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/cp-codes/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/cp-codes/changelog/llms.txt): full section index
+
+
+## DataStream 2
+
+- [DataStream 2](https://techdocs.akamai.com/datastream2/llms.txt): Akamai's DataStream provides real-time access to application activity data, including aggregated metrics on complete request-response cycles as well as origin response times. It helps simplify web application monitoring, and includes applications deployed to cloud hosting providers and applications that leverage third-party services.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/datastream2/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/datastream2/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/datastream2/docs/get-started/llms.txt)
+- [AnswerX (rDNS) logs](https://techdocs.akamai.com/datastream2/docs/answerx-rdns-logs/llms.txt)
+- [Security logs (SIEM)](https://techdocs.akamai.com/datastream2/docs/security-logs-siem/llms.txt)
+- [Manage](https://techdocs.akamai.com/datastream2/docs/manage/llms.txt)
+- [Troubleshoot](https://techdocs.akamai.com/datastream2/docs/troubleshoot/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/datastream2/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/datastream2/reference/api/llms.txt)
+- [DataStream 2 configuration](https://techdocs.akamai.com/datastream2/reference/datastream-2-configuration/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/datastream2/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/datastream2/changelog/llms.txt): full section index
+
+
+## Deliver your first site
+
+- [Deliver your first site](https://techdocs.akamai.com/onboard/llms.txt): To help speed up the onboarding process, this document provides a specific workflow you can follow to get your site up and running on the Akamai network.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/onboard/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/onboard/docs/welcome/llms.txt)
+- [Use Control Center](https://techdocs.akamai.com/onboard/docs/use-control-center/llms.txt)
+- [Use APIs](https://techdocs.akamai.com/onboard/docs/use-apis/llms.txt)
+- [What's next](https://techdocs.akamai.com/onboard/docs/whats-next/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/onboard/recipes/llms.txt): full section index
+
+
+## Domain Ownership Manager
+
+- [Domain Ownership Manager](https://techdocs.akamai.com/domain-validation/llms.txt): Domain Ownership Manager (DOM) is a service that prevents unauthorized use of hostnames on the Akamai network and strengthens security. Use the UI or API to prove domain ownership before you onboard new domains and hostnames to Akamai.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/domain-validation/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/domain-validation/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/domain-validation/docs/get-started/llms.txt)
+- [Manage domains](https://techdocs.akamai.com/domain-validation/docs/manage-domains/llms.txt)
+- [Troubleshooting](https://techdocs.akamai.com/domain-validation/docs/troubleshooting/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/domain-validation/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/domain-validation/reference/api/llms.txt)
+- [Domains](https://techdocs.akamai.com/domain-validation/reference/domains/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/domain-validation/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/domain-validation/changelog/llms.txt): full section index
+
+
+## Download Delivery
+
+- [Download Delivery](https://techdocs.akamai.com/download-delivery/llms.txt): A reliable, high performance file-based content delivery solution, Download Delivery delivers large (>100 MB) file-based content over the Internet. Built on the globally distributed Akamai Platform for superior capacity, scalability, availability, and performance, it provides clear, comprehensive metrics and optional tools that can monitor and manage the entire download process across your customer base. Download Delivery ensures a predictable, high-quality download experience while helping you address your online distribution goals.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/download-delivery/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/download-delivery/docs/welcome/llms.txt)
+- [Before you begin](https://techdocs.akamai.com/download-delivery/docs/before-you-begin/llms.txt)
+- [Configuration](https://techdocs.akamai.com/download-delivery/docs/configuration/llms.txt)
+- [Optional features](https://techdocs.akamai.com/download-delivery/docs/optional-features/llms.txt)
+- [Resources](https://techdocs.akamai.com/download-delivery/docs/resources/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/download-delivery/reference/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/download-delivery/reference/welcome/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/download-delivery/changelog/llms.txt): full section index
+
+
+## Edge Diagnostics
+
+- [Edge Diagnostics](https://techdocs.akamai.com/edge-diagnostics/llms.txt): Edge Diagnostics allows you to diagnose your server, DNS, and network problems from Akamai servers around the world.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/edge-diagnostics/docs/llms.txt): full section index
+- [Get started](https://techdocs.akamai.com/edge-diagnostics/docs/get-started/llms.txt)
+- [Tools](https://techdocs.akamai.com/edge-diagnostics/docs/tools/llms.txt)
+- [Problem scenarios](https://techdocs.akamai.com/edge-diagnostics/docs/problem-scenarios/llms.txt)
+- [Resources](https://techdocs.akamai.com/edge-diagnostics/docs/resources/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/edge-diagnostics/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/edge-diagnostics/reference/api/llms.txt)
+- [Edge server locations](https://techdocs.akamai.com/edge-diagnostics/reference/edge-server-locations/llms.txt)
+- [IP verification](https://techdocs.akamai.com/edge-diagnostics/reference/ip-verification/llms.txt)
+- [IP network location](https://techdocs.akamai.com/edge-diagnostics/reference/ip-network-location/llms.txt)
+- [IP verification and location](https://techdocs.akamai.com/edge-diagnostics/reference/ip-verification-and-location/llms.txt)
+- [GTM properties](https://techdocs.akamai.com/edge-diagnostics/reference/gtm-properties/llms.txt)
+- [IPA hostnames](https://techdocs.akamai.com/edge-diagnostics/reference/ipa-hostnames/llms.txt)
+- [Error translator](https://techdocs.akamai.com/edge-diagnostics/reference/error-translator/llms.txt)
+- [User diagnostic data](https://techdocs.akamai.com/edge-diagnostics/reference/user-diagnostic-data/llms.txt)
+- [Error statistics](https://techdocs.akamai.com/edge-diagnostics/reference/error-statistics/llms.txt)
+- [Metadata Tracer](https://techdocs.akamai.com/edge-diagnostics/reference/metadata-tracer/llms.txt)
+- [ESI debugger](https://techdocs.akamai.com/edge-diagnostics/reference/esi-debugger/llms.txt)
+- [CURL](https://techdocs.akamai.com/edge-diagnostics/reference/curl/llms.txt)
+- [GREP](https://techdocs.akamai.com/edge-diagnostics/reference/grep/llms.txt)
+- [ARL translator](https://techdocs.akamai.com/edge-diagnostics/reference/arl-translator/llms.txt)
+- [DIG](https://techdocs.akamai.com/edge-diagnostics/reference/dig/llms.txt)
+- [MTR](https://techdocs.akamai.com/edge-diagnostics/reference/mtr/llms.txt)
+- [URL Health Check](https://techdocs.akamai.com/edge-diagnostics/reference/url-health-check/llms.txt)
+- [Connectivity problems](https://techdocs.akamai.com/edge-diagnostics/reference/connectivity-problems/llms.txt)
+- [Content problems](https://techdocs.akamai.com/edge-diagnostics/reference/content-problems/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/edge-diagnostics/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/edge-diagnostics/changelog/llms.txt): full section index
+
+
+## Edge DNS
+
+- [Edge DNS](https://techdocs.akamai.com/edge-dns/llms.txt): Edge DNS is a cloud-based DNS solution that provides 24/7 DNS availability, improves DNS responsiveness, and has the resilience to defend against the largest DDoS attacks. Built on a globally distributed Anycast network, it can be implemented as a primary or secondary DNS service, replacing or augmenting existing DNS infrastructure as needed.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/edge-dns/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/edge-dns/docs/welcome/llms.txt)
+- [Configure and manage](https://techdocs.akamai.com/edge-dns/docs/configure-and-manage/llms.txt)
+- [Manage](https://techdocs.akamai.com/edge-dns/docs/manage/llms.txt)
+- [Monitor and report](https://techdocs.akamai.com/edge-dns/docs/monitor-and-report/llms.txt)
+- [Protect origin infrastructure with DNS Proxy](https://techdocs.akamai.com/edge-dns/docs/protect-origin-infrastructure-with-dns-proxy/llms.txt)
+- [Troubleshoot](https://techdocs.akamai.com/edge-dns/docs/troubleshoot/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/edge-dns/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/edge-dns/reference/api/llms.txt)
+- [Zones](https://techdocs.akamai.com/edge-dns/reference/zones/llms.txt)
+- [Zone versions](https://techdocs.akamai.com/edge-dns/reference/zone-versions/llms.txt)
+- [Change lists](https://techdocs.akamai.com/edge-dns/reference/change-lists/llms.txt)
+- [Data services](https://techdocs.akamai.com/edge-dns/reference/data-services/llms.txt)
+- [Bulk zones](https://techdocs.akamai.com/edge-dns/reference/bulk-zones/llms.txt)
+- [TSIG keys](https://techdocs.akamai.com/edge-dns/reference/tsig-keys/llms.txt)
+- [Shield NS53](https://techdocs.akamai.com/edge-dns/reference/shield-ns53/llms.txt)
+- [Record sets](https://techdocs.akamai.com/edge-dns/reference/record-sets/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/edge-dns/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/edge-dns/changelog/llms.txt): full section index
+
+
+## Edge IP Binding
+
+- [Edge IP Binding](https://techdocs.akamai.com/edge-ip-binding/llms.txt): Akamai's Edge IP Binding (EIPB) lets you deliver traffic from a small, static set of IP addresses in an scalable manner.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/edge-ip-binding/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/edge-ip-binding/docs/welcome/llms.txt)
+- [Create Edge IP Binding in Property Manager](https://techdocs.akamai.com/edge-ip-binding/docs/create-edge-ip-binding-in-property-manager/llms.txt)
+- [The Edge IP Binding tool](https://techdocs.akamai.com/edge-ip-binding/docs/the-edge-ip-binding-tool/llms.txt)
+- [Optional features](https://techdocs.akamai.com/edge-ip-binding/docs/optional-features/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/edge-ip-binding/changelog/llms.txt): full section index
+
+
+## EdgeKV
+
+- [EdgeKV](https://techdocs.akamai.com/edgekv/llms.txt): Akamai's EdgeKV is a key-value store database at the edge. It enables you to build data-driven EdgeWorker applications that require fast, frequent reads and infrequent writes.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/edgekv/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/edgekv/docs/welcome/llms.txt)
+- [Prerequisites](https://techdocs.akamai.com/edgekv/docs/prerequisites/llms.txt)
+- [Get started](https://techdocs.akamai.com/edgekv/docs/get-started/llms.txt)
+- [Technical resources](https://techdocs.akamai.com/edgekv/docs/technical-resources/llms.txt)
+- [Administrative tools](https://techdocs.akamai.com/edgekv/docs/administrative-tools/llms.txt)
+- [Debug and Monitor](https://techdocs.akamai.com/edgekv/docs/debug-and-monitor/llms.txt)
+- [Limitations](https://techdocs.akamai.com/edgekv/docs/limitations/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/edgekv/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/edgekv/reference/api/llms.txt)
+- [Initialize](https://techdocs.akamai.com/edgekv/reference/initialize/llms.txt)
+- [Access tokens](https://techdocs.akamai.com/edgekv/reference/access-tokens/llms.txt)
+- [Authorization](https://techdocs.akamai.com/edgekv/reference/authorization/llms.txt)
+- [Namespaces and data](https://techdocs.akamai.com/edgekv/reference/namespaces-and-data/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/edgekv/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/edgekv/changelog/llms.txt): full section index
+
+
+## EdgeWorkers
+
+- [EdgeWorkers](https://techdocs.akamai.com/edgeworkers/llms.txt): Use Akamai's EdgeWorkers service to execute JavaScript functions at the edge and create customized web experiences based on geolocation, device characteristics, and more.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/edgeworkers/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/edgeworkers/docs/welcome/llms.txt)
+- [Prerequisites](https://techdocs.akamai.com/edgeworkers/docs/prerequisites/llms.txt)
+- [Get started](https://techdocs.akamai.com/edgeworkers/docs/get-started/llms.txt)
+- [Administration](https://techdocs.akamai.com/edgeworkers/docs/administration/llms.txt)
+- [Development](https://techdocs.akamai.com/edgeworkers/docs/development/llms.txt)
+- [JavaScript API reference](https://techdocs.akamai.com/edgeworkers/docs/javascript-api-reference/llms.txt)
+- [Technical resources](https://techdocs.akamai.com/edgeworkers/docs/technical-resources/llms.txt)
+- [Debug](https://techdocs.akamai.com/edgeworkers/docs/debug/llms.txt)
+- [Monitor](https://techdocs.akamai.com/edgeworkers/docs/monitor/llms.txt)
+- [Limitations](https://techdocs.akamai.com/edgeworkers/docs/limitations/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/edgeworkers/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/edgeworkers/reference/api/llms.txt)
+- [Groups](https://techdocs.akamai.com/edgeworkers/reference/groups/llms.txt)
+- [Resource tiers](https://techdocs.akamai.com/edgeworkers/reference/resource-tiers/llms.txt)
+- [EdgeWorker IDs](https://techdocs.akamai.com/edgeworkers/reference/edgeworker-ids/llms.txt)
+- [Validations](https://techdocs.akamai.com/edgeworkers/reference/validations/llms.txt)
+- [Contracts](https://techdocs.akamai.com/edgeworkers/reference/contracts/llms.txt)
+- [Reports](https://techdocs.akamai.com/edgeworkers/reference/reports/llms.txt)
+- [Secure Token](https://techdocs.akamai.com/edgeworkers/reference/secure-token/llms.txt)
+- [EdgeWorkers customer log delivery](https://techdocs.akamai.com/edgeworkers/reference/edgeworkers-customer-log-delivery/llms.txt)
+- [Limits](https://techdocs.akamai.com/edgeworkers/reference/limits/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/edgeworkers/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/edgeworkers/changelog/llms.txt): full section index
+
+
+## Enhanced Content Control Utility API
+
+- [Enhanced Content Control Utility API](https://techdocs.akamai.com/eccu/llms.txt): The Enhanced Content Control Utility (ECCU) is one of several supported Akamai purge interfaces. Use ECCU to specify the set of files to refresh on the edge network. Specify directories, file extensions, certain types of HTTP request, or response properties to refine the set of content to refresh. For example, you can refresh specific parts of a library or the complete cache repository for many domains. The ECCU only invalidates content. It does not remove content from cache.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/eccu/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/eccu/reference/api/llms.txt)
+- [Permissions](https://techdocs.akamai.com/eccu/reference/permissions/llms.txt)
+- [Properties](https://techdocs.akamai.com/eccu/reference/properties/llms.txt)
+- [Requests](https://techdocs.akamai.com/eccu/reference/requests/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/eccu/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/eccu/changelog/llms.txt): full section index
+
+
+## Enterprise Application Access
+
+- [Enterprise Application Access](https://techdocs.akamai.com/eaa/llms.txt): Akamai’s Enterprise Center for Enterprise Application Access (EAA) integrates data path protection, identity access, multifactor authentication, application security, and management visibility and control for applications hosted in data centers and hybrid cloud environments. Using it, the management and control of remote access for employees, contractors, and partners becomes less complex and more secure. This robust tool delivers access to applications without allowing user access to the entire network. Applications are not accessed directly because they are hidden from the Internet and public exposure. A unique dual-cloud architecture closes all inbound firewall ports while providing authenticated end users with access to only their own special applications.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/eaa/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/eaa/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/eaa/docs/get-started/llms.txt)
+- [Secure your network](https://techdocs.akamai.com/eaa/docs/secure-your-network/llms.txt)
+- [Authenticate users](https://techdocs.akamai.com/eaa/docs/authenticate-users/llms.txt)
+- [Create applications](https://techdocs.akamai.com/eaa/docs/create-applications/llms.txt)
+- [CONNECTOR AND APPLICATIONS MANAGEMENT](https://techdocs.akamai.com/eaa/docs/connector-and-applications-management/llms.txt)
+- [Login Portal Customization](https://techdocs.akamai.com/eaa/docs/login-portal-customization/llms.txt)
+- [Monitor](https://techdocs.akamai.com/eaa/docs/monitor/llms.txt)
+- [Logs, Metrics, and SIEM integration](https://techdocs.akamai.com/eaa/docs/logs-metrics-and-siem-integration/llms.txt)
+- [Create client-based applications](https://techdocs.akamai.com/eaa/docs/create-client-based-applications/llms.txt)
+- [Use EAA Client](https://techdocs.akamai.com/eaa/docs/use-eaa-client/llms.txt)
+- [EAA Client for Ubuntu desktop](https://techdocs.akamai.com/eaa/docs/eaa-client-for-ubuntu-desktop/llms.txt)
+- [EAA Client advanced features](https://techdocs.akamai.com/eaa/docs/eaa-client-advanced-features/llms.txt)
+- [Device Posture](https://techdocs.akamai.com/eaa/docs/device-posture/llms.txt)
+- [Performance optimizations](https://techdocs.akamai.com/eaa/docs/performance-optimizations/llms.txt)
+- [Troubleshoot](https://techdocs.akamai.com/eaa/docs/troubleshoot/llms.txt)
+- [NON GA FEATURES](https://techdocs.akamai.com/eaa/docs/non-ga-features/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/eaa/changelog/llms.txt): full section index
+
+
+## Firewall Rules
+
+- [Firewall Rules](https://techdocs.akamai.com/firewall-rules/llms.txt): Firewall Rules lets you manage who receives notifications about Akamai IP address changes. You can subscribe users to specific service notifications, retrieve subscription and service information, and list all CIDR blocks for services you are subscribed to.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/firewall-rules/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/firewall-rules/docs/welcome/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/firewall-rules/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/firewall-rules/reference/api/llms.txt)
+- [CIDR blocks](https://techdocs.akamai.com/firewall-rules/reference/cidr-blocks/llms.txt)
+- [Services](https://techdocs.akamai.com/firewall-rules/reference/services/llms.txt)
+- [Subscriptions](https://techdocs.akamai.com/firewall-rules/reference/subscriptions/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/firewall-rules/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/firewall-rules/changelog/llms.txt): full section index
+
+
+## Get Started
+
+- [Get Started](https://techdocs.akamai.com/start/llms.txt): The Akamai Control Center's wizard walks you through a basic setup of your product, including creating certificates and other resources you may need to serve content on our network.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/start/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/start/docs/welcome/llms.txt)
+- [Set up your product](https://techdocs.akamai.com/start/docs/set-up-your-product/llms.txt)
+- [Activate, test, and go live](https://techdocs.akamai.com/start/docs/activate-test-and-go-live/llms.txt)
+- [Settings](https://techdocs.akamai.com/start/docs/settings/llms.txt)
+
+
+## Get to Know Akamai
+
+- [Get to Know Akamai](https://techdocs.akamai.com/platform-basics/llms.txt): Introduction to the underlying technologies that make up the Akamai Intelligent Edge Platform.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/platform-basics/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/platform-basics/docs/welcome/llms.txt)
+
+
+## Global Traffic Management
+
+- [Global Traffic Management](https://techdocs.akamai.com/gtm/llms.txt): Akamai's Global Traffic Management (GTM) helps Internet users access your website or IP applications with greater reliability. It applies an Internet-centric approach to global load balancing to increase site availability and responsiveness to online user requests. Unlike traditional hardware-based solutions that reside within data centers, the fault-tolerant Global Traffic Management service makes intelligent routing decisions. These are based on real-time data center performance health and on global Internet conditions. They transport user requests to the appropriate data center based on the best Internet route for that user at that moment.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/gtm/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/gtm/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/gtm/docs/get-started/llms.txt)
+- [Property types](https://techdocs.akamai.com/gtm/docs/property-types/llms.txt)
+- [Configure and manage](https://techdocs.akamai.com/gtm/docs/configure-and-manage/llms.txt)
+- [Monitor and report](https://techdocs.akamai.com/gtm/docs/monitor-and-report/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/gtm/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/gtm/reference/api/llms.txt)
+- [GTM VERSIONED OBJECTS](https://techdocs.akamai.com/gtm/reference/gtm-versioned-objects/llms.txt)
+- [Identity](https://techdocs.akamai.com/gtm/reference/identity/llms.txt)
+- [Domains](https://techdocs.akamai.com/gtm/reference/domains/llms.txt)
+- [Resources](https://techdocs.akamai.com/gtm/reference/resources/llms.txt)
+- [Properties](https://techdocs.akamai.com/gtm/reference/properties/llms.txt)
+- [CIDR maps](https://techdocs.akamai.com/gtm/reference/cidr-maps/llms.txt)
+- [Autonomous system maps](https://techdocs.akamai.com/gtm/reference/autonomous-system-maps/llms.txt)
+- [Geographic maps](https://techdocs.akamai.com/gtm/reference/geographic-maps/llms.txt)
+- [Data centers](https://techdocs.akamai.com/gtm/reference/data-centers/llms.txt)
+- [Status](https://techdocs.akamai.com/gtm/reference/status/llms.txt)
+- [Collections](https://techdocs.akamai.com/gtm/reference/collections/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/gtm/changelog/llms.txt): full section index
+
+
+## GTM Load Feedback API
+
+- [GTM Load Feedback API](https://techdocs.akamai.com/gtm-load-feedback/llms.txt): Akamai's Global Traffic Management Load Feedback API allows users to submit load data for a GTM domain in either JSON or XML format via POST, and to fetch the current load state via GET.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/gtm-load-feedback/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/gtm-load-feedback/reference/api/llms.txt)
+- [Global Traffic Management Load Feedback API](https://techdocs.akamai.com/gtm-load-feedback/reference/global-traffic-management-load-feedback-api/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/gtm-load-feedback/changelog/llms.txt): full section index
+
+
+## GTM Reporting API
+
+- [GTM Reporting API](https://techdocs.akamai.com/gtm-reporting/llms.txt): Akamai's Global Traffic Management Reporting (GTM) API provides read-only reports on GTM’s real time statistics. Each call allows you to view traffic, liveness, direct demand, load feedback, and latency on datacenters and properties.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/gtm-reporting/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/gtm-reporting/reference/api/llms.txt)
+- [Domain lists](https://techdocs.akamai.com/gtm-reporting/reference/domain-lists/llms.txt)
+- [Demand](https://techdocs.akamai.com/gtm-reporting/reference/demand/llms.txt)
+- [IP availability](https://techdocs.akamai.com/gtm-reporting/reference/ip-availability/llms.txt)
+- [Latency](https://techdocs.akamai.com/gtm-reporting/reference/latency/llms.txt)
+- [Liveness tests](https://techdocs.akamai.com/gtm-reporting/reference/liveness-tests/llms.txt)
+- [Load feedback](https://techdocs.akamai.com/gtm-reporting/reference/load-feedback/llms.txt)
+- [Traffic](https://techdocs.akamai.com/gtm-reporting/reference/traffic/llms.txt)
+- [Diagnostics](https://techdocs.akamai.com/gtm-reporting/reference/diagnostics/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/gtm-reporting/changelog/llms.txt): full section index
+
+
+## Guardicore Platform Agent
+
+- [Guardicore Platform Agent](https://techdocs.akamai.com/guardicore-platform-agent/llms.txt): Guardicore Platform Agent (formerly Zero Trust Client) integrates data path protection, identity access, multi-factor authentication, application security, management visibility, and control for applications hosted in data centers and hybrid cloud environments. Using it, the management and control of remote access for employees, contractors, and partners becomes less complex and more secure. This robust tool delivers access to applications without allowing user access to the entire network. Applications are not accessed directly because they are hidden from the Internet and public exposure. A unique dual-cloud architecture closes all inbound firewall ports while providing authenticated end users with access to only their own special applications. Threat Protection offers a cloud-based, targeted threat protection solution that safeguards your organization from DNS and web-based threats, enforces authentication and acceptable use policies, and audits user Internet access. Segmentation lets you control access, implement security policies, and maintain segmentation throughout your entire environment.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/guardicore-platform-agent/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/guardicore-platform-agent/docs/welcome/llms.txt)
+- [Desktop agent](https://techdocs.akamai.com/guardicore-platform-agent/docs/desktop-agent/llms.txt)
+- [Enterprise Center for Guardicore Platform Agent](https://techdocs.akamai.com/guardicore-platform-agent/docs/enterprise-center-for-guardicore-platform-agent/llms.txt)
+- [Troubleshoot](https://techdocs.akamai.com/guardicore-platform-agent/docs/troubleshoot/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/guardicore-platform-agent/changelog/llms.txt): full section index
+
+
+## Identity and Access Management API
+
+- [Identity and Access Management API](https://techdocs.akamai.com/iam-api/llms.txt): The Identity and Access Management API lets account administrators:  - Manage and maintain users and their access to ​Akamai Control Center​ applications and resources - Maintain user accounts and other general user information - Manage groups and group access - Create or update roles - Move properties between groups - Filter ​Control Center​ user login requests for the account, using IP Allowlist - Edit their own information and perform other administrative tasks for other users in addition to all tasks regular users perform Additionally, this API lets you manage your API client credentials. API credentials can only be rotated by the client owner. If you're a user or administrator, use this API to manage API access availability and run general operations performed on the Identity and Access Manager user interface from the Settings tab
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/iam-api/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/iam-api/reference/api/llms.txt)
+- [Groups](https://techdocs.akamai.com/iam-api/reference/groups/llms.txt)
+- [Properties](https://techdocs.akamai.com/iam-api/reference/properties/llms.txt)
+- [Roles](https://techdocs.akamai.com/iam-api/reference/roles/llms.txt)
+- [Users, for administrators](https://techdocs.akamai.com/iam-api/reference/users-for-administrators/llms.txt)
+- [Your user profile](https://techdocs.akamai.com/iam-api/reference/your-user-profile/llms.txt)
+- [Common resources, for administrators](https://techdocs.akamai.com/iam-api/reference/common-resources-for-administrators/llms.txt)
+- [Common resources, for users](https://techdocs.akamai.com/iam-api/reference/common-resources-for-users/llms.txt)
+- [IP access control lists](https://techdocs.akamai.com/iam-api/reference/ip-access-control-lists/llms.txt)
+- [API clients administration](https://techdocs.akamai.com/iam-api/reference/api-clients-administration/llms.txt)
+- [API client credentials](https://techdocs.akamai.com/iam-api/reference/api-client-credentials/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/iam-api/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/iam-api/changelog/llms.txt): full section index
+
+
+## Image and Video Manager
+
+- [Image and Video Manager](https://techdocs.akamai.com/ivm/llms.txt): With more people using mobile devices and more ways to deliver content, dealing with your images and videos can be challenging. Akamai's Image and Video Manager gives you the control you need to expertly manage them and fully engage your web visitors.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/ivm/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/ivm/docs/welcome/llms.txt)
+- [Hello World tutorials](https://techdocs.akamai.com/ivm/docs/hello-world-tutorials/llms.txt)
+- [Configuration](https://techdocs.akamai.com/ivm/docs/configuration/llms.txt)
+- [Administration and monitoring](https://techdocs.akamai.com/ivm/docs/administration-and-monitoring/llms.txt)
+- [Use cases and examples](https://techdocs.akamai.com/ivm/docs/use-cases-and-examples/llms.txt)
+- [Troubleshoot](https://techdocs.akamai.com/ivm/docs/troubleshoot/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/ivm/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/ivm/reference/api/llms.txt)
+- [Images](https://techdocs.akamai.com/ivm/reference/images/llms.txt)
+- [Policies](https://techdocs.akamai.com/ivm/reference/policies/llms.txt)
+- [Image & Video Manager policy sets](https://techdocs.akamai.com/ivm/reference/image-video-manager-policy-sets/llms.txt)
+- [Log error details](https://techdocs.akamai.com/ivm/reference/log-error-details/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/ivm/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/ivm/changelog/llms.txt): full section index
+
+
+## Invoicing API
+
+- [Invoicing API](https://techdocs.akamai.com/invoicing/llms.txt): Use the Akamai Invoicing API to develop your own tools to track invoice files, and keep others updated about their status.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/invoicing/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/invoicing/reference/api/llms.txt)
+- [Invoices](https://techdocs.akamai.com/invoicing/reference/invoices/llms.txt)
+- [Notifications](https://techdocs.akamai.com/invoicing/reference/notifications/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/invoicing/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/invoicing/changelog/llms.txt): full section index
+
+
+## Ion
+
+- [Ion](https://techdocs.akamai.com/ion/llms.txt): No matter how users choose to connect, Akamai Ion offers them a seamless experience across different device types and network conditions. Akamai continuously monitors real users, automatically applies best practice performance optimizations, and adapts experiences as content, user behavior, and network conditions change. Ion combines the scalability of Akamai’s global content delivery platform with fast dynamic content acceleration. Ion also leverages Akamai cellular optimizations that lower both latency and user engagement disruptions.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/ion/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/ion/docs/welcome/llms.txt)
+- [Before you begin](https://techdocs.akamai.com/ion/docs/before-you-begin/llms.txt)
+- [Guided configuration](https://techdocs.akamai.com/ion/docs/guided-configuration/llms.txt)
+- [Custom configuration](https://techdocs.akamai.com/ion/docs/custom-configuration/llms.txt)
+- [Tutorials](https://techdocs.akamai.com/ion/docs/tutorials/llms.txt)
+- [Optional features](https://techdocs.akamai.com/ion/docs/optional-features/llms.txt)
+- [Resources](https://techdocs.akamai.com/ion/docs/resources/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/ion/reference/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/ion/reference/welcome/llms.txt)
+- [API TUTORIALS](https://techdocs.akamai.com/ion/reference/api-tutorials/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/ion/changelog/llms.txt): full section index
+
+
+## mPulse Boomerang
+
+- [mPulse Boomerang](https://techdocs.akamai.com/mpulse-boomerang/llms.txt): Akamai's mPulse Boomerang is a JavaScript library for real user monitoring (commonly called RUM).  Boomerang measures the performance characteristics of real-world page loads and interactions.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/mpulse-boomerang/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/mpulse-boomerang/docs/welcome/llms.txt)
+- [How-Tos - Knowledge Base](https://techdocs.akamai.com/mpulse-boomerang/docs/how-tos-knowledge-base/llms.txt)
+- [Troubleshooting](https://techdocs.akamai.com/mpulse-boomerang/docs/troubleshooting/llms.txt)
+- [Reference topics](https://techdocs.akamai.com/mpulse-boomerang/docs/reference-topics/llms.txt)
+- [Developer tools](https://techdocs.akamai.com/mpulse-boomerang/docs/developer-tools/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/mpulse-boomerang/reference/llms.txt): full section index
+- [mPulse Boomerang API](https://techdocs.akamai.com/mpulse-boomerang/reference/mpulse-boomerang-api/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/mpulse-boomerang/changelog/llms.txt): full section index
+
+
+## Linode API
+
+- [Linode API](https://techdocs.akamai.com/linode-api/llms.txt): Programmatically create Linode instances, deploy Kubernetes clusters, and use the full range of Akamai cloud computing products and services.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/linode-api/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/linode-api/reference/api/llms.txt)
+- [Administration](https://techdocs.akamai.com/linode-api/reference/administration/llms.txt)
+- [Beta programs](https://techdocs.akamai.com/linode-api/reference/beta-programs/llms.txt)
+- [Databases](https://techdocs.akamai.com/linode-api/reference/databases/llms.txt)
+- [Domains](https://techdocs.akamai.com/linode-api/reference/domains/llms.txt)
+- [Identity and access](https://techdocs.akamai.com/linode-api/reference/identity-and-access/llms.txt)
+- [Images](https://techdocs.akamai.com/linode-api/reference/images/llms.txt)
+- [Linode instances](https://techdocs.akamai.com/linode-api/reference/linode-instances/llms.txt)
+- [Linode Kubernetes Engine (LKE)](https://techdocs.akamai.com/linode-api/reference/linode-kubernetes-engine-lke/llms.txt)
+- [Linode StackScripts](https://techdocs.akamai.com/linode-api/reference/linode-stackscripts/llms.txt)
+- [Longview](https://techdocs.akamai.com/linode-api/reference/longview/llms.txt)
+- [Maintenance](https://techdocs.akamai.com/linode-api/reference/maintenance/llms.txt)
+- [Managed](https://techdocs.akamai.com/linode-api/reference/managed/llms.txt)
+- [Marketplace](https://techdocs.akamai.com/linode-api/reference/marketplace/llms.txt)
+- [Monitor](https://techdocs.akamai.com/linode-api/reference/monitor/llms.txt)
+- [Network transfer prices](https://techdocs.akamai.com/linode-api/reference/network-transfer-prices/llms.txt)
+- [Networking](https://techdocs.akamai.com/linode-api/reference/networking/llms.txt)
+- [NodeBalancers](https://techdocs.akamai.com/linode-api/reference/nodebalancers/llms.txt)
+- [Object Storage](https://techdocs.akamai.com/linode-api/reference/object-storage/llms.txt)
+- [Placement groups](https://techdocs.akamai.com/linode-api/reference/placement-groups/llms.txt)
+- [Profile](https://techdocs.akamai.com/linode-api/reference/profile/llms.txt)
+- [Regions](https://techdocs.akamai.com/linode-api/reference/regions/llms.txt)
+- [Resource locking](https://techdocs.akamai.com/linode-api/reference/resource-locking/llms.txt)
+- [Support](https://techdocs.akamai.com/linode-api/reference/support/llms.txt)
+- [Tags](https://techdocs.akamai.com/linode-api/reference/tags/llms.txt)
+- [Volumes](https://techdocs.akamai.com/linode-api/reference/volumes/llms.txt)
+- [VPCs](https://techdocs.akamai.com/linode-api/reference/vpcs/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/linode-api/changelog/llms.txt): full section index
+
+
+## mPulse
+
+- [mPulse](https://techdocs.akamai.com/mpulse/llms.txt): mPulse is ​Akamai​'s real user measurement solution that maps user behavior to business performance as it's happening. With mPulse you can collect detailed business and performance data directly from your users' browser or mobile application in real time, and then drill down for a closer look at the performance of all your resources across all of your page views to identify the root cause of latencies and lost revenue.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/mpulse/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/mpulse/docs/welcome/llms.txt)
+- [New UI](https://techdocs.akamai.com/mpulse/docs/new-ui/llms.txt)
+- [Quick start](https://techdocs.akamai.com/mpulse/docs/quick-start/llms.txt)
+- [Customize your web app configuration](https://techdocs.akamai.com/mpulse/docs/customize-your-web-app-configuration/llms.txt)
+- [Explore mPulse system dashboards and widgets](https://techdocs.akamai.com/mpulse/docs/explore-mpulse-system-dashboards-and-widgets/llms.txt)
+- [Manage custom dashboards](https://techdocs.akamai.com/mpulse/docs/manage-custom-dashboards/llms.txt)
+- [Manage dashboard widgets](https://techdocs.akamai.com/mpulse/docs/manage-dashboard-widgets/llms.txt)
+- [Track and report performance activity](https://techdocs.akamai.com/mpulse/docs/track-and-report-performance-activity/llms.txt)
+- [Manage mPulse users](https://techdocs.akamai.com/mpulse/docs/manage-mpulse-users/llms.txt)
+- [Monitor application performance](https://techdocs.akamai.com/mpulse/docs/monitor-application-performance/llms.txt)
+- [Customize time zones and locales](https://techdocs.akamai.com/mpulse/docs/customize-time-zones-and-locales/llms.txt)
+- [View your mPulse timeline events](https://techdocs.akamai.com/mpulse/docs/view-your-mpulse-timeline-events/llms.txt)
+- [Manage your mPulse environment with boomerang self-service](https://techdocs.akamai.com/mpulse/docs/manage-your-mpulse-environment-with-boomerang-self-service/llms.txt)
+- [Reference topics](https://techdocs.akamai.com/mpulse/docs/reference-topics/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/mpulse/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/mpulse/reference/api/llms.txt)
+- [Tokens](https://techdocs.akamai.com/mpulse/reference/tokens/llms.txt)
+- [Objects](https://techdocs.akamai.com/mpulse/reference/objects/llms.txt)
+- [Alerts](https://techdocs.akamai.com/mpulse/reference/alerts/llms.txt)
+- [Annotations](https://techdocs.akamai.com/mpulse/reference/annotations/llms.txt)
+- [Queries](https://techdocs.akamai.com/mpulse/reference/queries/llms.txt)
+- [Domains](https://techdocs.akamai.com/mpulse/reference/domains/llms.txt)
+- [Beacons](https://techdocs.akamai.com/mpulse/reference/beacons/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/mpulse/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/mpulse/changelog/llms.txt): full section index
+
+
+## MSL5 Powered by Harmonic
+
+- [MSL5 Powered by Harmonic](https://techdocs.akamai.com/msl5-harmonic/llms.txt)
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/msl5-harmonic/docs/llms.txt): full section index
+- [Overview](https://techdocs.akamai.com/msl5-harmonic/docs/overview/llms.txt)
+- [Migration](https://techdocs.akamai.com/msl5-harmonic/docs/migration/llms.txt)
+- [Get started](https://techdocs.akamai.com/msl5-harmonic/docs/get-started/llms.txt)
+- [MSL5 user interface guide](https://techdocs.akamai.com/msl5-harmonic/docs/msl5-user-interface-guide/llms.txt)
+- [Reports and Logs](https://techdocs.akamai.com/msl5-harmonic/docs/reports-and-logs/llms.txt)
+- [Specifications](https://techdocs.akamai.com/msl5-harmonic/docs/specifications/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/msl5-harmonic/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/msl5-harmonic/reference/api/llms.txt)
+- [Media Services Live API](https://techdocs.akamai.com/msl5-harmonic/reference/media-services-live-api/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/msl5-harmonic/changelog/llms.txt): full section index
+
+
+## Mutual TLS Edge Truststore (Limited Availability)
+
+- [Mutual TLS Edge Truststore (Limited Availability)](https://techdocs.akamai.com/mtls-edge-truststore/llms.txt): Mutual TLS Edge Truststore is a self-service application that supports the creation, management, and activation of certificate authority certificate sets (CA sets) needed to establish mutual authentication (mTLS) sessions between the client and the Akamai edge.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/mtls-edge-truststore/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/mtls-edge-truststore/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/mtls-edge-truststore/docs/get-started/llms.txt)
+- [Manage certificates](https://techdocs.akamai.com/mtls-edge-truststore/docs/manage-certificates/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/mtls-edge-truststore/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/mtls-edge-truststore/reference/api/llms.txt)
+- [CA sets](https://techdocs.akamai.com/mtls-edge-truststore/reference/ca-sets/llms.txt)
+- [CA set versioning](https://techdocs.akamai.com/mtls-edge-truststore/reference/ca-set-versioning/llms.txt)
+- [Certificates](https://techdocs.akamai.com/mtls-edge-truststore/reference/certificates/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/mtls-edge-truststore/changelog/llms.txt): full section index
+
+
+## Mutual TLS Origin Keystore
+
+- [Mutual TLS Origin Keystore](https://techdocs.akamai.com/mtls-origin-keystore/llms.txt): Use Mutual TLS Origin Keystore to manage client certificates for mTLS authentication between the Akamai edge server and the origin.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/mtls-origin-keystore/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/mtls-origin-keystore/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/mtls-origin-keystore/docs/get-started/llms.txt)
+- [Manage certificates](https://techdocs.akamai.com/mtls-origin-keystore/docs/manage-certificates/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/mtls-origin-keystore/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/mtls-origin-keystore/reference/api/llms.txt)
+- [Account CA certificates](https://techdocs.akamai.com/mtls-origin-keystore/reference/account-ca-certificates/llms.txt)
+- [Client certificate versions](https://techdocs.akamai.com/mtls-origin-keystore/reference/client-certificate-versions/llms.txt)
+- [Client certificates](https://techdocs.akamai.com/mtls-origin-keystore/reference/client-certificates/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/mtls-origin-keystore/changelog/llms.txt): full section index
+
+
+## NetStorage
+
+- [NetStorage](https://techdocs.akamai.com/netstorage/llms.txt): NetStorage is a holistic solution for maintaining large collections of on-demand digital content-including electronic images, streaming media files, software, documents, and other digital objects-while also offering performance compatible with today’s online delivery needs and customers’ expectations of instant access.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/netstorage/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/netstorage/docs/welcome/llms.txt)
+- [Configuration](https://techdocs.akamai.com/netstorage/docs/configuration/llms.txt)
+- [Administration](https://techdocs.akamai.com/netstorage/docs/administration/llms.txt)
+- [Developer tools](https://techdocs.akamai.com/netstorage/docs/developer-tools/llms.txt)
+- [Best practices](https://techdocs.akamai.com/netstorage/docs/best-practices/llms.txt)
+- [Reports](https://techdocs.akamai.com/netstorage/docs/reports/llms.txt)
+- [Troubleshoot](https://techdocs.akamai.com/netstorage/docs/troubleshoot/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/netstorage/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/netstorage/reference/api/llms.txt)
+- [NetStorage CP codes](https://techdocs.akamai.com/netstorage/reference/netstorage-cp-codes/llms.txt)
+- [Storage groups](https://techdocs.akamai.com/netstorage/reference/storage-groups/llms.txt)
+- [Upload accounts](https://techdocs.akamai.com/netstorage/reference/upload-accounts/llms.txt)
+- [Replication zones](https://techdocs.akamai.com/netstorage/reference/replication-zones/llms.txt)
+- [ACL rule sets](https://techdocs.akamai.com/netstorage/reference/acl-rule-sets/llms.txt)
+- [Site snapshots](https://techdocs.akamai.com/netstorage/reference/site-snapshots/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/netstorage/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/netstorage/changelog/llms.txt): full section index
+
+
+## NetStorage Usage API
+
+- [NetStorage Usage API](https://techdocs.akamai.com/netstorage-usage/llms.txt): Akamai's NetStorage Usage API provides HTTP methods you can use to manage your NetStorage content. Communication is conducted via the Edge network using a HTTP(S) client of your own design. The client could be a web-based browser or scripted tools integrated with your content management system so long as each request provides the required NetStorage HTTP headers. With it, you can perform operations such as uploading, deleting, and listing of content, thus providing you another option for interfacing with your NetStorage account. HTTPS with Transport Layer Security (TLS) can be used.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/netstorage-usage/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/netstorage-usage/reference/api/llms.txt)
+- [Usage](https://techdocs.akamai.com/netstorage-usage/reference/usage/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/netstorage-usage/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/netstorage-usage/changelog/llms.txt): full section index
+
+
+## Network Lists API
+
+- [Network Lists API](https://techdocs.akamai.com/network-lists/llms.txt): Manage common sets of lists used by various Akamai security products and features.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/network-lists/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/network-lists/reference/api/llms.txt)
+- [Network Lists](https://techdocs.akamai.com/network-lists/reference/network-lists/llms.txt)
+- [Activations](https://techdocs.akamai.com/network-lists/reference/activations/llms.txt)
+- [Notifications](https://techdocs.akamai.com/network-lists/reference/notifications/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/network-lists/changelog/llms.txt): full section index
+
+
+## Object Delivery
+
+- [Object Delivery](https://techdocs.akamai.com/object-delivery/llms.txt): Akamai's Object Delivery service brings scalability, speed, and availability to the delivery of embedded static content. It removes the need to offload your entire website, which will improve its overall performance. It optimizes availability and delivery from your subdomain of executables over HTTP that are less than 100 MB, such as images, JavaScript, CSS, PDF documents, and XML. It does this while offering configuration options for cacheability and other services that help offload your origin infrastructure.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/object-delivery/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/object-delivery/docs/welcome/llms.txt)
+- [Before you begin](https://techdocs.akamai.com/object-delivery/docs/before-you-begin/llms.txt)
+- [Configuration](https://techdocs.akamai.com/object-delivery/docs/configuration/llms.txt)
+- [Optional features](https://techdocs.akamai.com/object-delivery/docs/optional-features/llms.txt)
+- [Resources](https://techdocs.akamai.com/object-delivery/docs/resources/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/object-delivery/reference/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/object-delivery/reference/welcome/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/object-delivery/changelog/llms.txt): full section index
+
+
+## Origin IP Access Control List
+
+- [Origin IP Access Control List](https://techdocs.akamai.com/origin-ip-acl/llms.txt): Origin IP Access Control List helps to protect your origin server by restricting access to a small and stable list of IP addresses.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/origin-ip-acl/docs/llms.txt): full section index
+- [Documentation](https://techdocs.akamai.com/origin-ip-acl/docs/documentation/llms.txt)
+
+
+## PowerShell
+
+- [PowerShell](https://techdocs.akamai.com/powershell/llms.txt): Make calls to many of our API with a consistent interface using our PowerShell module.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/powershell/docs/llms.txt): full section index
+- [Get started](https://techdocs.akamai.com/powershell/docs/get-started/llms.txt)
+- [API Definitions](https://techdocs.akamai.com/powershell/docs/api-definitions/llms.txt)
+- [API Key Manager](https://techdocs.akamai.com/powershell/docs/api-key-manager/llms.txt)
+- [AppSec](https://techdocs.akamai.com/powershell/docs/appsec/llms.txt)
+- [China CDN](https://techdocs.akamai.com/powershell/docs/china-cdn/llms.txt)
+- [Certificates](https://techdocs.akamai.com/powershell/docs/certificates/llms.txt)
+- [Client Lists](https://techdocs.akamai.com/powershell/docs/client-lists/llms.txt)
+- [Cloud Access Manager](https://techdocs.akamai.com/powershell/docs/cloud-access-manager/llms.txt)
+- [Cloud Wrapper](https://techdocs.akamai.com/powershell/docs/cloud-wrapper/llms.txt)
+- [Cloudlets](https://techdocs.akamai.com/powershell/docs/cloudlets/llms.txt)
+- [Common](https://techdocs.akamai.com/powershell/docs/common/llms.txt)
+- [Contracts](https://techdocs.akamai.com/powershell/docs/contracts/llms.txt)
+- [CP Codes](https://techdocs.akamai.com/powershell/docs/cp-codes/llms.txt)
+- [Datastream](https://techdocs.akamai.com/powershell/docs/datastream/llms.txt)
+- [Domain Ownership](https://techdocs.akamai.com/powershell/docs/domain-ownership/llms.txt)
+- [Edge Diagnostics](https://techdocs.akamai.com/powershell/docs/edge-diagnostics/llms.txt)
+- [Edge DNS](https://techdocs.akamai.com/powershell/docs/edge-dns/llms.txt)
+- [Edge Hostnames](https://techdocs.akamai.com/powershell/docs/edge-hostnames/llms.txt)
+- [EdgeKV](https://techdocs.akamai.com/powershell/docs/edgekv/llms.txt)
+- [EdgeWorkers](https://techdocs.akamai.com/powershell/docs/edgeworkers/llms.txt)
+- [Firewall Rules Notification](https://techdocs.akamai.com/powershell/docs/firewall-rules-notification/llms.txt)
+- [Global Traffic Management](https://techdocs.akamai.com/powershell/docs/global-traffic-management/llms.txt)
+- [Identity & Access Management](https://techdocs.akamai.com/powershell/docs/identity-access-management/llms.txt)
+- [Image & Video Manager](https://techdocs.akamai.com/powershell/docs/image-video-manager/llms.txt)
+- [Media Services Live](https://techdocs.akamai.com/powershell/docs/media-services-live/llms.txt)
+- [Mutual TLS Edge Truststore](https://techdocs.akamai.com/powershell/docs/mutual-tls-edge-truststore/llms.txt)
+- [Mutual TLS Origin Keystore](https://techdocs.akamai.com/powershell/docs/mutual-tls-origin-keystore/llms.txt)
+- [NetStorage](https://techdocs.akamai.com/powershell/docs/netstorage/llms.txt)
+- [Network Lists](https://techdocs.akamai.com/powershell/docs/network-lists/llms.txt)
+- [Property](https://techdocs.akamai.com/powershell/docs/property/llms.txt)
+- [Purge](https://techdocs.akamai.com/powershell/docs/purge/llms.txt)
+- [Reporting](https://techdocs.akamai.com/powershell/docs/reporting/llms.txt)
+- [SIEM](https://techdocs.akamai.com/powershell/docs/siem/llms.txt)
+- [Site Shield](https://techdocs.akamai.com/powershell/docs/site-shield/llms.txt)
+- [SLA](https://techdocs.akamai.com/powershell/docs/sla/llms.txt)
+- [Test Center](https://techdocs.akamai.com/powershell/docs/test-center/llms.txt)
+
+
+## Prolexic Analytics API
+
+- [Prolexic Analytics API](https://techdocs.akamai.com/prolexic/llms.txt): Akamai's Prolexic managed services help protect your network infrastructure against DDoS attacks. They include managed options available for your entire data center, as well as for individual internet-facing applications. Prolexic services help reduce the risk of DDoS attacks while maintaining the availability of Internet-facing applications.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/prolexic/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/prolexic/reference/api/llms.txt)
+- [Prolexic Analytics](https://techdocs.akamai.com/prolexic/reference/prolexic-analytics/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/prolexic/changelog/llms.txt): full section index
+
+
+## Script Management
+
+- [Script Management](https://techdocs.akamai.com/script-management/llms.txt): Akamai's Script Management is a suite of tools to help you minimize performance impacts from JavaScripts.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/script-management/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/script-management/docs/welcome/llms.txt)
+- [Manage your policies](https://techdocs.akamai.com/script-management/docs/manage-your-policies/llms.txt)
+- [Additional resources](https://techdocs.akamai.com/script-management/docs/additional-resources/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/script-management/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/script-management/reference/api/llms.txt)
+- [Insights](https://techdocs.akamai.com/script-management/reference/insights/llms.txt)
+- [Policies](https://techdocs.akamai.com/script-management/reference/policies/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/script-management/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/script-management/changelog/llms.txt): full section index
+
+
+## Prolexic IP Protect Configuration API
+
+- [Prolexic IP Protect Configuration API](https://techdocs.akamai.com/ip-protect/llms.txt): Akamai's Prolexic IP Protect API shields your site from DDoS attacks by diverting traffic and scrubbing network packets.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/ip-protect/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/ip-protect/reference/api/llms.txt)
+- [Mapped IP addresses](https://techdocs.akamai.com/ip-protect/reference/mapped-ip-addresses/llms.txt)
+- [Policy domains](https://techdocs.akamai.com/ip-protect/reference/policy-domains/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/ip-protect/changelog/llms.txt): full section index
+
+
+## Property Manager
+
+- [Property Manager](https://techdocs.akamai.com/property-mgr/llms.txt): Property Manager is a configuration tool that you use with other Akamai products to start serving the traffic to your site or application through the Akamai edge network.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/property-mgr/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/property-mgr/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/property-mgr/docs/get-started/llms.txt)
+- [Property Hostnames](https://techdocs.akamai.com/property-mgr/docs/property-hostnames/llms.txt)
+- [Variables](https://techdocs.akamai.com/property-mgr/docs/variables/llms.txt)
+- [Property Configuration Settings](https://techdocs.akamai.com/property-mgr/docs/property-configuration-settings/llms.txt)
+- [Activation and testing](https://techdocs.akamai.com/property-mgr/docs/activation-and-testing/llms.txt)
+- [Miscellaneous](https://techdocs.akamai.com/property-mgr/docs/miscellaneous/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/property-mgr/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/property-mgr/reference/api/llms.txt)
+- [Rule configurations](https://techdocs.akamai.com/property-mgr/reference/rule-configurations/llms.txt)
+- [Prerequisite data](https://techdocs.akamai.com/property-mgr/reference/prerequisite-data/llms.txt)
+- [Includes](https://techdocs.akamai.com/property-mgr/reference/includes/llms.txt)
+- [Property hostnames](https://techdocs.akamai.com/property-mgr/reference/property-hostnames/llms.txt)
+- [Properties](https://techdocs.akamai.com/property-mgr/reference/properties/llms.txt)
+- [Custom behaviors and overrides](https://techdocs.akamai.com/property-mgr/reference/custom-behaviors-and-overrides/llms.txt)
+- [Bulk search and update](https://techdocs.akamai.com/property-mgr/reference/bulk-search-and-update/llms.txt)
+- [Search](https://techdocs.akamai.com/property-mgr/reference/search/llms.txt)
+- [Rule formats, schemas, and utilities](https://techdocs.akamai.com/property-mgr/reference/rule-formats-schemas-and-utilities/llms.txt)
+- [Domain ownership validation challenges](https://techdocs.akamai.com/property-mgr/reference/domain-ownership-validation-challenges/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/property-mgr/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/property-mgr/changelog/llms.txt): full section index
+
+
+## Purge Cache
+
+- [Purge Cache](https://techdocs.akamai.com/purge-cache/llms.txt): Akamai’s Purge Cache web interface on Control Center lets you refresh specific cached objects or remove all objects across Akamai’s edge network in just a few seconds. You can filter objects by URLs, Content Provider (CP) codes, or cache tags. Removing cached objects allows you to quickly correct mistakes in your published content.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/purge-cache/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/purge-cache/docs/welcome/llms.txt)
+- [Fast purge](https://techdocs.akamai.com/purge-cache/docs/fast-purge/llms.txt)
+- [Enhanced purge](https://techdocs.akamai.com/purge-cache/docs/enhanced-purge/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/purge-cache/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/purge-cache/reference/api/llms.txt)
+- [Invalidations](https://techdocs.akamai.com/purge-cache/reference/invalidations/llms.txt)
+- [Deletions](https://techdocs.akamai.com/purge-cache/reference/deletions/llms.txt)
+- [Rate limit status](https://techdocs.akamai.com/purge-cache/reference/rate-limit-status/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/purge-cache/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/purge-cache/changelog/llms.txt): full section index
+
+
+## Release Notes
+
+- [Release Notes](https://techdocs.akamai.com/release-notes/llms.txt)
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/release-notes/docs/llms.txt): full section index
+- [Documentation](https://techdocs.akamai.com/release-notes/docs/documentation/llms.txt)
+
+
+## Reporting
+
+- [Reporting](https://techdocs.akamai.com/reporting/llms.txt): If you’re using Akamai’s Intelligent Platform to deliver your content, you want to see how it’s performing. Reporting lets you create a wide range of reports, with new kinds added periodically. It lets you retrieve data in intervals from minutes to months.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/reporting/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/reporting/docs/welcome/llms.txt)
+- [Use reports](https://techdocs.akamai.com/reporting/docs/use-reports/llms.txt)
+- [Report types](https://techdocs.akamai.com/reporting/docs/report-types/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/reporting/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/reporting/reference/api/llms.txt)
+- [Reports](https://techdocs.akamai.com/reporting/reference/reports/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/reporting/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/reporting/changelog/llms.txt): full section index
+
+
+## Security Center
+
+- [Security Center](https://techdocs.akamai.com/security-ctr/llms.txt): Akamai’s security products defend against many different types of attacks. For each attack, you generally want to know who is attacking and which site is being targeted. Different attacks, however, may require the use of different features of Akamai’s security product line. Sorting this out requires presenting specific information related to the situation—which is where Akamai Security Center comes in. It gives you the information you need in a clear and quickly scannable way. Security Center’s dashboard displays high-level information on security events, traffic, and attack activity, all separated into four categories: DoS attack, application layer attack, bot activity, and custom rule activity.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/security-ctr/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/security-ctr/docs/welcome/llms.txt)
+- [Security Hub](https://techdocs.akamai.com/security-ctr/docs/security-hub/llms.txt)
+- [Web security reports](https://techdocs.akamai.com/security-ctr/docs/web-security-reports/llms.txt)
+- [Web Security Analytics](https://techdocs.akamai.com/security-ctr/docs/web-security-analytics/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/security-ctr/changelog/llms.txt): full section index
+
+
+## Security Notification Settings
+
+- [Security Notification Settings](https://techdocs.akamai.com/security-notification-settings/llms.txt): Akamai's Security Notification Settings application provides a unified, central location to manage how your organization receives automatic, real-time alerts across the application security portfolio. You can define who receives notifications and where they are delivered by integrating third-party messaging platforms like Slack, Microsoft Teams, PagerDuty, and custom webhooks.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/security-notification-settings/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/security-notification-settings/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/security-notification-settings/docs/get-started/llms.txt)
+- [Email groups](https://techdocs.akamai.com/security-notification-settings/docs/email-groups/llms.txt)
+- [Notification channels](https://techdocs.akamai.com/security-notification-settings/docs/notification-channels/llms.txt)
+- [Troubleshooting](https://techdocs.akamai.com/security-notification-settings/docs/troubleshooting/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/security-notification-settings/changelog/llms.txt): full section index
+
+
+## Secure Internet Access Enterprise
+
+- [Secure Internet Access Enterprise](https://techdocs.akamai.com/etp/llms.txt): Secure Internet Access Enterprise (SIA) leverages real-time Akamai Cloud Security Intelligence and Akamai’s proven, globally distributed, recursive DNS platform to identify and block targeted threats such as malware, ransomware, DNS data exfiltration, and phishing. Akamai’s cloud portal lets security teams centrally manage and enforce unified security and acceptable use policies for all employees in minutes.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/etp/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/etp/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/etp/docs/get-started/llms.txt)
+- [Manage SIA](https://techdocs.akamai.com/etp/docs/manage-sia/llms.txt)
+- [Manage SIA Proxy](https://techdocs.akamai.com/etp/docs/manage-sia-proxy/llms.txt)
+- [Manage ETP Client](https://techdocs.akamai.com/etp/docs/manage-etp-client/llms.txt)
+- [Manage Security Connector](https://techdocs.akamai.com/etp/docs/manage-security-connector/llms.txt)
+- [Analyze reports](https://techdocs.akamai.com/etp/docs/analyze-reports/llms.txt)
+- [Enterprise Threat Intelligence](https://techdocs.akamai.com/etp/docs/enterprise-threat-intelligence/llms.txt)
+- [Developer tools](https://techdocs.akamai.com/etp/docs/developer-tools/llms.txt)
+- [Troubleshoot](https://techdocs.akamai.com/etp/docs/troubleshoot/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/etp/changelog/llms.txt): full section index
+
+
+## SIA Configuration API
+
+- [SIA Configuration API](https://techdocs.akamai.com/etp-config/llms.txt): Akamai's Secure Internet Access (SIA) Configuration API offers a programmatic interface to manage policy settings to protect against enterprise security and acceptable user policy related events. A distributed configuration encapsulates all the rules for how to process DNS requests for your enterprise.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/etp-config/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/etp-config/reference/api/llms.txt)
+- [Certificates](https://techdocs.akamai.com/etp-config/reference/certificates/llms.txt)
+- [Policies](https://techdocs.akamai.com/etp-config/reference/policies/llms.txt)
+- [Data Loss Prevention Dictionary](https://techdocs.akamai.com/etp-config/reference/data-loss-prevention-dictionary/llms.txt)
+- [Configurations](https://techdocs.akamai.com/etp-config/reference/configurations/llms.txt)
+- [Security connectors](https://techdocs.akamai.com/etp-config/reference/security-connectors/llms.txt)
+- [Deployments](https://techdocs.akamai.com/etp-config/reference/deployments/llms.txt)
+- [Custom responses](https://techdocs.akamai.com/etp-config/reference/custom-responses/llms.txt)
+- [Sites](https://techdocs.akamai.com/etp-config/reference/sites/llms.txt)
+- [Client Configurations](https://techdocs.akamai.com/etp-config/reference/client-configurations/llms.txt)
+- [Notifications](https://techdocs.akamai.com/etp-config/reference/notifications/llms.txt)
+- [Lists](https://techdocs.akamai.com/etp-config/reference/lists/llms.txt)
+- [Connection Credentials](https://techdocs.akamai.com/etp-config/reference/connection-credentials/llms.txt)
+- [Tenant and Delegated Access](https://techdocs.akamai.com/etp-config/reference/tenant-and-delegated-access/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/etp-config/changelog/llms.txt): full section index
+
+
+## SIA Reporting API
+
+- [SIA Reporting API](https://techdocs.akamai.com/etp-reporting/llms.txt): The Secure Internet Access (SIA) Reporting API lets you access and analyze reports for security events, acceptable user policy events, and DNS activity totals. You can also view Indicator of Compromise (IOC) data to further analyze blacklisted entries. The API allows you flexible access to the same reporting features as in Akamai Control Center, using your own tools.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/etp-reporting/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/etp-reporting/reference/api/llms.txt)
+- [Threat event reports](https://techdocs.akamai.com/etp-reporting/reference/threat-event-reports/llms.txt)
+- [AUP event reports](https://techdocs.akamai.com/etp-reporting/reference/aup-event-reports/llms.txt)
+- [DNS activity reports](https://techdocs.akamai.com/etp-reporting/reference/dns-activity-reports/llms.txt)
+- [Security Connector event reports](https://techdocs.akamai.com/etp-reporting/reference/security-connector-event-reports/llms.txt)
+- [IDP systems reports](https://techdocs.akamai.com/etp-reporting/reference/idp-systems-reports/llms.txt)
+- [Indicators of Compromise (IOC) reports](https://techdocs.akamai.com/etp-reporting/reference/indicators-of-compromise-ioc-reports/llms.txt)
+- [DeepScan event reports](https://techdocs.akamai.com/etp-reporting/reference/deepscan-event-reports/llms.txt)
+- [Threat metadata report](https://techdocs.akamai.com/etp-reporting/reference/threat-metadata-report/llms.txt)
+- [Feedback reports](https://techdocs.akamai.com/etp-reporting/reference/feedback-reports/llms.txt)
+- [Report schedules](https://techdocs.akamai.com/etp-reporting/reference/report-schedules/llms.txt)
+- [Network traffic connections reports](https://techdocs.akamai.com/etp-reporting/reference/network-traffic-connections-reports/llms.txt)
+- [Proxy traffic transactions reports](https://techdocs.akamai.com/etp-reporting/reference/proxy-traffic-transactions-reports/llms.txt)
+- [Threat intelligence](https://techdocs.akamai.com/etp-reporting/reference/threat-intelligence/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/etp-reporting/changelog/llms.txt): full section index
+
+
+## SIEM Integration
+
+- [SIEM Integration](https://techdocs.akamai.com/siem-integration/llms.txt): Akamai’s SIEM Integration Solution integrates third-party Security Information and Event Management (SIEM) applications with Akamai Security Business Unit solutions including Kona Site Defender, Bot Manager, Client Reputation, and Web Application Protector. This solution lets customers choose security configurations and firewall policies that capture and filter security events based on an attack category.  Cloud Security customers can leverage pre-built connectors with Splunk, HP ArchSight, IBM QRadar, and Intel McAfee SIEM applications. They can also develop their own custom connector for specific SIEM solutions. The SIEM connector uses an Akamai API to pull security events data into the SIEM application securely and in real time.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/siem-integration/docs/llms.txt): full section index
+- [Get started](https://techdocs.akamai.com/siem-integration/docs/get-started/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/siem-integration/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/siem-integration/reference/api/llms.txt)
+- [Security Events](https://techdocs.akamai.com/siem-integration/reference/security-events/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/siem-integration/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/siem-integration/changelog/llms.txt): full section index
+
+
+## Single Sign-On Configuration API
+
+- [Single Sign-On Configuration API](https://techdocs.akamai.com/sso-config/llms.txt): Akamai's Single Sign-On Configuration API lets you manage SSO with SAML certificates.
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/sso-config/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/sso-config/reference/api/llms.txt)
+- [Manage certificates](https://techdocs.akamai.com/sso-config/reference/manage-certificates/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/sso-config/changelog/llms.txt): full section index
+
+
+## Site Shield
+
+- [Site Shield](https://techdocs.akamai.com/site-shield/llms.txt): Site Shield provides an additional layer of defense for critical websites and web applications. Site Shield cloaks websites from the public Internet, effectively removing them from Internet-accessible IP address space. This helps prevent attackers from directly targeting the application origin and forces traffic to go through the Akamai Intelligent Platform, where attacks can be detected and mitigated.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/site-shield/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/site-shield/docs/welcome/llms.txt)
+- [Get started](https://techdocs.akamai.com/site-shield/docs/get-started/llms.txt)
+- [Administration](https://techdocs.akamai.com/site-shield/docs/administration/llms.txt)
+- [Maintenance](https://techdocs.akamai.com/site-shield/docs/maintenance/llms.txt)
+- [Developer tools](https://techdocs.akamai.com/site-shield/docs/developer-tools/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/site-shield/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/site-shield/reference/api/llms.txt)
+- [Maps](https://techdocs.akamai.com/site-shield/reference/maps/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/site-shield/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/site-shield/changelog/llms.txt): full section index
+
+
+## Terraform
+
+- [Terraform](https://techdocs.akamai.com/terraform/llms.txt): Use Infrastructure as Code to manage and provision your Akamai configurations.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/terraform/docs/llms.txt): full section index
+- [Get Started](https://techdocs.akamai.com/terraform/docs/get-started/llms.txt)
+- [Identity and Access Management](https://techdocs.akamai.com/terraform/docs/identity-and-access-management/llms.txt)
+- [Property](https://techdocs.akamai.com/terraform/docs/property/llms.txt)
+- [Reporting Groups](https://techdocs.akamai.com/terraform/docs/reporting-groups/llms.txt)
+- [Application Security](https://techdocs.akamai.com/terraform/docs/application-security/llms.txt)
+- [API Definitions](https://techdocs.akamai.com/terraform/docs/api-definitions/llms.txt)
+- [Bot Manager](https://techdocs.akamai.com/terraform/docs/bot-manager/llms.txt)
+- [Client Lists](https://techdocs.akamai.com/terraform/docs/client-lists/llms.txt)
+- [Network Lists](https://techdocs.akamai.com/terraform/docs/network-lists/llms.txt)
+- [Account Protector](https://techdocs.akamai.com/terraform/docs/account-protector/llms.txt)
+- [Edge DNS](https://techdocs.akamai.com/terraform/docs/edge-dns/llms.txt)
+- [Certificates](https://techdocs.akamai.com/terraform/docs/certificates/llms.txt)
+- [Image and Video Manager](https://techdocs.akamai.com/terraform/docs/image-and-video-manager/llms.txt)
+- [Global Traffic Management](https://techdocs.akamai.com/terraform/docs/global-traffic-management/llms.txt)
+- [Cloud Wrapper](https://techdocs.akamai.com/terraform/docs/cloud-wrapper/llms.txt)
+- [Cloudlets](https://techdocs.akamai.com/terraform/docs/cloudlets/llms.txt)
+- [EdgeWorkers](https://techdocs.akamai.com/terraform/docs/edgeworkers/llms.txt)
+- [DataStream](https://techdocs.akamai.com/terraform/docs/datastream/llms.txt)
+- [Cloud Access Manager](https://techdocs.akamai.com/terraform/docs/cloud-access-manager/llms.txt)
+- [Mutual TLS Origin Keystore](https://techdocs.akamai.com/terraform/docs/mutual-tls-origin-keystore/llms.txt)
+- [Mutual TLS Edge Truststore](https://techdocs.akamai.com/terraform/docs/mutual-tls-edge-truststore/llms.txt)
+- [Archive](https://techdocs.akamai.com/terraform/docs/archive/llms.txt)
+
+
+## Test Center
+
+- [Test Center](https://techdocs.akamai.com/test-ctr/llms.txt): Akamai's Test Center is a testing tool that checks the effect of configuration changes on your web property.  Use this tool as part of your testing protocol to increase your confidence in the safety and accuracy of your configuration changes.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/test-ctr/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/test-ctr/docs/welcome/llms.txt)
+- [Functional testing](https://techdocs.akamai.com/test-ctr/docs/functional-testing/llms.txt)
+- [Comparative testing](https://techdocs.akamai.com/test-ctr/docs/comparative-testing/llms.txt)
+- [Both tests](https://techdocs.akamai.com/test-ctr/docs/both-tests/llms.txt)
+
+### API Reference
+
+- [API Reference index](https://techdocs.akamai.com/test-ctr/reference/llms.txt): full section index
+- [API](https://techdocs.akamai.com/test-ctr/reference/api/llms.txt)
+- [Test runs](https://techdocs.akamai.com/test-ctr/reference/test-runs/llms.txt)
+- [Functional testing](https://techdocs.akamai.com/test-ctr/reference/functional-testing/llms.txt)
+- [Test catalog template](https://techdocs.akamai.com/test-ctr/reference/test-catalog-template/llms.txt)
+- [Test requests](https://techdocs.akamai.com/test-ctr/reference/test-requests/llms.txt)
+- [Functions](https://techdocs.akamai.com/test-ctr/reference/functions/llms.txt)
+
+### Recipes
+
+- [Recipes index](https://techdocs.akamai.com/test-ctr/recipes/llms.txt): full section index
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/test-ctr/changelog/llms.txt): full section index
+
+
+## TrafficPeak
+
+- [TrafficPeak](https://techdocs.akamai.com/trafficpeak/llms.txt): The TrafficPeak Observability Platform, available on Akamai Cloud, allows you to drill down into your TrafficPeak data to reveal trends and troubleshoot problems.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/trafficpeak/docs/llms.txt): full section index
+- [Overview](https://techdocs.akamai.com/trafficpeak/docs/overview/llms.txt)
+- [Dashboards](https://techdocs.akamai.com/trafficpeak/docs/dashboards/llms.txt)
+- [Create dashboards](https://techdocs.akamai.com/trafficpeak/docs/create-dashboards/llms.txt)
+- [Query interfaces](https://techdocs.akamai.com/trafficpeak/docs/query-interfaces/llms.txt)
+- [Manage Grafana](https://techdocs.akamai.com/trafficpeak/docs/manage-grafana/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/trafficpeak/changelog/llms.txt): full section index
+
+
+## Web Application Security
+
+- [Web Application Security](https://techdocs.akamai.com/cloud-security/llms.txt): How to protect your websites and APIs against DDoS and malicious web application attacks. Also explore how to handle adversarial bots, client-side script attacks, and account takeover fraud.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/cloud-security/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/cloud-security/docs/welcome/llms.txt)
+- [App & API Protector](https://techdocs.akamai.com/cloud-security/docs/app-api-protector/llms.txt)
+- [App & API Protector Hybrid](https://techdocs.akamai.com/cloud-security/docs/app-api-protector-hybrid/llms.txt)
+- [Manage bots](https://techdocs.akamai.com/cloud-security/docs/manage-bots/llms.txt)
+- [Content Protector](https://techdocs.akamai.com/cloud-security/docs/content-protector/llms.txt)
+- [Account Protector](https://techdocs.akamai.com/cloud-security/docs/account-protector/llms.txt)
+- [Firewall for AI](https://techdocs.akamai.com/cloud-security/docs/firewall-for-ai/llms.txt)
+- [Client-Side Protection & Compliance](https://techdocs.akamai.com/cloud-security/docs/client-side-protection-compliance/llms.txt)
+- [Brand Protector](https://techdocs.akamai.com/cloud-security/docs/brand-protector/llms.txt)
+- [Protect your APIs](https://techdocs.akamai.com/cloud-security/docs/protect-your-apis/llms.txt)
+- [More info](https://techdocs.akamai.com/cloud-security/docs/more-info/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/cloud-security/changelog/llms.txt): full section index
+
+
+## Zero Trust Client
+
+- [Zero Trust Client](https://techdocs.akamai.com/zero-trust-client/llms.txt): Zero Trust Client integrates data path protection, identity access, multi-factor authentication, application security, management visibility, and control for applications hosted in data centers and hybrid cloud environments. Using it, the management and control of remote access for employees, contractors, and partners becomes less complex and more secure. This robust tool delivers access to applications without allowing user access to the entire network. Applications are not accessed directly because they are hidden from the Internet and public exposure. A unique dual-cloud architecture closes all inbound firewall ports while providing authenticated end users with access to only their own special applications. Threat Protection offers a cloud-based, targeted threat protection solution that safeguards your organization from DNS and web-based threats, enforces authentication and acceptable use policies, and audits user Internet access. Segmentation lets you control access, implement security policies, and maintain segmentation throughout your entire environment.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/zero-trust-client/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/zero-trust-client/docs/welcome/llms.txt)
+- [Desktop client](https://techdocs.akamai.com/zero-trust-client/docs/desktop-client/llms.txt)
+- [Mobile client](https://techdocs.akamai.com/zero-trust-client/docs/mobile-client/llms.txt)
+- [Enterprise Center for Zero Trust Client](https://techdocs.akamai.com/zero-trust-client/docs/enterprise-center-for-zero-trust-client/llms.txt)
+- [Troubleshoot](https://techdocs.akamai.com/zero-trust-client/docs/troubleshoot/llms.txt)
+
+### Changelog
+
+- [Changelog index](https://techdocs.akamai.com/zero-trust-client/changelog/llms.txt): full section index
+
+
+## Zero Trust Security
+
+- [Zero Trust Security](https://techdocs.akamai.com/zero-trust-security/llms.txt): Akamai's Zero Trust Network Access (ZTNA) draws upon a set of rules that form a policy that in turn determines whether or not to allow access to your organization’s network or apps. Learn how to create policies based on the Zero Trust paradigm.
+
+### Guides
+
+- [Guides index](https://techdocs.akamai.com/zero-trust-security/docs/llms.txt): full section index
+- [Welcome](https://techdocs.akamai.com/zero-trust-security/docs/welcome/llms.txt)
+- [Akamai Guardicore Segmentation](https://techdocs.akamai.com/zero-trust-security/docs/akamai-guardicore-segmentation/llms.txt)
+
+
+## Akamai TechDocs
+
+- [Akamai TechDocs](https://techdocs.akamai.com/home/llms.txt): Find guides, APIs, Terraform, code examples, and more for Akamai products and services.
+
+### Pages
+
+- [Pages index](https://techdocs.akamai.com/home/page/llms.txt): full section index

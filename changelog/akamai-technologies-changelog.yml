@@ -1,0 +1,112 @@
+generated: '2026-08-30'
+method: searched
+source: https://techdocs.akamai.com/linode-api/changelog + https://techdocs.akamai.com/property-mgr/changelog +
+  https://techdocs.akamai.com/edgeworkers/changelog + https://techdocs.akamai.com/purge-cache/changelog
+description: 'Akamai publishes a dated changelog per product on TechDocs rather than one platform feed, and each
+  one is machine-readable: append /llms.txt to any changelog URL for the full dated index, or .md to any entry for
+  its markdown. Cadence varies enormously by product - Property Manager and the Linode API ship monthly or better,
+  while Fast Purge has not had an entry since January 2023.'
+scheme: per-product, dated
+format: HTML + llms.txt index + per-entry markdown
+machine_readable:
+  index: https://techdocs.akamai.com/<product>/changelog/llms.txt
+  entry: append .md to any changelog entry URL
+feeds:
+- product: Linode API (Akamai Cloud)
+  url: https://techdocs.akamai.com/linode-api/changelog
+  status: 200
+  entries:
+  - date: '2026-07-01'
+    title: Reserved Public IPv4 Addresses
+    kind: addition
+  - date: '2026-06-30'
+    title: ACLP - Metrics updates
+    kind: addition
+  - date: '2026-06-05'
+    title: ACLP - Alerts updates
+    kind: addition
+  - date: '2026-06-03'
+    title: Password-less Linode support
+    kind: addition
+  - date: '2026-05-21'
+    title: ACLP Alerts is LA
+    kind: addition
+  - date: '2026-05-20'
+    title: SSO login available
+    kind: addition
+  - date: '2026-05-07'
+    title: 'ACLP: Logs - General Availability'
+    kind: addition
+  - date: '2026-04-09'
+    title: Linode Interfaces and firewall templates
+    kind: addition
+  - date: '2026-03-31'
+    title: Identity and Access in Akamai Cloud is generally available
+    kind: addition
+  - date: '2026-03-31'
+    title: Managed Databases updates
+    kind: addition
+- product: Property Manager
+  url: https://techdocs.akamai.com/property-mgr/changelog
+  status: 200
+  entries:
+  - date: '2026-08-28'
+    title: gRPC in General Availability
+    kind: addition
+  - date: '2026-08-13'
+    title: Post Quantum Cryptography support for Standard TLS
+    kind: addition
+  - date: '2026-08-04'
+    title: New frozen rule format
+    kind: addition
+  - date: '2026-07-22'
+    title: Catalog updates
+    kind: addition
+  - date: '2026-06-22'
+    title: Support added for gRPC-Web to native translation
+    kind: addition
+  - date: '2026-06-09'
+    title: Catalog updates
+    kind: addition
+  - date: '2026-05-07'
+    title: Catalog updates
+    kind: addition
+- product: EdgeWorkers
+  url: https://techdocs.akamai.com/edgeworkers/changelog
+  status: 200
+  entries:
+  - date: '2026-08-26'
+    title: Monitoring and compression updates
+    kind: addition
+  - date: '2026-08-12'
+    title: EdgeWorkers API report IDs 2 and 4 disabled
+    kind: breaking
+  - date: '2026-07-31'
+    title: Limit increase for body size responses using respondWith in the Request Object
+    kind: addition
+  - date: '2026-07-28'
+    title: Wall time report
+    kind: addition
+  - date: '2026-06-30'
+    title: Limit and reporting updates
+    kind: addition
+  - date: '2025-12-05'
+    title: New onBotSegmentAvailable event handler
+    kind: addition
+- product: Fast Purge / Purge Cache
+  url: https://techdocs.akamai.com/purge-cache/changelog
+  status: 200
+  entries:
+  - date: '2023-01-02'
+    title: Postman collection available
+    kind: addition
+  - date: '2021-08-31'
+    title: New Purge Cache documentation experience
+    kind: addition
+  - date: '2019-01-30'
+    title: New Enhanced Content Control Utility User Interface
+    kind: addition
+  note: No entry since January 2023 - the API is stable, not abandoned, but the changelog carries no recent signal.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

@@ -1,18 +1,63 @@
-generated: '2026-07-11'
-method: derived
-source: openapi/akamai-technologies-openapi.yml
+generated: '2026-08-30'
+method: searched
+source: https://techdocs.akamai.com/developer/docs/make-your-first-api-call + https://techdocs.akamai.com/developer/docs/authenticate-with-edgegrid
+  + openapi/akamai-technologies-linode-api-openapi.json
+docs: https://techdocs.akamai.com/developer/docs/make-your-first-api-call
+description: Akamai runs two entirely different authentication models. The EdgeGrid control plane (57 of the 58
+  harvested specs) signs each request with EG1-HMAC-SHA256 and sends it to a per-account hostname; nothing about
+  this is declared in the OpenAPI descriptions themselves - not one of those 57 specs contains a securitySchemes
+  block - so the scheme below is taken from the Akamai developer documentation, not derived. Akamai Cloud (the Linode
+  API) is conventional OAuth 2.0 plus personal access tokens, and does declare its schemes in the spec.
 summary:
   types:
-  - apiKey
+  - http
+  - oauth2
+  - custom-signature
   api_key_in:
   - header
+  oauth2_flows:
+  - authorizationCode
 schemes:
 - name: EdgeGrid
-  type: apiKey
+  type: custom-signature
   in: header
   parameter: Authorization
-  description: |-
-    Akamai EdgeGrid HMAC-SHA256 signed Authorization header
-    (`EG1-HMAC-SHA256 client_token=...;access_token=...;timestamp=...;nonce=...;signature=...`).
+  applies_to: all EdgeGrid control-plane APIs (57 specs)
+  description: 'Authorization: EG1-HMAC-SHA256 client_token=...;access_token=...;timestamp=...;nonce=...;signature=...
+    The signature covers the method, path, host, selected headers and a hash of the body. Credentials are created
+    in Control Center as an API client and stored in a ~/.edgerc section as client_secret, host, access_token and
+    client_token; the `host` value is the per-account API hostname (akab-*.luna.akamaiapis.net) that replaces the
+    {hostname} server variable in every spec.'
+  authorization_model: API client grants scoped to specific APIs with READ-WRITE or READ-ONLY access, plus contract/group
+    visibility and optional account-switch keys for partners.
+  docs: https://techdocs.akamai.com/developer/docs/authenticate-with-edgegrid
   sources:
-  - openapi/akamai-technologies-openapi.yml
+  - https://techdocs.akamai.com/developer/docs/make-your-first-api-call
+  note: NOT declared in the OpenAPI. A client generated from any akamai/akamai-apis spec alone will produce unauthenticated
+    requests - this is the single biggest gap between Akamai contracts and Akamai reality.
+- name: oauth
+  type: oauth2
+  applies_to: linode-api (Akamai Cloud)
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://login.linode.com/oauth/authorize
+    tokenUrl: https://login.linode.com/oauth/token
+    scopes: 37
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+  see: scopes/akamai-technologies-scopes.yml
+- name: personalAccessToken
+  type: http
+  scheme: bearer
+  applies_to: linode-api (Akamai Cloud)
+  description: Bearer personal access token created in Cloud Manager, scoped per service with read_only / read_write.
+  sources:
+  - openapi/akamai-technologies-linode-api-openapi.json
+mfa:
+  product: Akamai MFA
+  api: openapi/akamai-technologies-amfa-v1-openapi.json
+  note: Akamai also sells MFA as a product with its own API and an OIDC surface; that is a customer-facing service,
+    not the authentication used to call Akamai APIs.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
