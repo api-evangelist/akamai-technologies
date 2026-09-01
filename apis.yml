@@ -367,7 +367,7 @@ apis:
   tags:
   - CP codes
   - Product
-  - Reporting Groups
+  - Reporting groups
   - Watermark limits
   tags_raw:
   - CP codes
@@ -783,7 +783,7 @@ apis:
   tags:
   - Activations
   - Elements
-  - Network Lists
+  - Network lists
   - Subscription
   tags_raw:
   - Activations
