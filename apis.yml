@@ -1124,3 +1124,5 @@ x-enrichment:
   status: enriched
   artifacts_added: 85
   pass: local-v1
+x-parent: akamai
+x-relationship: product
